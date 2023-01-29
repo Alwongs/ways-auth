@@ -1,0 +1,15 @@
+.way__content {
+    margin-bottom: 16px;
+}
+
+.way-list {
+    margin-bottom: 16px;
+}
+.way-item {
+    @include flex(space-between, center); 
+    margin-bottom: 16px;
+    padding: 6px;
+    &:hover {
+        background-color: rgb(208, 234, 246);
+    }       
+}
