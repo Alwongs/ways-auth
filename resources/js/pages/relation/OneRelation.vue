@@ -1,5 +1,5 @@
 <template>
-    <div class="page relation">
+    <div class="relation">
         <!-- Modals -->
         <div v-if="isPrintOpen" class="background-print-document">
             <div class="background-print-document__header">                 
@@ -136,7 +136,7 @@
             </div>
         </div>
 
-        <div class="realation__button-group">
+        <div class="app-btn-group">
             <button 
                 class="app-btn app-btn__back mr-16" 
                 @click.prevent="goBack"
@@ -365,13 +365,15 @@ export default {
 
 $bg-color: rgb(214, 214, 214);
 $content-color: rgb(0, 76, 143);
+
 .relation {
     position: relative;
+    padding: 64px 32px;
     &__title-car {
         font-weight: 700;
         color: rgb(138, 0, 0);
         font-size: 20px;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
     }
     &__title-driver {
         font-weight: 700;
@@ -393,7 +395,7 @@ $content-color: rgb(0, 76, 143);
     border: 1px solid lightgrey;
     width: fit-content;
     border-radius: 10px;
-    padding: 16px;
+    // padding: 16px;
     margin-bottom: 16px;
     span {
         font-weight: 700;
@@ -471,13 +473,6 @@ $content-color: rgb(0, 76, 143);
         &:hover {
             background-color: rgb(217, 217, 217);
         }
-    }
-}
-.realation__button-group {
-    display: flex;
-    justify-content: center;
-    button:not(:last-child) {
-        margin-right: 32px;
     }
 }
 .background-print-document {

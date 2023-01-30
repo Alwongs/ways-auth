@@ -55,6 +55,10 @@ export default {
 @import "../sass/_variables.scss";
 
 .nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
     background-color: $nav-panel-color;
     width: 100%;
     height: 48px;

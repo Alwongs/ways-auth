@@ -29,7 +29,7 @@ a {
   width: 800px;
   height: 100vh;
   margin: 0 auto;
-  padding: 32px;
+  padding: 64px 32px;
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .page {
@@ -39,13 +39,13 @@ a {
 @media (min-width: 768px) and (max-width: 1023px) {
   .page {
     width: 100%;
-    padding: 16px;
+    padding: 64px 32px;
   }
 }
 @media (max-width: 767px) {
   .page {
     width: 100%;
-    padding: 16px;
+    padding: 64px 32px;
   }
 }
 .page__title {
@@ -140,6 +140,9 @@ a {
   padding-top: 8px;
   display: flex;
   justify-content: flex-end;
+}
+.app-btn-group button:not(:last-child) {
+  margin-right: 16px;
 }
 
 .app-btn {
