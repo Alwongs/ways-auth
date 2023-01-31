@@ -68,6 +68,7 @@ export default {
     color: white;
     font-size: 18px;
     padding: 0 32px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
         font-size: 15px;        
     }     

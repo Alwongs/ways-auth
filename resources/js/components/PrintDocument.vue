@@ -9,7 +9,7 @@
                         организации</p>
                     </div>
                     <div class="title-block">
-                        <h1>ПУТЕВОЙ ЛИСТ ЛЕГКОВОГО АВТОМОБИЛЯ</h1>
+                        <h1>ПУТЕВОЙ ЛИСТ АВТОМОБИЛЯ</h1>
                         <div class="title-block__series"></div>
                         <p><b>N</b></p>
                         <div class="title-block__number"><b>{{ waybillNumber }}</b></div>
@@ -338,20 +338,20 @@ $border-bold: 2.5px;
     margin-bottom: 16px;
 }
 .print-header {
-    border: 2px solid black;
-    background-color: rgba(212, 138, 138, 0.546);    
+    // border: 2px solid black;
+    // background-color: rgba(212, 138, 138, 0.546);    
     // height: 60px;
-    height: 20px;
+    height: 30px;
     width: 550px;
 }
 .print-footer {
-    border: 2px solid black;
-    background-color: rgba(212, 138, 138, 0.546);
+    // border: 2px solid black;
+    // background-color: rgba(212, 138, 138, 0.546);
     height: 20px;
     width: 550px;
 }
 .document {
-    margin-left: 40px; // левый отступ документа
+    margin-left: 20px; // левый отступ документа
     background-color: rgba(255, 255, 255, 1);     
     color: black;
     width: 526px;

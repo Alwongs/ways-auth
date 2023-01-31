@@ -1,6 +1,41 @@
 "use strict";
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_pages_relation_OneRelation_vue"],{
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'DatePicker',
+  data: function data() {
+    return {
+      day: '',
+      month: '',
+      year: ''
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PrintBackSide.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PrintBackSide.vue?vue&type=script&lang=js& ***!
@@ -11,6 +46,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -424,6 +460,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _components_PrintDocument_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/PrintDocument.vue */ "./resources/js/components/PrintDocument.vue");
 /* harmony import */ var _components_PrintBackSide_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/PrintBackSide.vue */ "./resources/js/components/PrintBackSide.vue");
+/* harmony import */ var _components_DatePicker_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/DatePicker.vue */ "./resources/js/components/DatePicker.vue");
 //
 //
 //
@@ -585,6 +622,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -592,7 +639,8 @@ __webpack_require__.r(__webpack_exports__);
   name: 'OneRelation',
   components: {
     PrintDocument: _components_PrintDocument_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    PrintBackSide: _components_PrintBackSide_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    PrintBackSide: _components_PrintBackSide_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    DatePicker: _components_DatePicker_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   props: ['relationId'],
   data: function data() {
@@ -774,6 +822,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".relation-form[data-v-fa816ef2] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-fa816ef2] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-fa816ef2] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form__item[data-v-fa816ef2] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__item-day[data-v-fa816ef2] {\n  border: 1px solid blue;\n  width: 40px;\n  margin-right: 8px;\n}\n.relation-form__item-day input[data-v-fa816ef2] {\n  width: 100%;\n}\n.relation-form__select-day[data-v-fa816ef2] {\n  background-color: rgb(185, 230, 244);\n  height: 100px;\n  position: absolute;\n  z-index: 2;\n  width: 40px;\n}\n.relation-form__item-month[data-v-fa816ef2] {\n  border: 1px solid blue;\n  width: 100px;\n  text-align: center;\n  margin-right: 8px;\n}\n.relation-form__item-month input[data-v-fa816ef2] {\n  width: 100%;\n}\n.relation-form__item-year[data-v-fa816ef2] {\n  border: 1px solid blue;\n  width: 60px;\n}\n.relation-form__item-year input[data-v-fa816ef2] {\n  width: 100%;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PrintBackSide.vue?vue&type=style&index=0&id=dc491a60&lang=scss&scoped=true&":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PrintBackSide.vue?vue&type=style&index=0&id=dc491a60&lang=scss&scoped=true& ***!
@@ -790,7 +861,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".back-side-list-of-paper[data-v-dc491a60] {\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: 0 auto;\n}\n.align-button[data-v-dc491a60] {\n  margin: 0 auto;\n}\n.document-back-side[data-v-dc491a60] {\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 550px;\n  height: 734px;\n  padding: 0 12px;\n}\n.document-back-side img[data-v-dc491a60] {\n  width: 100%;\n  height: auto;\n}\n.back-side-top-devider[data-v-dc491a60] {\n  height: 48px;\n}\n.back-side-top-label[data-v-dc491a60] {\n  text-align: end;\n  font-size: 12px;\n  padding-right: 2px;\n}\n.table[data-v-dc491a60] {\n  display: flex;\n  border-color: black;\n  border-style: solid;\n  border-width: 1.5px 1.5px 0 1.5px;\n}\n.table-number[data-v-dc491a60] {\n  flex-basis: 26px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-number__header[data-v-dc491a60] {\n  height: 78px;\n  line-height: 11px;\n  width: 100%;\n  text-align: center;\n  writing-mode: vertical-rl;\n  transform: scale(-1);\n  font-size: 9px;\n  border-top: 1.5px solid black;\n}\n.table-number__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n  text-align: center;\n  line-height: 31px;\n  font-size: 10px;\n}\n.table-place[data-v-dc491a60] {\n  flex-basis: 225px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-place__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-place__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-place__departure-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__departure-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-place__arrive-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time[data-v-dc491a60] {\n  border-right: 1.5px solid black;\n  flex-basis: 148px;\n}\n.table-time__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-time__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__departure-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__arrive-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__arrive-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance[data-v-dc491a60] {\n  width: 56px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-distance__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  text-align: center;\n  padding-top: 25px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}\n.table-signature[data-v-dc491a60] {\n  flex-grow: 1;\n  height: 100%;\n}\n.table-signature__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  line-height: 11px;\n  text-align: center;\n  padding-top: 4px;\n  border-bottom: 1.5px solid black;\n}\n.table-signature__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".back-side-list-of-paper[data-v-dc491a60] {\n  display: flex;\n  justify-content: flex-end;\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  width: 1200px;\n  margin: 0 auto;\n}\n.align-button[data-v-dc491a60] {\n  margin: 0 auto;\n}\n.print-header-back[data-v-dc491a60] {\n  background-color: rgba(90, 140, 162, 0.454);\n  height: 10px;\n}\n.document-back-side[data-v-dc491a60] {\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 540px;\n  margin-left: 570px;\n  height: 734px;\n  padding: 0 12px;\n}\n.document-back-side img[data-v-dc491a60] {\n  width: 100%;\n  height: auto;\n}\n.back-side-top-devider[data-v-dc491a60] {\n  height: 48px;\n}\n.back-side-top-label[data-v-dc491a60] {\n  text-align: end;\n  font-size: 12px;\n  padding-right: 2px;\n}\n.table[data-v-dc491a60] {\n  display: flex;\n  border-color: black;\n  border-style: solid;\n  border-width: 1.5px 1.5px 0 1.5px;\n}\n.table-number[data-v-dc491a60] {\n  flex-basis: 26px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-number__header[data-v-dc491a60] {\n  height: 78px;\n  line-height: 11px;\n  width: 100%;\n  text-align: center;\n  writing-mode: vertical-rl;\n  transform: scale(-1);\n  font-size: 9px;\n  border-top: 1.5px solid black;\n}\n.table-number__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n  text-align: center;\n  line-height: 31px;\n  font-size: 10px;\n}\n.table-place[data-v-dc491a60] {\n  flex-basis: 225px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-place__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-place__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-place__departure-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__departure-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-place__arrive-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time[data-v-dc491a60] {\n  border-right: 1.5px solid black;\n  flex-basis: 148px;\n}\n.table-time__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-time__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__departure-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__arrive-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__arrive-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance[data-v-dc491a60] {\n  width: 56px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-distance__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  text-align: center;\n  padding-top: 25px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}\n.table-signature[data-v-dc491a60] {\n  flex-grow: 1;\n  height: 100%;\n}\n.table-signature__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  line-height: 11px;\n  text-align: center;\n  padding-top: 4px;\n  border-bottom: 1.5px solid black;\n}\n.table-signature__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -813,7 +884,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".align-button[data-v-5b96528d] {\n  margin: 0 auto;\n}\n.modal[data-v-5b96528d] {\n  display: flex;\n  justify-content: center;\n}\n.list-of-paper[data-v-5b96528d] {\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  background-color: #fff;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  margin-bottom: 16px;\n}\n.print-header[data-v-5b96528d] {\n  border: 2px solid black;\n  background-color: rgba(212, 138, 138, 0.546);\n  height: 20px;\n  width: 550px;\n}\n.print-footer[data-v-5b96528d] {\n  border: 2px solid black;\n  background-color: rgba(212, 138, 138, 0.546);\n  height: 20px;\n  width: 550px;\n}\n.document[data-v-5b96528d] {\n  margin-left: 40px;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 526px;\n  height: 734px;\n}\n.stamp-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 41px;\n}\n.stamp-block p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 10px;\n  width: 177px;\n  height: 30px;\n}\n.title-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 41px;\n  font-size: 13px;\n}\n.title-block h1[data-v-5b96528d] {\n  font-size: inherit;\n  text-align: start;\n  margin: 0;\n  margin-right: 16px;\n}\n.title-block__series[data-v-5b96528d] {\n  width: 85px;\n  border-bottom: 1px solid black;\n  margin-right: 6px;\n}\n.title-block__number[data-v-5b96528d] {\n  width: 75px;\n  border-bottom: 1px solid black;\n  text-align: center;\n  margin-left: 4px;\n}\n.date-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n  font-size: 12px;\n  font-weight: 700;\n}\n.date-block__day[data-v-5b96528d] {\n  width: 38px;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.date-block__month[data-v-5b96528d] {\n  width: 140px;\n  text-align: center;\n  border-bottom: 1px solid black;\n  margin-left: 6px;\n}\n.date-block__year[data-v-5b96528d] {\n  width: 75px;\n  text-align: end;\n  padding-right: 4px;\n  border-bottom: 1px solid black;\n}\n.date-block__series-label[data-v-5b96528d] {\n  font-weight: 500;\n  width: 150px;\n  text-align: center;\n  align-self: flex-start;\n  font-size: 7px;\n}\n.company-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 32px;\n  font-size: 9px;\n}\n.company-block__label[data-v-5b96528d] {\n  margin-right: 25px;\n  align-self: center;\n}\n.company-block__info[data-v-5b96528d] {\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.company-labels-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  padding-right: 100px;\n  height: 12px;\n  font-size: 8px;\n}\n.model-block[data-v-5b96528d] {\n  display: flex;\n  height: 26px;\n}\n.model-block__label[data-v-5b96528d] {\n  align-self: center;\n  font-size: 9px;\n  margin-right: 16px;\n  margin-bottom: -8px;\n}\n.model-block__type[data-v-5b96528d] {\n  font-size: 14px;\n  font-weight: 700;\n  width: 140px;\n  text-align: end;\n  padding-right: 12px;\n  align-self: flex-end;\n  border-bottom: 1px solid black;\n}\n.model-block__model[data-v-5b96528d] {\n  font-size: 14px;\n  font-weight: 700;\n  min-width: 160px;\n  text-align: start;\n  align-self: flex-end;\n  border-bottom: 1px solid black;\n}\n.car-number-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n}\n.car-number-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.car-number-block__number[data-v-5b96528d] {\n  line-height: 16px;\n  font-size: 13px;\n  font-weight: 700;\n  width: 155px;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.driver-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n}\n.driver-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 6px;\n  align-self: center;\n}\n.driver-block__name[data-v-5b96528d] {\n  line-height: 15px;\n  font-size: 14px;\n  font-weight: 700;\n  width: 270px;\n  text-align: start;\n  padding-left: 4px;\n  margin-right: 24px;\n  border-bottom: 1px solid black;\n  white-space: nowrap;\n}\n.driver-block__label-2[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 4px;\n  align-self: center;\n}\n.driver-block__person-number[data-v-5b96528d] {\n  border: 2.5px solid black;\n  height: 18px;\n  line-height: 15px;\n  flex-grow: 1;\n  font-size: 12px;\n  align-self: center;\n  text-align: center;\n}\n.driver-labels-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  padding-right: 140px;\n  height: 12px;\n  font-size: 8px;\n}\n.license-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 13px;\n}\n.license-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  line-height: 9px;\n  margin-right: 24px;\n  align-self: center;\n}\n.license-block__number[data-v-5b96528d] {\n  width: 220px;\n  border-bottom: 1px solid black;\n  font-size: 12px;\n  line-height: 12px;\n  font-weight: 700;\n  margin-right: 16px;\n  padding-left: 8px;\n}\n.license-block__label-2[data-v-5b96528d] {\n  font-size: 9px;\n  line-height: 9px;\n  align-self: center;\n  margin-right: 14px;\n}\n.license-block__class[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  flex-grow: 1;\n}\n.big-bottom-block[data-v-5b96528d] {\n  display: flex;\n  height: 530px;\n}\n.big-bottom-block__left[data-v-5b96528d] {\n  width: 270px;\n  height: 100%;\n  padding-right: 5px;\n}\n.big-bottom-block__right[data-v-5b96528d] {\n  height: 100%;\n  padding-left: 5px;\n  flex-grow: 1;\n}\n.license-card-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 21px;\n}\n.license-card-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n}\n.license-card-block__right[data-v-5b96528d] {\n  flex-grow: 1;\n  text-align: center;\n}\n.license-card-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 9px;\n}\n.license-card-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.task-header-block[data-v-5b96528d] {\n  height: 39px;\n  text-align: center;\n  vertical-align: bottom;\n  font-size: 12px;\n  font-weight: 700;\n  padding-top: 18px;\n}\n.customer-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 36px;\n}\n.customer-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 8px;\n}\n.customer-block__right[data-v-5b96528d] {\n  flex-grow: 1;\n  text-align: center;\n}\n.customer-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 14px;\n  font-weight: 700;\n}\n.customer-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.organization-block[data-v-5b96528d] {\n  height: 35px;\n  padding-top: 5px;\n  text-align: center;\n  width: 170px;\n}\n.organization-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 9px;\n  font-weight: 700;\n}\n.organization-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.customer-address-block[data-v-5b96528d] {\n  height: 51px;\n}\n.customer-address-block__label-block[data-v-5b96528d] {\n  display: flex;\n  height: 21px;\n}\n.customer-address-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 16px;\n  padding-top: 8px;\n}\n.customer-address-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 8px;\n  flex-grow: 1;\n}\n.customer-address-block__value-2[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  text-align: center;\n  height: 14px;\n  font-size: 13px;\n  font-weight: 700;\n  line-height: 13px;\n  flex-grow: 1;\n}\n.customer-address-block__value-3[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 13px;\n  font-weight: 700;\n  line-height: 13px;\n  flex-grow: 1;\n}\n.departure-time-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  padding-left: 29px;\n}\n.departure-time-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 24px;\n  font-weight: 700;\n}\n.departure-time-block__value[data-v-5b96528d] {\n  flex-grow: 1;\n  height: 32px;\n  border: 2.5px solid black;\n}\n.dispetcher-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 35px;\n}\n.dispetcher-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 10px;\n  align-self: center;\n}\n.dispetcher-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.dispetcher-block__signature-value[data-v-5b96528d] {\n  width: 54px;\n  border-bottom: 1px solid black;\n}\n.dispetcher-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.dispetcher-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.dispetcher-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.dispetcher-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.arrive-time-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 36px;\n  padding-left: 15px;\n}\n.arrive-time-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 15px;\n  font-weight: 700;\n}\n.arrive-time-block__value[data-v-5b96528d] {\n  flex-grow: 1;\n  height: 32px;\n  border: 2.5px solid black;\n}\n.divider-block[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 20px;\n}\n.comments-block__label[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 8px;\n  text-align: center;\n  height: 28px;\n}\n.comments-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n}\n.logistic-block__routes[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n  padding-left: 2px;\n}\n.logistic-block__payload[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n  padding-left: 2px;\n}\n.finish-drive-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 37px;\n}\n.finish-drive-block__label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: end;\n  width: 70px;\n  margin-right: 30px;\n}\n.finish-drive-block__value-1[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  margin-right: 20px;\n  width: 54px;\n}\n.finish-drive-block__value-2[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  flex-grow: 1;\n}\n.bottom-labels-block[data-v-5b96528d] {\n  display: flex;\n  height: 30px;\n}\n.bottom-labels-block__stamp-place[data-v-5b96528d] {\n  align-self: flex-end;\n  font-size: 9px;\n  text-align: end;\n  width: 70px;\n  margin-right: 30px;\n  padding-right: 10px;\n}\n.bottom-labels-block__label-1[data-v-5b96528d] {\n  text-align: center;\n  margin-right: 20px;\n  width: 54px;\n  font-size: 8px;\n}\n.bottom-labels-block__label-2[data-v-5b96528d] {\n  text-align: center;\n  flex-grow: 1;\n  font-size: 8px;\n}\n.mechanic-check-title[data-v-5b96528d] {\n  height: 25px;\n  font-size: 11px;\n  text-align: center;\n  padding-top: 8px;\n}\n.odometer-departure-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 22px;\n  margin-bottom: 3px;\n}\n.odometer-departure-block__label[data-v-5b96528d] {\n  font-size: 10px;\n  width: 150px;\n  text-align: center;\n}\n.odometer-departure-block__value[data-v-5b96528d] {\n  height: 100%;\n  flex-grow: 1;\n  border: 2.5px solid black;\n}\n.mechanic-departure-block[data-v-5b96528d] {\n  border: 1px solid black;\n}\n.mechanic-departure-block p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 9px;\n}\n.mechanic-departure-block h3[data-v-5b96528d] {\n  text-align: center;\n  font-size: 9px;\n  text-transform: uppercase;\n}\n.mechanic-departure-block__date[data-v-5b96528d] {\n  display: flex;\n  justify-content: center;\n  height: 15px;\n  font-size: 9px;\n  padding-top: 4px;\n}\n.mechanic-departure-block__date div[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n}\n.mechanic-departure-block__date p[data-v-5b96528d] {\n  margin: 0 1px;\n}\n.mechanic-departure-block__day[data-v-5b96528d] {\n  width: 28px;\n}\n.mechanic-departure-block__month[data-v-5b96528d] {\n  width: 38px;\n  margin-left: 4px;\n  margin-right: 2px;\n}\n.mechanic-departure-block__year[data-v-5b96528d] {\n  width: 20px;\n  margin-left: 2px;\n}\n.mechanic-departure-block__hours[data-v-5b96528d] {\n  width: 18px;\n  margin-left: 4px;\n}\n.mechanic-departure-block__minutes[data-v-5b96528d] {\n  width: 18px;\n  margin-left: 2px;\n}\n.mechanic-departure-block__signature[data-v-5b96528d] {\n  height: 25px;\n  text-align: end;\n  padding-right: 8px;\n  padding-top: 8px;\n  font-size: 13px;\n  font-weight: 700;\n  border-bottom: 1px solid black;\n}\n.mechanic-departure-block__labels[data-v-5b96528d] {\n  display: flex;\n  height: 12px;\n  text-align: end;\n  font-size: 8px;\n}\n.mechanic-departure-block__label-1[data-v-5b96528d] {\n  text-align: center;\n  width: 140px;\n}\n.mechanic-departure-block__label-2[data-v-5b96528d] {\n  text-align: center;\n  flex-grow: 1;\n}\n.driver-check-title p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 11px;\n  width: 160px;\n  margin: 0 auto;\n  line-height: 11px;\n}\n.driver-check-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 28px;\n  margin-bottom: 3px;\n}\n.driver-check-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.driver-check-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.driver-check-block__signature-value[data-v-5b96528d] {\n  width: 62px;\n  border-bottom: 1px solid black;\n}\n.driver-check-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.driver-check-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.driver-check-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.driver-check-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.fuel-type-block[data-v-5b96528d] {\n  display: flex;\n  height: 50px;\n}\n.fuel-type-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  width: 95px;\n  padding-top: 7px;\n}\n.fuel-type-block__type[data-v-5b96528d] {\n  font-size: 8px;\n  width: 75px;\n}\n.fuel-type-block__type-title[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 0 1px 1px;\n}\n.fuel-type-block__type-value[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 0 0 1px 1px;\n}\n.fuel-type-block__code[data-v-5b96528d] {\n  font-size: 8px;\n  flex-grow: 1;\n}\n.fuel-type-block__code-title[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 1px 2.5px 1px;\n}\n.fuel-type-block__code-value[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n}\n.fuel-type-block__code-value[data-v-5b96528d]:not(:last-child) {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2.5px 1px 2.5px;\n}\n.fuel-type-block__code-value[data-v-5b96528d]:last-child {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2.5px 2.5px 2.5px;\n}\n.fuel-check-title[data-v-5b96528d] {\n  font-size: 10px;\n  font-weight: 700;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.fuel-check-section[data-v-5b96528d] {\n  display: flex;\n}\n.fuel-check-section__left[data-v-5b96528d] {\n  height: 100%;\n  width: 170px;\n  font-size: 9px;\n}\n.fuel-check-section__left-title[data-v-5b96528d] {\n  height: 17px;\n  text-align: center;\n}\n.fuel-check-section__left-recieved[data-v-5b96528d] {\n  position: relative;\n  height: 34px;\n  font-size: 9px;\n  padding-right: 45px;\n}\n.fuel-check-section__left-recieved div[data-v-5b96528d] {\n  text-align: center;\n  height: 13px;\n  margin-top: -3px;\n}\n.fuel-check-section__left-doc-number[data-v-5b96528d] {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  display: inline-block;\n  height: 13px;\n  line-height: 13px;\n  margin-right: 4px;\n  padding-left: 8px;\n}\n.fuel-check-section__left-devider[data-v-5b96528d] {\n  display: inline-block;\n  height: 14px;\n  width: 60px;\n  margin-left: 51px;\n  border-bottom: 1px solid black;\n}\n.fuel-check-section__left-rest-before[data-v-5b96528d] {\n  height: 24px;\n  padding-top: 11px;\n}\n.fuel-check-section__left-rest-after[data-v-5b96528d] {\n  height: 21px;\n  padding-top: 9px;\n  text-align: end;\n  padding-right: 16px;\n}\n.fuel-check-section__left-spent-norm[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__left-spent-fact[data-v-5b96528d] {\n  height: 14px;\n  text-align: end;\n  padding-right: 16px;\n}\n.fuel-check-section__left-economy[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__left-spent-over[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__right[data-v-5b96528d] {\n  background-color: rgb(255, 255, 255);\n  height: 100%;\n  flex-grow: 1;\n}\n.fuel-check-section__right-title[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 1px 0 1px;\n  height: 17px;\n  font-size: 10px;\n  text-align: center;\n}\n.fuel-check-section__right-recieved[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 2.5px 2.5px 0 2.5px;\n  height: 34px;\n}\n.fuel-check-section__right-rest-before[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 21px;\n}\n.fuel-check-section__right-rest-after[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 21px;\n}\n.fuel-check-section__right-spent-norm[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-spent-fact[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-economy[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-spent-over[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 2.5px 2.5px;\n  height: 14px;\n}\n.odometer-arrive-block[data-v-5b96528d] {\n  margin-bottom: 16px;\n}\n.odometer-arrive-block__title[data-v-5b96528d] {\n  font-size: 9px;\n  width: 190px;\n  height: 25px;\n}\n.odometer-arrive-block__value[data-v-5b96528d] {\n  display: flex;\n  font-size: 9px;\n}\n.odometer-arrive-block__value-devider[data-v-5b96528d] {\n  font-size: 9px;\n  width: 150px;\n  height: 22px;\n}\n.odometer-arrive-block__value-place[data-v-5b96528d] {\n  font-size: 9px;\n  flex-grow: 1;\n  height: 22px;\n  border: 2.5px solid black;\n}\n.mechanic-arrive-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 28px;\n  margin-bottom: 3px;\n}\n.mechanic-arrive-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.mechanic-arrive-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.mechanic-arrive-block__signature-value[data-v-5b96528d] {\n  width: 62px;\n  border-bottom: 1px solid black;\n}\n.mechanic-arrive-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.mechanic-arrive-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.mechanic-arrive-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.mechanic-arrive-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".align-button[data-v-5b96528d] {\n  margin: 0 auto;\n}\n.modal[data-v-5b96528d] {\n  display: flex;\n  justify-content: center;\n}\n.list-of-paper[data-v-5b96528d] {\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  background-color: #fff;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  margin-bottom: 16px;\n}\n.print-header[data-v-5b96528d] {\n  height: 30px;\n  width: 550px;\n}\n.print-footer[data-v-5b96528d] {\n  height: 20px;\n  width: 550px;\n}\n.document[data-v-5b96528d] {\n  margin-left: 20px;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 526px;\n  height: 734px;\n}\n.stamp-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 41px;\n}\n.stamp-block p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 10px;\n  width: 177px;\n  height: 30px;\n}\n.title-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 41px;\n  font-size: 13px;\n}\n.title-block h1[data-v-5b96528d] {\n  font-size: inherit;\n  text-align: start;\n  margin: 0;\n  margin-right: 16px;\n}\n.title-block__series[data-v-5b96528d] {\n  width: 85px;\n  border-bottom: 1px solid black;\n  margin-right: 6px;\n}\n.title-block__number[data-v-5b96528d] {\n  width: 75px;\n  border-bottom: 1px solid black;\n  text-align: center;\n  margin-left: 4px;\n}\n.date-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n  font-size: 12px;\n  font-weight: 700;\n}\n.date-block__day[data-v-5b96528d] {\n  width: 38px;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.date-block__month[data-v-5b96528d] {\n  width: 140px;\n  text-align: center;\n  border-bottom: 1px solid black;\n  margin-left: 6px;\n}\n.date-block__year[data-v-5b96528d] {\n  width: 75px;\n  text-align: end;\n  padding-right: 4px;\n  border-bottom: 1px solid black;\n}\n.date-block__series-label[data-v-5b96528d] {\n  font-weight: 500;\n  width: 150px;\n  text-align: center;\n  align-self: flex-start;\n  font-size: 7px;\n}\n.company-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 32px;\n  font-size: 9px;\n}\n.company-block__label[data-v-5b96528d] {\n  margin-right: 25px;\n  align-self: center;\n}\n.company-block__info[data-v-5b96528d] {\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.company-labels-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  padding-right: 100px;\n  height: 12px;\n  font-size: 8px;\n}\n.model-block[data-v-5b96528d] {\n  display: flex;\n  height: 26px;\n}\n.model-block__label[data-v-5b96528d] {\n  align-self: center;\n  font-size: 9px;\n  margin-right: 16px;\n  margin-bottom: -8px;\n}\n.model-block__type[data-v-5b96528d] {\n  font-size: 14px;\n  font-weight: 700;\n  width: 140px;\n  text-align: end;\n  padding-right: 12px;\n  align-self: flex-end;\n  border-bottom: 1px solid black;\n}\n.model-block__model[data-v-5b96528d] {\n  font-size: 14px;\n  font-weight: 700;\n  min-width: 160px;\n  text-align: start;\n  align-self: flex-end;\n  border-bottom: 1px solid black;\n}\n.car-number-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n}\n.car-number-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.car-number-block__number[data-v-5b96528d] {\n  line-height: 16px;\n  font-size: 13px;\n  font-weight: 700;\n  width: 155px;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.driver-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n}\n.driver-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 6px;\n  align-self: center;\n}\n.driver-block__name[data-v-5b96528d] {\n  line-height: 15px;\n  font-size: 14px;\n  font-weight: 700;\n  width: 270px;\n  text-align: start;\n  padding-left: 4px;\n  margin-right: 24px;\n  border-bottom: 1px solid black;\n  white-space: nowrap;\n}\n.driver-block__label-2[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 4px;\n  align-self: center;\n}\n.driver-block__person-number[data-v-5b96528d] {\n  border: 2.5px solid black;\n  height: 18px;\n  line-height: 15px;\n  flex-grow: 1;\n  font-size: 12px;\n  align-self: center;\n  text-align: center;\n}\n.driver-labels-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  padding-right: 140px;\n  height: 12px;\n  font-size: 8px;\n}\n.license-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 13px;\n}\n.license-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  line-height: 9px;\n  margin-right: 24px;\n  align-self: center;\n}\n.license-block__number[data-v-5b96528d] {\n  width: 220px;\n  border-bottom: 1px solid black;\n  font-size: 12px;\n  line-height: 12px;\n  font-weight: 700;\n  margin-right: 16px;\n  padding-left: 8px;\n}\n.license-block__label-2[data-v-5b96528d] {\n  font-size: 9px;\n  line-height: 9px;\n  align-self: center;\n  margin-right: 14px;\n}\n.license-block__class[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  flex-grow: 1;\n}\n.big-bottom-block[data-v-5b96528d] {\n  display: flex;\n  height: 530px;\n}\n.big-bottom-block__left[data-v-5b96528d] {\n  width: 270px;\n  height: 100%;\n  padding-right: 5px;\n}\n.big-bottom-block__right[data-v-5b96528d] {\n  height: 100%;\n  padding-left: 5px;\n  flex-grow: 1;\n}\n.license-card-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 21px;\n}\n.license-card-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n}\n.license-card-block__right[data-v-5b96528d] {\n  flex-grow: 1;\n  text-align: center;\n}\n.license-card-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 9px;\n}\n.license-card-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.task-header-block[data-v-5b96528d] {\n  height: 39px;\n  text-align: center;\n  vertical-align: bottom;\n  font-size: 12px;\n  font-weight: 700;\n  padding-top: 18px;\n}\n.customer-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 36px;\n}\n.customer-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 8px;\n}\n.customer-block__right[data-v-5b96528d] {\n  flex-grow: 1;\n  text-align: center;\n}\n.customer-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 14px;\n  font-weight: 700;\n}\n.customer-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.organization-block[data-v-5b96528d] {\n  height: 35px;\n  padding-top: 5px;\n  text-align: center;\n  width: 170px;\n}\n.organization-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 9px;\n  font-weight: 700;\n}\n.organization-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.customer-address-block[data-v-5b96528d] {\n  height: 51px;\n}\n.customer-address-block__label-block[data-v-5b96528d] {\n  display: flex;\n  height: 21px;\n}\n.customer-address-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 16px;\n  padding-top: 8px;\n}\n.customer-address-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 8px;\n  flex-grow: 1;\n}\n.customer-address-block__value-2[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  text-align: center;\n  height: 14px;\n  font-size: 13px;\n  font-weight: 700;\n  line-height: 13px;\n  flex-grow: 1;\n}\n.customer-address-block__value-3[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 13px;\n  font-weight: 700;\n  line-height: 13px;\n  flex-grow: 1;\n}\n.departure-time-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  padding-left: 29px;\n}\n.departure-time-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 24px;\n  font-weight: 700;\n}\n.departure-time-block__value[data-v-5b96528d] {\n  flex-grow: 1;\n  height: 32px;\n  border: 2.5px solid black;\n}\n.dispetcher-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 35px;\n}\n.dispetcher-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 10px;\n  align-self: center;\n}\n.dispetcher-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.dispetcher-block__signature-value[data-v-5b96528d] {\n  width: 54px;\n  border-bottom: 1px solid black;\n}\n.dispetcher-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.dispetcher-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.dispetcher-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.dispetcher-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.arrive-time-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 36px;\n  padding-left: 15px;\n}\n.arrive-time-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 15px;\n  font-weight: 700;\n}\n.arrive-time-block__value[data-v-5b96528d] {\n  flex-grow: 1;\n  height: 32px;\n  border: 2.5px solid black;\n}\n.divider-block[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 20px;\n}\n.comments-block__label[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 8px;\n  text-align: center;\n  height: 28px;\n}\n.comments-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n}\n.logistic-block__routes[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n  padding-left: 2px;\n}\n.logistic-block__payload[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n  padding-left: 2px;\n}\n.finish-drive-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 37px;\n}\n.finish-drive-block__label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: end;\n  width: 70px;\n  margin-right: 30px;\n}\n.finish-drive-block__value-1[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  margin-right: 20px;\n  width: 54px;\n}\n.finish-drive-block__value-2[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  flex-grow: 1;\n}\n.bottom-labels-block[data-v-5b96528d] {\n  display: flex;\n  height: 30px;\n}\n.bottom-labels-block__stamp-place[data-v-5b96528d] {\n  align-self: flex-end;\n  font-size: 9px;\n  text-align: end;\n  width: 70px;\n  margin-right: 30px;\n  padding-right: 10px;\n}\n.bottom-labels-block__label-1[data-v-5b96528d] {\n  text-align: center;\n  margin-right: 20px;\n  width: 54px;\n  font-size: 8px;\n}\n.bottom-labels-block__label-2[data-v-5b96528d] {\n  text-align: center;\n  flex-grow: 1;\n  font-size: 8px;\n}\n.mechanic-check-title[data-v-5b96528d] {\n  height: 25px;\n  font-size: 11px;\n  text-align: center;\n  padding-top: 8px;\n}\n.odometer-departure-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 22px;\n  margin-bottom: 3px;\n}\n.odometer-departure-block__label[data-v-5b96528d] {\n  font-size: 10px;\n  width: 150px;\n  text-align: center;\n}\n.odometer-departure-block__value[data-v-5b96528d] {\n  height: 100%;\n  flex-grow: 1;\n  border: 2.5px solid black;\n}\n.mechanic-departure-block[data-v-5b96528d] {\n  border: 1px solid black;\n}\n.mechanic-departure-block p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 9px;\n}\n.mechanic-departure-block h3[data-v-5b96528d] {\n  text-align: center;\n  font-size: 9px;\n  text-transform: uppercase;\n}\n.mechanic-departure-block__date[data-v-5b96528d] {\n  display: flex;\n  justify-content: center;\n  height: 15px;\n  font-size: 9px;\n  padding-top: 4px;\n}\n.mechanic-departure-block__date div[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n}\n.mechanic-departure-block__date p[data-v-5b96528d] {\n  margin: 0 1px;\n}\n.mechanic-departure-block__day[data-v-5b96528d] {\n  width: 28px;\n}\n.mechanic-departure-block__month[data-v-5b96528d] {\n  width: 38px;\n  margin-left: 4px;\n  margin-right: 2px;\n}\n.mechanic-departure-block__year[data-v-5b96528d] {\n  width: 20px;\n  margin-left: 2px;\n}\n.mechanic-departure-block__hours[data-v-5b96528d] {\n  width: 18px;\n  margin-left: 4px;\n}\n.mechanic-departure-block__minutes[data-v-5b96528d] {\n  width: 18px;\n  margin-left: 2px;\n}\n.mechanic-departure-block__signature[data-v-5b96528d] {\n  height: 25px;\n  text-align: end;\n  padding-right: 8px;\n  padding-top: 8px;\n  font-size: 13px;\n  font-weight: 700;\n  border-bottom: 1px solid black;\n}\n.mechanic-departure-block__labels[data-v-5b96528d] {\n  display: flex;\n  height: 12px;\n  text-align: end;\n  font-size: 8px;\n}\n.mechanic-departure-block__label-1[data-v-5b96528d] {\n  text-align: center;\n  width: 140px;\n}\n.mechanic-departure-block__label-2[data-v-5b96528d] {\n  text-align: center;\n  flex-grow: 1;\n}\n.driver-check-title p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 11px;\n  width: 160px;\n  margin: 0 auto;\n  line-height: 11px;\n}\n.driver-check-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 28px;\n  margin-bottom: 3px;\n}\n.driver-check-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.driver-check-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.driver-check-block__signature-value[data-v-5b96528d] {\n  width: 62px;\n  border-bottom: 1px solid black;\n}\n.driver-check-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.driver-check-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.driver-check-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.driver-check-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.fuel-type-block[data-v-5b96528d] {\n  display: flex;\n  height: 50px;\n}\n.fuel-type-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  width: 95px;\n  padding-top: 7px;\n}\n.fuel-type-block__type[data-v-5b96528d] {\n  font-size: 8px;\n  width: 75px;\n}\n.fuel-type-block__type-title[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 0 1px 1px;\n}\n.fuel-type-block__type-value[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 0 0 1px 1px;\n}\n.fuel-type-block__code[data-v-5b96528d] {\n  font-size: 8px;\n  flex-grow: 1;\n}\n.fuel-type-block__code-title[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 1px 2.5px 1px;\n}\n.fuel-type-block__code-value[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n}\n.fuel-type-block__code-value[data-v-5b96528d]:not(:last-child) {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2.5px 1px 2.5px;\n}\n.fuel-type-block__code-value[data-v-5b96528d]:last-child {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2.5px 2.5px 2.5px;\n}\n.fuel-check-title[data-v-5b96528d] {\n  font-size: 10px;\n  font-weight: 700;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.fuel-check-section[data-v-5b96528d] {\n  display: flex;\n}\n.fuel-check-section__left[data-v-5b96528d] {\n  height: 100%;\n  width: 170px;\n  font-size: 9px;\n}\n.fuel-check-section__left-title[data-v-5b96528d] {\n  height: 17px;\n  text-align: center;\n}\n.fuel-check-section__left-recieved[data-v-5b96528d] {\n  position: relative;\n  height: 34px;\n  font-size: 9px;\n  padding-right: 45px;\n}\n.fuel-check-section__left-recieved div[data-v-5b96528d] {\n  text-align: center;\n  height: 13px;\n  margin-top: -3px;\n}\n.fuel-check-section__left-doc-number[data-v-5b96528d] {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  display: inline-block;\n  height: 13px;\n  line-height: 13px;\n  margin-right: 4px;\n  padding-left: 8px;\n}\n.fuel-check-section__left-devider[data-v-5b96528d] {\n  display: inline-block;\n  height: 14px;\n  width: 60px;\n  margin-left: 51px;\n  border-bottom: 1px solid black;\n}\n.fuel-check-section__left-rest-before[data-v-5b96528d] {\n  height: 24px;\n  padding-top: 11px;\n}\n.fuel-check-section__left-rest-after[data-v-5b96528d] {\n  height: 21px;\n  padding-top: 9px;\n  text-align: end;\n  padding-right: 16px;\n}\n.fuel-check-section__left-spent-norm[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__left-spent-fact[data-v-5b96528d] {\n  height: 14px;\n  text-align: end;\n  padding-right: 16px;\n}\n.fuel-check-section__left-economy[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__left-spent-over[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__right[data-v-5b96528d] {\n  background-color: rgb(255, 255, 255);\n  height: 100%;\n  flex-grow: 1;\n}\n.fuel-check-section__right-title[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 1px 0 1px;\n  height: 17px;\n  font-size: 10px;\n  text-align: center;\n}\n.fuel-check-section__right-recieved[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 2.5px 2.5px 0 2.5px;\n  height: 34px;\n}\n.fuel-check-section__right-rest-before[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 21px;\n}\n.fuel-check-section__right-rest-after[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 21px;\n}\n.fuel-check-section__right-spent-norm[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-spent-fact[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-economy[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-spent-over[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 2.5px 2.5px;\n  height: 14px;\n}\n.odometer-arrive-block[data-v-5b96528d] {\n  margin-bottom: 16px;\n}\n.odometer-arrive-block__title[data-v-5b96528d] {\n  font-size: 9px;\n  width: 190px;\n  height: 25px;\n}\n.odometer-arrive-block__value[data-v-5b96528d] {\n  display: flex;\n  font-size: 9px;\n}\n.odometer-arrive-block__value-devider[data-v-5b96528d] {\n  font-size: 9px;\n  width: 150px;\n  height: 22px;\n}\n.odometer-arrive-block__value-place[data-v-5b96528d] {\n  font-size: 9px;\n  flex-grow: 1;\n  height: 22px;\n  border: 2.5px solid black;\n}\n.mechanic-arrive-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 28px;\n  margin-bottom: 3px;\n}\n.mechanic-arrive-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.mechanic-arrive-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.mechanic-arrive-block__signature-value[data-v-5b96528d] {\n  width: 62px;\n  border-bottom: 1px solid black;\n}\n.mechanic-arrive-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.mechanic-arrive-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.mechanic-arrive-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.mechanic-arrive-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -836,10 +907,39 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".relation[data-v-c7ea9f90] {\n  position: relative;\n  padding: 64px 32px;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-content[data-v-c7ea9f90] {\n  border: 1px solid lightgrey;\n  width: -moz-fit-content;\n  width: fit-content;\n  border-radius: 10px;\n  margin-bottom: 16px;\n}\n.relation-content span[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(0, 76, 143);\n  margin-left: 4px;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.relation-form__item-day[data-v-c7ea9f90] {\n  width: 40px;\n}\n.relation-form__item-month[data-v-c7ea9f90] {\n  width: 100px;\n  text-align: center;\n}\n.relation-form__item-year[data-v-c7ea9f90] {\n  width: 60px;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".relation[data-v-c7ea9f90] {\n  position: relative;\n  padding: 64px 32px;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-content[data-v-c7ea9f90] {\n  border: 1px solid lightgrey;\n  width: -moz-fit-content;\n  width: fit-content;\n  border-radius: 10px;\n  margin-bottom: 16px;\n}\n.relation-content span[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(0, 76, 143);\n  margin-left: 4px;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__item-day[data-v-c7ea9f90] {\n  border: 1px solid blue;\n  width: 40px;\n  margin-right: 8px;\n}\n.relation-form__item-day input[data-v-c7ea9f90] {\n  width: 100%;\n}\n.relation-form__item-month[data-v-c7ea9f90] {\n  border: 1px solid blue;\n  width: 100px;\n  text-align: center;\n  margin-right: 8px;\n}\n.relation-form__item-month input[data-v-c7ea9f90] {\n  width: 100%;\n}\n.relation-form__item-year[data-v-c7ea9f90] {\n  border: 1px solid blue;\n  width: 60px;\n}\n.relation-form__item-year input[data-v-c7ea9f90] {\n  width: 100%;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -927,6 +1027,46 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_OneRelation_vue_vue_type_style_index_0_id_c7ea9f90_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/DatePicker.vue":
+/*!************************************************!*\
+  !*** ./resources/js/components/DatePicker.vue ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true& */ "./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true&");
+/* harmony import */ var _DatePicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatePicker.vue?vue&type=script&lang=js& */ "./resources/js/components/DatePicker.vue?vue&type=script&lang=js&");
+/* harmony import */ var _DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& */ "./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _DatePicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "fa816ef2",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/DatePicker.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
@@ -1050,6 +1190,21 @@ component.options.__file = "resources/js/pages/relation/OneRelation.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/DatePicker.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/DatePicker.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatePicker.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/PrintBackSide.vue?vue&type=script&lang=js&":
 /*!****************************************************************************!*\
   !*** ./resources/js/components/PrintBackSide.vue?vue&type=script&lang=js& ***!
@@ -1095,6 +1250,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/PrintBackSide.vue?vue&type=style&index=0&id=dc491a60&lang=scss&scoped=true&":
 /*!*************************************************************************************************************!*\
   !*** ./resources/js/components/PrintBackSide.vue?vue&type=style&index=0&id=dc491a60&lang=scss&scoped=true& ***!
@@ -1127,6 +1294,22 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_OneRelation_vue_vue_type_style_index_0_id_c7ea9f90_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./OneRelation.vue?vue&type=style&index=0&id=c7ea9f90&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/relation/OneRelation.vue?vue&type=style&index=0&id=c7ea9f90&lang=scss&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true& ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true&");
 
 
 /***/ }),
@@ -1179,6 +1362,100 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "relation-form__item-date" }, [
+    _c("div", { staticClass: "relation-form__item" }, [
+      _c("label", { attrs: { for: "" } }, [_vm._v("дата выезда: ")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.day,
+            expression: "day",
+          },
+        ],
+        staticClass: "relation-form__item-day",
+        attrs: { type: "text" },
+        domProps: { value: _vm.day },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.day = $event.target.value
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.month,
+            expression: "month",
+          },
+        ],
+        staticClass: "relation-form__item-month",
+        attrs: { type: "text" },
+        domProps: { value: _vm.month },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.month = $event.target.value
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.year,
+            expression: "year",
+          },
+        ],
+        staticClass: "relation-form__item-year",
+        attrs: { type: "text" },
+        domProps: { value: _vm.year },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.year = $event.target.value
+          },
+        },
+      }),
+    ]),
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PrintBackSide.vue?vue&type=template&id=dc491a60&scoped=true&":
 /*!*************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PrintBackSide.vue?vue&type=template&id=dc491a60&scoped=true& ***!
@@ -1195,7 +1472,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "back-side-list-of-paper print-back" }, [
-    _c("header", { staticClass: "print-header" }),
+    _c("div", { staticClass: "horizontal-devider" }),
     _vm._v(" "),
     _c("div", { staticClass: "document-back-side" }, [
       _c("div", { staticClass: "back-side-top-devider" }),
@@ -1456,7 +1733,7 @@ var render = function () {
           _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "title-block" }, [
-            _c("h1", [_vm._v("ПУТЕВОЙ ЛИСТ ЛЕГКОВОГО АВТОМОБИЛЯ")]),
+            _c("h1", [_vm._v("ПУТЕВОЙ ЛИСТ АВТОМОБИЛЯ")]),
             _vm._v(" "),
             _c("div", { staticClass: "title-block__series" }),
             _vm._v(" "),
@@ -2299,368 +2576,375 @@ var render = function () {
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "relation-form" }, [
-        _c("div", { staticClass: "relation-form__item waybill" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("№ п. листа: ")]),
+      _c(
+        "div",
+        { staticClass: "relation-form" },
+        [
+          _c("date-picker"),
           _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.waybillNumber,
-                expression: "waybillNumber",
-              },
-            ],
-            attrs: { type: "text" },
-            domProps: { value: _vm.waybillNumber },
-            on: {
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.waybillNumber = $event.target.value
-              },
-            },
-          }),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "relation-form__item-date" }, [
-          _c("div", { staticClass: "relation-form__item" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("дата выезда: ")]),
+          _c("div", { staticClass: "relation-form__item waybill" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("№ п. листа: ")]),
             _vm._v(" "),
             _c("input", {
               directives: [
                 {
                   name: "model",
                   rawName: "v-model",
-                  value: _vm.dateFrom.day,
-                  expression: "dateFrom.day",
+                  value: _vm.waybillNumber,
+                  expression: "waybillNumber",
                 },
               ],
-              staticClass: "relation-form__item-day",
               attrs: { type: "text" },
-              domProps: { value: _vm.dateFrom.day },
+              domProps: { value: _vm.waybillNumber },
               on: {
                 input: function ($event) {
                   if ($event.target.composing) {
                     return
                   }
-                  _vm.$set(_vm.dateFrom, "day", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.dateFrom.month,
-                  expression: "dateFrom.month",
-                },
-              ],
-              staticClass: "relation-form__item-month",
-              attrs: { type: "text" },
-              domProps: { value: _vm.dateFrom.month },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.dateFrom, "month", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.dateFrom.year,
-                  expression: "dateFrom.year",
-                },
-              ],
-              staticClass: "relation-form__item-year",
-              attrs: { type: "text" },
-              domProps: { value: _vm.dateFrom.year },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.dateFrom, "year", $event.target.value)
+                  _vm.waybillNumber = $event.target.value
                 },
               },
             }),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("дата заезда: ")]),
+          _c("div", { staticClass: "relation-form__item-date" }, [
+            _c("div", { staticClass: "relation-form__item" }, [
+              _c("label", { attrs: { for: "" } }, [_vm._v("дата заезда: ")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dateFrom.day,
+                    expression: "dateFrom.day",
+                  },
+                ],
+                staticClass: "relation-form__item-day",
+                attrs: { type: "text" },
+                domProps: { value: _vm.dateFrom.day },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.dateFrom, "day", $event.target.value)
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dateFrom.month,
+                    expression: "dateFrom.month",
+                  },
+                ],
+                staticClass: "relation-form__item-month",
+                attrs: { type: "text" },
+                domProps: { value: _vm.dateFrom.month },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.dateFrom, "month", $event.target.value)
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dateFrom.year,
+                    expression: "dateFrom.year",
+                  },
+                ],
+                staticClass: "relation-form__item-year",
+                attrs: { type: "text" },
+                domProps: { value: _vm.dateFrom.year },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.dateFrom, "year", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "relation-form__item" }, [
+              _c("label", { attrs: { for: "" } }, [_vm._v("дата заезда: ")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dateTo.day,
+                    expression: "dateTo.day",
+                  },
+                ],
+                staticClass: "relation-form__item-day",
+                attrs: { type: "text" },
+                domProps: { value: _vm.dateTo.day },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.dateTo, "day", $event.target.value)
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dateTo.month,
+                    expression: "dateTo.month",
+                  },
+                ],
+                staticClass: "relation-form__item-month",
+                attrs: { type: "text" },
+                domProps: { value: _vm.dateTo.month },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.dateTo, "month", $event.target.value)
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dateTo.year,
+                    expression: "dateTo.year",
+                  },
+                ],
+                staticClass: "relation-form__item-year",
+                attrs: { type: "text" },
+                domProps: { value: _vm.dateTo.year },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.dateTo, "year", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "relation-form__item mechanic" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("заказчик: ")]),
             _vm._v(" "),
             _c("input", {
               directives: [
                 {
                   name: "model",
                   rawName: "v-model",
-                  value: _vm.dateTo.day,
-                  expression: "dateTo.day",
+                  value: _vm.customer,
+                  expression: "customer",
                 },
               ],
-              staticClass: "relation-form__item-day",
+              staticClass: "relation-form__customer",
               attrs: { type: "text" },
-              domProps: { value: _vm.dateTo.day },
+              domProps: { value: _vm.customer },
               on: {
                 input: function ($event) {
                   if ($event.target.composing) {
                     return
                   }
-                  _vm.$set(_vm.dateTo, "day", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.dateTo.month,
-                  expression: "dateTo.month",
-                },
-              ],
-              staticClass: "relation-form__item-month",
-              attrs: { type: "text" },
-              domProps: { value: _vm.dateTo.month },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.dateTo, "month", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.dateTo.year,
-                  expression: "dateTo.year",
-                },
-              ],
-              staticClass: "relation-form__item-year",
-              attrs: { type: "text" },
-              domProps: { value: _vm.dateTo.year },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.dateTo, "year", $event.target.value)
+                  _vm.customer = $event.target.value
                 },
               },
             }),
           ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "relation-form__item mechanic" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("заказчик: ")]),
           _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.customer,
-                expression: "customer",
+          _c("div", { staticClass: "relation-form__item mechanic" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("адрес подачи: ")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.address,
+                  expression: "address",
+                },
+              ],
+              staticClass: "relation-form__address",
+              attrs: { type: "text" },
+              domProps: { value: _vm.address },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.address = $event.target.value
+                },
               },
-            ],
-            staticClass: "relation-form__customer",
-            attrs: { type: "text" },
-            domProps: { value: _vm.customer },
-            on: {
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.customer = $event.target.value
-              },
-            },
-          }),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "relation-form__item mechanic" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("адрес подачи: ")]),
+            }),
+          ]),
           _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.address,
-                expression: "address",
+          _c("div", { staticClass: "relation-form__item mechanic" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("механик: ")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.mechanicFullName,
+                  expression: "mechanicFullName",
+                },
+              ],
+              staticClass: "relation-form__mechanic",
+              attrs: { type: "text", readonly: "" },
+              domProps: { value: _vm.mechanicFullName },
+              on: {
+                click: _vm.toggleMechanicList,
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.mechanicFullName = $event.target.value
+                },
               },
-            ],
-            staticClass: "relation-form__address",
-            attrs: { type: "text" },
-            domProps: { value: _vm.address },
-            on: {
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.address = $event.target.value
-              },
-            },
-          }),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "relation-form__item mechanic" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("механик: ")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.mechanicFullName,
-                expression: "mechanicFullName",
-              },
-            ],
-            staticClass: "relation-form__mechanic",
-            attrs: { type: "text", readonly: "" },
-            domProps: { value: _vm.mechanicFullName },
-            on: {
-              click: _vm.toggleMechanicList,
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.mechanicFullName = $event.target.value
-              },
-            },
-          }),
-          _vm._v(" "),
-          _vm.isMechanicListOpen
-            ? _c(
-                "ul",
-                { staticClass: "relation-form__drop-list" },
-                [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "closeBtn",
-                      on: { click: _vm.toggleMechanicList },
-                    },
-                    [_vm._v("x")]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.mechanicList, function (mechanic) {
-                    return _c(
+            }),
+            _vm._v(" "),
+            _vm.isMechanicListOpen
+              ? _c(
+                  "ul",
+                  { staticClass: "relation-form__drop-list" },
+                  [
+                    _c(
                       "li",
                       {
-                        key: mechanic.id,
-                        staticClass: "relation-form__drop-item",
-                        on: {
-                          click: function ($event) {
-                            return _vm.selectMechanic(mechanic)
+                        staticClass: "closeBtn",
+                        on: { click: _vm.toggleMechanicList },
+                      },
+                      [_vm._v("x")]
+                    ),
+                    _vm._v(" "),
+                    _vm._l(_vm.mechanicList, function (mechanic) {
+                      return _c(
+                        "li",
+                        {
+                          key: mechanic.id,
+                          staticClass: "relation-form__drop-item",
+                          on: {
+                            click: function ($event) {
+                              return _vm.selectMechanic(mechanic)
+                            },
                           },
                         },
-                      },
-                      [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(mechanic.last_name) +
-                            " " +
-                            _vm._s(mechanic.first_name) +
-                            " " +
-                            _vm._s(mechanic.middle_name) +
-                            "\n                "
-                        ),
-                      ]
-                    )
-                  }),
-                ],
-                2
-              )
-            : _vm._e(),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "relation-form__item dispetcher" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("диспетчер: ")]),
+                        [
+                          _vm._v(
+                            "\n                    " +
+                              _vm._s(mechanic.last_name) +
+                              " " +
+                              _vm._s(mechanic.first_name) +
+                              " " +
+                              _vm._s(mechanic.middle_name) +
+                              "\n                "
+                          ),
+                        ]
+                      )
+                    }),
+                  ],
+                  2
+                )
+              : _vm._e(),
+          ]),
           _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.dispetcherFullName,
-                expression: "dispetcherFullName",
+          _c("div", { staticClass: "relation-form__item dispetcher" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("диспетчер: ")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.dispetcherFullName,
+                  expression: "dispetcherFullName",
+                },
+              ],
+              staticClass: "relation-form__mechanic",
+              attrs: { type: "text", readonly: "" },
+              domProps: { value: _vm.dispetcherFullName },
+              on: {
+                click: _vm.toggleDispetcherList,
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.dispetcherFullName = $event.target.value
+                },
               },
-            ],
-            staticClass: "relation-form__mechanic",
-            attrs: { type: "text", readonly: "" },
-            domProps: { value: _vm.dispetcherFullName },
-            on: {
-              click: _vm.toggleDispetcherList,
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.dispetcherFullName = $event.target.value
-              },
-            },
-          }),
-          _vm._v(" "),
-          _vm.isDispetcherListOpen
-            ? _c(
-                "ul",
-                { staticClass: "relation-form__drop-list" },
-                [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "closeBtn",
-                      on: { click: _vm.toggleDispetcherList },
-                    },
-                    [_vm._v("x")]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.dispetcherList, function (dispetcher) {
-                    return _c(
+            }),
+            _vm._v(" "),
+            _vm.isDispetcherListOpen
+              ? _c(
+                  "ul",
+                  { staticClass: "relation-form__drop-list" },
+                  [
+                    _c(
                       "li",
                       {
-                        key: dispetcher.id,
-                        staticClass: "relation-form__drop-item",
-                        on: {
-                          click: function ($event) {
-                            return _vm.selectDispetcher(dispetcher)
+                        staticClass: "closeBtn",
+                        on: { click: _vm.toggleDispetcherList },
+                      },
+                      [_vm._v("x")]
+                    ),
+                    _vm._v(" "),
+                    _vm._l(_vm.dispetcherList, function (dispetcher) {
+                      return _c(
+                        "li",
+                        {
+                          key: dispetcher.id,
+                          staticClass: "relation-form__drop-item",
+                          on: {
+                            click: function ($event) {
+                              return _vm.selectDispetcher(dispetcher)
+                            },
                           },
                         },
-                      },
-                      [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(dispetcher.last_name) +
-                            " " +
-                            _vm._s(dispetcher.first_name) +
-                            " " +
-                            _vm._s(dispetcher.middle_name) +
-                            "\n                "
-                        ),
-                      ]
-                    )
-                  }),
-                ],
-                2
-              )
-            : _vm._e(),
-        ]),
-      ]),
+                        [
+                          _vm._v(
+                            "\n                    " +
+                              _vm._s(dispetcher.last_name) +
+                              " " +
+                              _vm._s(dispetcher.first_name) +
+                              " " +
+                              _vm._s(dispetcher.middle_name) +
+                              "\n                "
+                          ),
+                        ]
+                      )
+                    }),
+                  ],
+                  2
+                )
+              : _vm._e(),
+          ]),
+        ],
+        1
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "app-btn-group" }, [
         _c(

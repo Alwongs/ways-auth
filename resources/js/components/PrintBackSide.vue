@@ -1,6 +1,7 @@
 <template>
     <div class="back-side-list-of-paper print-back">
-        <header class="print-header"></header>
+        <div class="horizontal-devider"></div>
+        <!-- <header class="print-header-back"></header> -->
         <div class="document-back-side">
             <div class="back-side-top-devider"></div>
             <div class="back-side-top-label">Оборотная сторона</div>
@@ -105,20 +106,36 @@ $border-bold: 2.5px;
     border-width: $top $right $bottom $left; 
 }
 .back-side-list-of-paper {
+    display: flex;
+    justify-content: flex-end;
     box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);  
-    width: fit-content;
+    width: 1200px;
     margin: 0 auto;
 }
 .align-button {
     margin: 0 auto;
 }
 
+
+
 // back side of document
+// .horizontal-devider {
+//     border: 3px solid red;
+//     background-color: rgb(135, 72, 40);
+//     height: 734px;
+//     width: 450px;
+// }
+.print-header-back {
+    background-color: rgba(90, 140, 162, 0.454);
+    height: 10px;
+
+}
 .document-back-side {
     position: relative;
     background-color: rgb(255, 255, 255); 
     color: black;
-    width: 550px;
+    width: 540px;
+    margin-left: 570px;
     height: 734px;
     padding: 0 12px; 
     img {
