@@ -338,20 +338,26 @@ $border-bold: 2.5px;
     margin-bottom: 16px;
 }
 .print-header {
-    height: 60px;
-    width: 600px;
+    border: 2px solid black;
+    background-color: rgba(212, 138, 138, 0.546);    
+    // height: 60px;
+    height: 20px;
+    width: 550px;
 }
 .print-footer {
+    border: 2px solid black;
+    background-color: rgba(212, 138, 138, 0.546);
     height: 20px;
-    width: 600px;
+    width: 550px;
 }
 .document {
-    margin-left: 60px;
+    margin-left: 40px; // левый отступ документа
     background-color: rgba(255, 255, 255, 1);     
     color: black;
     width: 526px;
     height: 734px;
 }
+
 // top-block
 .stamp-block {
     display: flex;
