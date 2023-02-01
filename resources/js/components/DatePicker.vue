@@ -1,10 +1,22 @@
 <template>
-    <div class="relation-form__item-date">
-        <div class="relation-form__item">
-            <label for="">дата выезда: </label>
-            <input v-model="day" type="text" class="relation-form__item-day">
-            <input v-model="month" type="text" class="relation-form__item-month">
-            <input v-model="year" type="text" class="relation-form__item-year">
+    <div class="date-picker">
+        <div class="date-picker__day">
+            <input v-model="day" type="text" @click="toggleDayList">   
+            <ul v-if="isDayListOpen" class="date-picker__drop-day">
+                <li v-for="n in 31" :key="n" @click="selectDay(n)">{{ n }}</li>
+            </ul>         
+        </div>
+        <div class="date-picker__month">
+            <input v-model="month" type="text" @click="toggleMonthList">
+            <ul v-if="isMonthListOpen" class="date-picker__drop-month">
+                <li v-for="month in monthList" :key="month" @click="selectMonth(month)">{{ month }}</li>
+            </ul>             
+        </div>
+        <div class="date-picker__year">
+            <input v-model="year" type="text" @click="toggleYearList">
+            <ul v-if="isYearListOpen" class="date-picker__drop-year">
+                <li v-for="year in yearList" :key="year" @click="selectYear(year)">{{ year }}</li>
+            </ul>             
         </div>
     </div>  
 </template>
@@ -14,10 +26,68 @@ export default {
     name: 'DatePicker',
     data() {
         return {
+            isDayListOpen: false,
+            isMonthListOpen: false,
+            isYearListOpen: false,
+
+            monthList: [
+                'Января',
+                'Февраля',
+                'Марта',
+                'Апреля',
+                'Мая',
+                'Июня',
+                'Июля',
+                'Августа',
+                'Сентября',
+                'Октября',
+                'Ноября',
+                'Декабря'
+            ],
+            yearList: [
+                '2023',
+                '2024',
+                '2025',
+                '2026',
+                '2027',
+                '2028',
+                '2029',
+            ],
+
             day: '',
             month: '',
             year: ''
         }
+    },
+    methods: {
+        toggleDayList() {
+            this.isDayListOpen = !this.isDayListOpen;
+            this.isMonthListOpen = false;  
+            this.isYearListOpen = false;                      
+        },
+        toggleMonthList() {
+            this.isMonthListOpen = !this.isMonthListOpen;
+            this.isDayListOpen = false;  
+            this.isYearListOpen = false;  
+        },
+        toggleYearList() {
+            this.isYearListOpen = !this.isYearListOpen; 
+            this.isDayListOpen = false; 
+            this.isMonthListOpen = false;  
+        },
+
+        selectDay(day) {
+            this.day = day;
+            this.isDayListOpen = false;            
+        },
+        selectMonth(month) {
+            this.month = month;
+            this.isMonthListOpen = false;            
+        },
+        selectYear(year) {
+            this.year = year;
+            this.isYearListOpen = false;            
+        },
     }
 }
 </script>
@@ -27,68 +97,56 @@ export default {
 $bg-color: rgb(214, 214, 214);
 $content-color: rgb(0, 76, 143);
 
-.relation-form {
-    border: 1px solid rgb(179, 179, 179);
-    width: 100%;
-    border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 16px;  
-    label {
-        font-size: 13px;
-        flex: 90px 0 0; 
-        margin-right: 8px;    
-    } 
-    input {
-        height: 30px;
-        padding: 0 8px;
-        margin-right: 8px;
-        font-size: 15px;
-        text-align: center;
-        border-radius: 4px; 
-        border: none; 
-        color: $content-color;      
-    }
-    &__item {
-        position: relative;
-        margin-bottom: 12px;
-        display: flex;
-        // justify-content: flex-end;
-        align-items: center;
-    }
-    &__item-date {
+.date-picker {
+    display: flex;
 
-    }
-    &__item-day {
-        border: 1px solid blue;
+    &__day {
         width: 40px;
         margin-right: 8px;
-        input {
-            width: 100%;
-        }
     }
-    &__select-day {
-        background-color: rgb(185, 230, 244);
-        height: 100px;
+    &__month {
+        width: 100px;
+        margin-right: 8px;
+    }  
+    &__year {
+        width: 60px;
+    }
+
+    &__drop-day {
+        width: 55px;
+    }
+    &__drop-month {
+        width: 115px;
+    }  
+    &__drop-year {
+        width: 75px;
+    }    
+    input {
+        width: 100%;
+        height: 32px;
+        font-size: 16px;   
+        color: $content-color;
+        text-align: center; 
+        border-radius: 4px;          
+        border: none; 
+        outline: none;
+    }
+    ul {
         position: absolute;
         z-index: 2;
-        width: 40px;
+        background-color: #fff;
+        box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);        
 
-    }
-    &__item-month {
-        border: 1px solid blue;        
-        width: 100px;
         text-align: center;
-        margin-right: 8px;
-        input {
-            width: 100%;
-        }        
+        color: $content-color;
+        height: 150px;
+        overflow: hidden;
+        overflow-y: scroll;
     }
-    &__item-year {
-        border: 1px solid blue;        
-        width: 60px;
-        input {
-            width: 100%;
-        }        
+    li:hover {
+        background-color: rgb(150, 189, 213);
+        color: white;
+        cursor: pointer;
     }
 }
 </style>

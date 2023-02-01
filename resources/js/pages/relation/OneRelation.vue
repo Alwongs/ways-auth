@@ -49,33 +49,22 @@
         </div>    
 
         <div class="relation-form">
-            <date-picker />
-
-
-
-
-
-
 
             <div class="relation-form__item waybill">
                 <label for="">№ п. листа: </label>
                 <input v-model="waybillNumber" type="text">
             </div>
-            <div class="relation-form__item-date">
 
-                <div class="relation-form__item">
-                    <label for="">дата заезда: </label>
-                    <input v-model="dateFrom.day" type="text" class="relation-form__item-day">
-                    <input v-model="dateFrom.month" type="text" class="relation-form__item-month">
-                    <input v-model="dateFrom.year" type="text" class="relation-form__item-year">
-                </div>
-                <div class="relation-form__item">
-                    <label for="">дата заезда: </label>
-                    <input v-model="dateTo.day" type="text" class="relation-form__item-day">
-                    <input v-model="dateTo.month" type="text" class="relation-form__item-month">
-                    <input v-model="dateTo.year" type="text" class="relation-form__item-year">
-                </div>
+
+            <div class="relation-form__item">
+                <label for="">Дата выезда: </label>
+                <date-picker />                
             </div>
+            <div class="relation-form__item">
+                <label for="">Дата заезда: </label>
+                <date-picker />                
+            </div>
+
 
             <div class="relation-form__item mechanic">
                 <label for="">заказчик: </label>
@@ -442,33 +431,7 @@ $content-color: rgb(0, 76, 143);
         // justify-content: flex-end;
         align-items: center;
     }
-    &__item-date {
 
-    }
-    &__item-day {
-        border: 1px solid blue;
-        width: 40px;
-        margin-right: 8px;
-        input {
-            width: 100%;
-        }
-    }
-    &__item-month {
-        border: 1px solid blue;        
-        width: 100px;
-        text-align: center;
-        margin-right: 8px;
-        input {
-            width: 100%;
-        }        
-    }
-    &__item-year {
-        border: 1px solid blue;        
-        width: 60px;
-        input {
-            width: 100%;
-        }        
-    }
     &__mechanic {
         width: 350px;
         letter-spacing: 1px;

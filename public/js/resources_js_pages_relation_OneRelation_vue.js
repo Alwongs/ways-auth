@@ -22,15 +22,61 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'DatePicker',
   data: function data() {
     return {
+      isDayListOpen: false,
+      isMonthListOpen: false,
+      isYearListOpen: false,
+      monthList: ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'],
+      yearList: ['2023', '2024', '2025', '2026', '2027', '2028', '2029'],
       day: '',
       month: '',
       year: ''
     };
+  },
+  methods: {
+    toggleDayList: function toggleDayList() {
+      this.isDayListOpen = !this.isDayListOpen;
+      this.isMonthListOpen = false;
+      this.isYearListOpen = false;
+    },
+    toggleMonthList: function toggleMonthList() {
+      this.isMonthListOpen = !this.isMonthListOpen;
+      this.isDayListOpen = false;
+      this.isYearListOpen = false;
+    },
+    toggleYearList: function toggleYearList() {
+      this.isYearListOpen = !this.isYearListOpen;
+      this.isDayListOpen = false;
+      this.isMonthListOpen = false;
+    },
+    selectDay: function selectDay(day) {
+      this.day = day;
+      this.isDayListOpen = false;
+    },
+    selectMonth: function selectMonth(month) {
+      this.month = month;
+      this.isMonthListOpen = false;
+    },
+    selectYear: function selectYear(year) {
+      this.year = year;
+      this.isYearListOpen = false;
+    }
   }
 });
 
@@ -620,17 +666,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -838,7 +873,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".relation-form[data-v-fa816ef2] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-fa816ef2] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-fa816ef2] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form__item[data-v-fa816ef2] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__item-day[data-v-fa816ef2] {\n  border: 1px solid blue;\n  width: 40px;\n  margin-right: 8px;\n}\n.relation-form__item-day input[data-v-fa816ef2] {\n  width: 100%;\n}\n.relation-form__select-day[data-v-fa816ef2] {\n  background-color: rgb(185, 230, 244);\n  height: 100px;\n  position: absolute;\n  z-index: 2;\n  width: 40px;\n}\n.relation-form__item-month[data-v-fa816ef2] {\n  border: 1px solid blue;\n  width: 100px;\n  text-align: center;\n  margin-right: 8px;\n}\n.relation-form__item-month input[data-v-fa816ef2] {\n  width: 100%;\n}\n.relation-form__item-year[data-v-fa816ef2] {\n  border: 1px solid blue;\n  width: 60px;\n}\n.relation-form__item-year input[data-v-fa816ef2] {\n  width: 100%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".date-picker[data-v-fa816ef2] {\n  display: flex;\n}\n.date-picker__day[data-v-fa816ef2] {\n  width: 40px;\n  margin-right: 8px;\n}\n.date-picker__month[data-v-fa816ef2] {\n  width: 100px;\n  margin-right: 8px;\n}\n.date-picker__year[data-v-fa816ef2] {\n  width: 60px;\n}\n.date-picker__drop-day[data-v-fa816ef2] {\n  width: 55px;\n}\n.date-picker__drop-month[data-v-fa816ef2] {\n  width: 115px;\n}\n.date-picker__drop-year[data-v-fa816ef2] {\n  width: 75px;\n}\n.date-picker input[data-v-fa816ef2] {\n  width: 100%;\n  height: 32px;\n  font-size: 16px;\n  color: rgb(0, 76, 143);\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  outline: none;\n}\n.date-picker ul[data-v-fa816ef2] {\n  position: absolute;\n  z-index: 2;\n  background-color: #fff;\n  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);\n  text-align: center;\n  color: rgb(0, 76, 143);\n  height: 150px;\n  overflow: hidden;\n  overflow-y: scroll;\n}\n.date-picker li[data-v-fa816ef2]:hover {\n  background-color: rgb(150, 189, 213);\n  color: white;\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -907,7 +942,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".relation[data-v-c7ea9f90] {\n  position: relative;\n  padding: 64px 32px;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-content[data-v-c7ea9f90] {\n  border: 1px solid lightgrey;\n  width: -moz-fit-content;\n  width: fit-content;\n  border-radius: 10px;\n  margin-bottom: 16px;\n}\n.relation-content span[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(0, 76, 143);\n  margin-left: 4px;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__item-day[data-v-c7ea9f90] {\n  border: 1px solid blue;\n  width: 40px;\n  margin-right: 8px;\n}\n.relation-form__item-day input[data-v-c7ea9f90] {\n  width: 100%;\n}\n.relation-form__item-month[data-v-c7ea9f90] {\n  border: 1px solid blue;\n  width: 100px;\n  text-align: center;\n  margin-right: 8px;\n}\n.relation-form__item-month input[data-v-c7ea9f90] {\n  width: 100%;\n}\n.relation-form__item-year[data-v-c7ea9f90] {\n  border: 1px solid blue;\n  width: 60px;\n}\n.relation-form__item-year input[data-v-c7ea9f90] {\n  width: 100%;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".relation[data-v-c7ea9f90] {\n  position: relative;\n  padding: 64px 32px;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-content[data-v-c7ea9f90] {\n  border: 1px solid lightgrey;\n  width: -moz-fit-content;\n  width: fit-content;\n  border-radius: 10px;\n  margin-bottom: 16px;\n}\n.relation-content span[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(0, 76, 143);\n  margin-left: 4px;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1377,10 +1412,8 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relation-form__item-date" }, [
-    _c("div", { staticClass: "relation-form__item" }, [
-      _c("label", { attrs: { for: "" } }, [_vm._v("дата выезда: ")]),
-      _vm._v(" "),
+  return _c("div", { staticClass: "date-picker" }, [
+    _c("div", { staticClass: "date-picker__day" }, [
       _c("input", {
         directives: [
           {
@@ -1390,10 +1423,10 @@ var render = function () {
             expression: "day",
           },
         ],
-        staticClass: "relation-form__item-day",
         attrs: { type: "text" },
         domProps: { value: _vm.day },
         on: {
+          click: _vm.toggleDayList,
           input: function ($event) {
             if ($event.target.composing) {
               return
@@ -1403,6 +1436,30 @@ var render = function () {
         },
       }),
       _vm._v(" "),
+      _vm.isDayListOpen
+        ? _c(
+            "ul",
+            { staticClass: "date-picker__drop-day" },
+            _vm._l(31, function (n) {
+              return _c(
+                "li",
+                {
+                  key: n,
+                  on: {
+                    click: function ($event) {
+                      return _vm.selectDay(n)
+                    },
+                  },
+                },
+                [_vm._v(_vm._s(n))]
+              )
+            }),
+            0
+          )
+        : _vm._e(),
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "date-picker__month" }, [
       _c("input", {
         directives: [
           {
@@ -1412,10 +1469,10 @@ var render = function () {
             expression: "month",
           },
         ],
-        staticClass: "relation-form__item-month",
         attrs: { type: "text" },
         domProps: { value: _vm.month },
         on: {
+          click: _vm.toggleMonthList,
           input: function ($event) {
             if ($event.target.composing) {
               return
@@ -1425,6 +1482,30 @@ var render = function () {
         },
       }),
       _vm._v(" "),
+      _vm.isMonthListOpen
+        ? _c(
+            "ul",
+            { staticClass: "date-picker__drop-month" },
+            _vm._l(_vm.monthList, function (month) {
+              return _c(
+                "li",
+                {
+                  key: month,
+                  on: {
+                    click: function ($event) {
+                      return _vm.selectMonth(month)
+                    },
+                  },
+                },
+                [_vm._v(_vm._s(month))]
+              )
+            }),
+            0
+          )
+        : _vm._e(),
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "date-picker__year" }, [
       _c("input", {
         directives: [
           {
@@ -1434,10 +1515,10 @@ var render = function () {
             expression: "year",
           },
         ],
-        staticClass: "relation-form__item-year",
         attrs: { type: "text" },
         domProps: { value: _vm.year },
         on: {
+          click: _vm.toggleYearList,
           input: function ($event) {
             if ($event.target.composing) {
               return
@@ -1446,6 +1527,28 @@ var render = function () {
           },
         },
       }),
+      _vm._v(" "),
+      _vm.isYearListOpen
+        ? _c(
+            "ul",
+            { staticClass: "date-picker__drop-year" },
+            _vm._l(_vm.yearList, function (year) {
+              return _c(
+                "li",
+                {
+                  key: year,
+                  on: {
+                    click: function ($event) {
+                      return _vm.selectYear(year)
+                    },
+                  },
+                },
+                [_vm._v(_vm._s(year))]
+              )
+            }),
+            0
+          )
+        : _vm._e(),
     ]),
   ])
 }
@@ -2576,375 +2679,248 @@ var render = function () {
         ]),
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "relation-form" },
-        [
-          _c("date-picker"),
+      _c("div", { staticClass: "relation-form" }, [
+        _c("div", { staticClass: "relation-form__item waybill" }, [
+          _c("label", { attrs: { for: "" } }, [_vm._v("№ п. листа: ")]),
           _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item waybill" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("№ п. листа: ")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.waybillNumber,
-                  expression: "waybillNumber",
-                },
-              ],
-              attrs: { type: "text" },
-              domProps: { value: _vm.waybillNumber },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.waybillNumber = $event.target.value
-                },
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.waybillNumber,
+                expression: "waybillNumber",
               },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item-date" }, [
-            _c("div", { staticClass: "relation-form__item" }, [
-              _c("label", { attrs: { for: "" } }, [_vm._v("дата заезда: ")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.dateFrom.day,
-                    expression: "dateFrom.day",
-                  },
-                ],
-                staticClass: "relation-form__item-day",
-                attrs: { type: "text" },
-                domProps: { value: _vm.dateFrom.day },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.dateFrom, "day", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.dateFrom.month,
-                    expression: "dateFrom.month",
-                  },
-                ],
-                staticClass: "relation-form__item-month",
-                attrs: { type: "text" },
-                domProps: { value: _vm.dateFrom.month },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.dateFrom, "month", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.dateFrom.year,
-                    expression: "dateFrom.year",
-                  },
-                ],
-                staticClass: "relation-form__item-year",
-                attrs: { type: "text" },
-                domProps: { value: _vm.dateFrom.year },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.dateFrom, "year", $event.target.value)
-                  },
-                },
-              }),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "relation-form__item" }, [
-              _c("label", { attrs: { for: "" } }, [_vm._v("дата заезда: ")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.dateTo.day,
-                    expression: "dateTo.day",
-                  },
-                ],
-                staticClass: "relation-form__item-day",
-                attrs: { type: "text" },
-                domProps: { value: _vm.dateTo.day },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.dateTo, "day", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.dateTo.month,
-                    expression: "dateTo.month",
-                  },
-                ],
-                staticClass: "relation-form__item-month",
-                attrs: { type: "text" },
-                domProps: { value: _vm.dateTo.month },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.dateTo, "month", $event.target.value)
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.dateTo.year,
-                    expression: "dateTo.year",
-                  },
-                ],
-                staticClass: "relation-form__item-year",
-                attrs: { type: "text" },
-                domProps: { value: _vm.dateTo.year },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.dateTo, "year", $event.target.value)
-                  },
-                },
-              }),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item mechanic" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("заказчик: ")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.customer,
-                  expression: "customer",
-                },
-              ],
-              staticClass: "relation-form__customer",
-              attrs: { type: "text" },
-              domProps: { value: _vm.customer },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.customer = $event.target.value
-                },
+            ],
+            attrs: { type: "text" },
+            domProps: { value: _vm.waybillNumber },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.waybillNumber = $event.target.value
               },
-            }),
-          ]),
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "relation-form__item" },
+          [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Дата выезда: ")]),
+            _vm._v(" "),
+            _c("date-picker"),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "relation-form__item" },
+          [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Дата заезда: ")]),
+            _vm._v(" "),
+            _c("date-picker"),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "relation-form__item mechanic" }, [
+          _c("label", { attrs: { for: "" } }, [_vm._v("заказчик: ")]),
           _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item mechanic" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("адрес подачи: ")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.address,
-                  expression: "address",
-                },
-              ],
-              staticClass: "relation-form__address",
-              attrs: { type: "text" },
-              domProps: { value: _vm.address },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.address = $event.target.value
-                },
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.customer,
+                expression: "customer",
               },
-            }),
-          ]),
+            ],
+            staticClass: "relation-form__customer",
+            attrs: { type: "text" },
+            domProps: { value: _vm.customer },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.customer = $event.target.value
+              },
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "relation-form__item mechanic" }, [
+          _c("label", { attrs: { for: "" } }, [_vm._v("адрес подачи: ")]),
           _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item mechanic" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("механик: ")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.mechanicFullName,
-                  expression: "mechanicFullName",
-                },
-              ],
-              staticClass: "relation-form__mechanic",
-              attrs: { type: "text", readonly: "" },
-              domProps: { value: _vm.mechanicFullName },
-              on: {
-                click: _vm.toggleMechanicList,
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.mechanicFullName = $event.target.value
-                },
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.address,
+                expression: "address",
               },
-            }),
-            _vm._v(" "),
-            _vm.isMechanicListOpen
-              ? _c(
-                  "ul",
-                  { staticClass: "relation-form__drop-list" },
-                  [
-                    _c(
+            ],
+            staticClass: "relation-form__address",
+            attrs: { type: "text" },
+            domProps: { value: _vm.address },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.address = $event.target.value
+              },
+            },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "relation-form__item mechanic" }, [
+          _c("label", { attrs: { for: "" } }, [_vm._v("механик: ")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.mechanicFullName,
+                expression: "mechanicFullName",
+              },
+            ],
+            staticClass: "relation-form__mechanic",
+            attrs: { type: "text", readonly: "" },
+            domProps: { value: _vm.mechanicFullName },
+            on: {
+              click: _vm.toggleMechanicList,
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.mechanicFullName = $event.target.value
+              },
+            },
+          }),
+          _vm._v(" "),
+          _vm.isMechanicListOpen
+            ? _c(
+                "ul",
+                { staticClass: "relation-form__drop-list" },
+                [
+                  _c(
+                    "li",
+                    {
+                      staticClass: "closeBtn",
+                      on: { click: _vm.toggleMechanicList },
+                    },
+                    [_vm._v("x")]
+                  ),
+                  _vm._v(" "),
+                  _vm._l(_vm.mechanicList, function (mechanic) {
+                    return _c(
                       "li",
                       {
-                        staticClass: "closeBtn",
-                        on: { click: _vm.toggleMechanicList },
-                      },
-                      [_vm._v("x")]
-                    ),
-                    _vm._v(" "),
-                    _vm._l(_vm.mechanicList, function (mechanic) {
-                      return _c(
-                        "li",
-                        {
-                          key: mechanic.id,
-                          staticClass: "relation-form__drop-item",
-                          on: {
-                            click: function ($event) {
-                              return _vm.selectMechanic(mechanic)
-                            },
+                        key: mechanic.id,
+                        staticClass: "relation-form__drop-item",
+                        on: {
+                          click: function ($event) {
+                            return _vm.selectMechanic(mechanic)
                           },
                         },
-                        [
-                          _vm._v(
-                            "\n                    " +
-                              _vm._s(mechanic.last_name) +
-                              " " +
-                              _vm._s(mechanic.first_name) +
-                              " " +
-                              _vm._s(mechanic.middle_name) +
-                              "\n                "
-                          ),
-                        ]
-                      )
-                    }),
-                  ],
-                  2
-                )
-              : _vm._e(),
-          ]),
+                      },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(mechanic.last_name) +
+                            " " +
+                            _vm._s(mechanic.first_name) +
+                            " " +
+                            _vm._s(mechanic.middle_name) +
+                            "\n                "
+                        ),
+                      ]
+                    )
+                  }),
+                ],
+                2
+              )
+            : _vm._e(),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "relation-form__item dispetcher" }, [
+          _c("label", { attrs: { for: "" } }, [_vm._v("диспетчер: ")]),
           _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item dispetcher" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("диспетчер: ")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.dispetcherFullName,
-                  expression: "dispetcherFullName",
-                },
-              ],
-              staticClass: "relation-form__mechanic",
-              attrs: { type: "text", readonly: "" },
-              domProps: { value: _vm.dispetcherFullName },
-              on: {
-                click: _vm.toggleDispetcherList,
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.dispetcherFullName = $event.target.value
-                },
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.dispetcherFullName,
+                expression: "dispetcherFullName",
               },
-            }),
-            _vm._v(" "),
-            _vm.isDispetcherListOpen
-              ? _c(
-                  "ul",
-                  { staticClass: "relation-form__drop-list" },
-                  [
-                    _c(
+            ],
+            staticClass: "relation-form__mechanic",
+            attrs: { type: "text", readonly: "" },
+            domProps: { value: _vm.dispetcherFullName },
+            on: {
+              click: _vm.toggleDispetcherList,
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.dispetcherFullName = $event.target.value
+              },
+            },
+          }),
+          _vm._v(" "),
+          _vm.isDispetcherListOpen
+            ? _c(
+                "ul",
+                { staticClass: "relation-form__drop-list" },
+                [
+                  _c(
+                    "li",
+                    {
+                      staticClass: "closeBtn",
+                      on: { click: _vm.toggleDispetcherList },
+                    },
+                    [_vm._v("x")]
+                  ),
+                  _vm._v(" "),
+                  _vm._l(_vm.dispetcherList, function (dispetcher) {
+                    return _c(
                       "li",
                       {
-                        staticClass: "closeBtn",
-                        on: { click: _vm.toggleDispetcherList },
-                      },
-                      [_vm._v("x")]
-                    ),
-                    _vm._v(" "),
-                    _vm._l(_vm.dispetcherList, function (dispetcher) {
-                      return _c(
-                        "li",
-                        {
-                          key: dispetcher.id,
-                          staticClass: "relation-form__drop-item",
-                          on: {
-                            click: function ($event) {
-                              return _vm.selectDispetcher(dispetcher)
-                            },
+                        key: dispetcher.id,
+                        staticClass: "relation-form__drop-item",
+                        on: {
+                          click: function ($event) {
+                            return _vm.selectDispetcher(dispetcher)
                           },
                         },
-                        [
-                          _vm._v(
-                            "\n                    " +
-                              _vm._s(dispetcher.last_name) +
-                              " " +
-                              _vm._s(dispetcher.first_name) +
-                              " " +
-                              _vm._s(dispetcher.middle_name) +
-                              "\n                "
-                          ),
-                        ]
-                      )
-                    }),
-                  ],
-                  2
-                )
-              : _vm._e(),
-          ]),
-        ],
-        1
-      ),
+                      },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(dispetcher.last_name) +
+                            " " +
+                            _vm._s(dispetcher.first_name) +
+                            " " +
+                            _vm._s(dispetcher.middle_name) +
+                            "\n                "
+                        ),
+                      ]
+                    )
+                  }),
+                ],
+                2
+              )
+            : _vm._e(),
+        ]),
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "app-btn-group" }, [
         _c(
