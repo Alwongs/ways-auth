@@ -1,19 +1,19 @@
 <template>
     <div class="date-picker">
-        <div class="date-picker__day">
-            <input v-model="day" type="text" @click="toggleDayList">   
+        <div class="date-picker__item date-picker__day">
+            <input v-model="day" type="text" @click="toggleDayList" placeholder="День">   
             <ul v-if="isDayListOpen" class="date-picker__drop-day">
                 <li v-for="n in 31" :key="n" @click="selectDay(n)">{{ n }}</li>
             </ul>         
         </div>
-        <div class="date-picker__month">
-            <input v-model="month" type="text" @click="toggleMonthList">
+        <div class="date-picker__item date-picker__month">
+            <input v-model="month" type="text" @click="toggleMonthList" placeholder="Месяц">
             <ul v-if="isMonthListOpen" class="date-picker__drop-month">
                 <li v-for="month in monthList" :key="month" @click="selectMonth(month)">{{ month }}</li>
             </ul>             
         </div>
-        <div class="date-picker__year">
-            <input v-model="year" type="text" @click="toggleYearList">
+        <div class="date-picker__item date-picker__year">
+            <input v-model="year" type="text" @click="toggleYearList" placeholder="Год">
             <ul v-if="isYearListOpen" class="date-picker__drop-year">
                 <li v-for="year in yearList" :key="year" @click="selectYear(year)">{{ year }}</li>
             </ul>             
@@ -58,8 +58,9 @@ export default {
             month: '',
             year: ''
         }
-    },
+    }, 
     methods: {
+
         toggleDayList() {
             this.isDayListOpen = !this.isDayListOpen;
             this.isMonthListOpen = false;  
@@ -78,14 +79,17 @@ export default {
 
         selectDay(day) {
             this.day = day;
+            this.$emit('updateDay', this.day)
             this.isDayListOpen = false;            
         },
         selectMonth(month) {
             this.month = month;
+            this.$emit('updateMonth', this.month)            
             this.isMonthListOpen = false;            
         },
         selectYear(year) {
             this.year = year;
+            this.$emit('updateYear', this.year)              
             this.isYearListOpen = false;            
         },
     }
@@ -99,14 +103,14 @@ $content-color: rgb(0, 76, 143);
 
 .date-picker {
     display: flex;
-
+    &__item {
+        margin-right: 8px;
+    }
     &__day {
         width: 40px;
-        margin-right: 8px;
     }
     &__month {
         width: 100px;
-        margin-right: 8px;
     }  
     &__year {
         width: 60px;
@@ -130,6 +134,9 @@ $content-color: rgb(0, 76, 143);
         border-radius: 4px;          
         border: none; 
         outline: none;
+        &::placeholder {
+            font-size: 12px;
+        }
     }
     ul {
         position: absolute;

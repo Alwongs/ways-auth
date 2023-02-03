@@ -109,7 +109,7 @@ $border-bold: 2.5px;
     display: flex;
     justify-content: flex-end;
     box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);  
-    width: 1200px;
+    width: 1270px;
     margin: 0 auto;
 }
 .align-button {

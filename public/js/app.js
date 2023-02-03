@@ -5334,6 +5334,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5612,6 +5613,14 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     name: 'add-relation',
     component: function component() {
       return __webpack_require__.e(/*! import() */ "resources_js_pages_relation_AddRelation_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/relation/AddRelation.vue */ "./resources/js/pages/relation/AddRelation.vue"));
+    }
+  },
+  // -------------- journal -----------------
+  {
+    path: '/journal',
+    name: 'journal',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_pages_journal_Journal_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/journal/Journal.vue */ "./resources/js/pages/journal/Journal.vue"));
     }
   }]
 });
@@ -28987,6 +28996,17 @@ var render = function () {
                 )
               : _vm._e(),
             _vm._v(" "),
+            _vm.token
+              ? _c(
+                  "router-link",
+                  {
+                    staticClass: "nav__item",
+                    attrs: { to: { name: "journal" } },
+                  },
+                  [_vm._v("Журнал")]
+                )
+              : _vm._e(),
+            _vm._v(" "),
             !_vm.token
               ? _c(
                   "router-link",
@@ -44447,7 +44467,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_pages_Login_vue":1,"resources_js_pages_Register_vue":1,"resources_js_pages_Home_vue":1,"resources_js_pages_car_CarList_vue":1,"resources_js_pages_car_CarItem_vue":1,"resources_js_pages_car_CarAdd_vue":1,"resources_js_pages_car_CarEdit_vue":1,"resources_js_pages_driver_DriverList_vue":1,"resources_js_pages_driver_DriverItem_vue":1,"resources_js_pages_driver_DriverAdd_vue":1,"resources_js_pages_driver_DriverEdit_vue":1,"resources_js_pages_relation_RelationList_vue":1,"resources_js_pages_relation_OneRelation_vue":1,"resources_js_pages_relation_AddRelation_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_pages_Login_vue":1,"resources_js_pages_Register_vue":1,"resources_js_pages_Home_vue":1,"resources_js_pages_car_CarList_vue":1,"resources_js_pages_car_CarItem_vue":1,"resources_js_pages_car_CarAdd_vue":1,"resources_js_pages_car_CarEdit_vue":1,"resources_js_pages_driver_DriverList_vue":1,"resources_js_pages_driver_DriverItem_vue":1,"resources_js_pages_driver_DriverAdd_vue":1,"resources_js_pages_driver_DriverEdit_vue":1,"resources_js_pages_relation_RelationList_vue":1,"resources_js_pages_relation_OneRelation_vue":1,"resources_js_pages_relation_AddRelation_vue":1,"resources_js_pages_journal_Journal_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

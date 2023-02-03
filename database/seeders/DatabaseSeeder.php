@@ -156,5 +156,27 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => now()
             ],
         ]);
+
+        \DB::table('waybills')->insert([
+            [
+                'number' => '001',
+                'date' => '01.01.2023',
+                'full_name' => 'Мартынов Александр Владимирович',
+                'person_number' => '10133',
+                'car_number' => 'К 839 РН 82',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'number' => '002',
+                'date' => '01.01.2023',
+                'full_name' => 'Исподников Дмитрий Валерьевич',
+                'person_number' => '1256',
+                'car_number' => 'К 241 РН 73',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+
+        ]);        
     }
 }

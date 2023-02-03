@@ -6,6 +6,7 @@
                 <router-link class="nav__item" v-if="token" :to="{ name: 'cars' }">Автомобили</router-link>
                 <router-link class="nav__item" v-if="token" :to="{ name: 'drivers' }">Водители</router-link>
                 <router-link class="nav__item" v-if="token" :to="{ name: 'relations' }">Авто-Водитель</router-link>
+                <router-link class="nav__item" v-if="token" :to="{ name: 'journal' }">Журнал</router-link>
                 
                 <router-link class="nav__item" v-if="!token" :to="{ name: 'user.login' }">Вход</router-link>
                 <router-link class="nav__item" v-if="!token" :to="{ name: 'user.register' }">Регистрация</router-link>

@@ -34,8 +34,8 @@ __webpack_require__.r(__webpack_exports__);
   name: "Login",
   data: function data() {
     return {
-      email: 'alwong@ya.ru',
-      password: '12345678'
+      email: '',
+      password: ''
     };
   },
   methods: {

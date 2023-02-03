@@ -8,6 +8,7 @@ use App\Http\Controllers\GetController;
 use App\Http\Controllers\Api\V1\CarController;
 use App\Http\Controllers\Api\V1\DriverController;
 use App\Http\Controllers\Api\V1\CarDriverController;
+use App\Http\Controllers\Api\V1\WaybillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::group(['middleware' => 'auth:sanctum'], function() {
         'cars' => CarController::class,
         'drivers' => DriverController::class,
         'relations' => CarDriverController::class,                
+        'waybills' => WaybillController::class,                
     ]);
 });
 

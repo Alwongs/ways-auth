@@ -87,6 +87,13 @@ const router = new VueRouter({
             path: '/add-relation',
             name: 'add-relation',
             component: () => import('./pages/relation/AddRelation.vue'),
+        },     
+        
+        // -------------- journal -----------------
+        {
+            path: '/journal',
+            name: 'journal',
+            component: () => import('./pages/journal/Journal.vue'),            
         }        
     ]
 })

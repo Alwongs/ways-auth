@@ -58,11 +58,23 @@
 
             <div class="relation-form__item">
                 <label for="">Дата выезда: </label>
-                <date-picker />                
+                <date-picker 
+                    @updateDay="updateDayFrom"
+                    @updateMonth="updateMonthFrom"
+                    @updateYear="updateYearFrom"                  
+                />                
             </div>
+
             <div class="relation-form__item">
                 <label for="">Дата заезда: </label>
-                <date-picker />                
+                <date-picker 
+                    v-if="!isSameDate"
+                    @updateDay="updateDayTo"
+                    @updateMonth="updateMonthTo"
+                    @updateYear="updateYearTo"
+                />  
+                <a v-if="!isSameDate" href="#" @click="makeSameDate">Заезд в тот же день</a>              
+                <a v-if="isSameDate" href="#" @click="makeDiffDate">Добавить дату заезда</a>              
             </div>
 
 
@@ -178,6 +190,7 @@ export default {
             isPrintBackOpen: false,
             isMechanicListOpen: false,
             isDispetcherListOpen: false,
+            isSameDate: false,
 
             relation: {},
             car: {},
@@ -186,16 +199,18 @@ export default {
             dispetcherList: [],
 
             waybillNumber: '',
+
             dateFrom: {
-                day: '25',
-                month: 'Октября',
-                year: '2023'
+                day: '',
+                month: '',
+                year: ''
             },
             dateTo: {
-                day: '27',
-                month: 'Декабря',
-                year: '2024'
+                day: '',
+                month: '',
+                year: ''
             },
+
             customer: 'ООО АК "Волга-Днепр"',
             address: 'г. Ульяновск, ул. Карбышева, д. 14',            
             selectedMechanic: {
@@ -224,7 +239,38 @@ export default {
             return '';
         }
     },    
-    methods: {      
+    methods: {    
+        
+        makeSameDate() {
+            this.dateTo = this.dateFrom;
+            this.isSameDate = true;
+        },
+        makeDiffDate() {
+            this.dateTo = {};
+            this.isSameDate = false;
+        },
+
+        updateDayFrom(day) {
+            this.dateFrom.day = day
+        },
+        updateMonthFrom(month) {
+            this.dateFrom.month = month
+        },
+        updateYearFrom(year) {
+            this.dateFrom.year = year
+        },
+
+        updateDayTo(day) {
+            this.dateTo.day = day
+        },
+        updateMonthTo(month) {
+            this.dateTo.month = month
+        },
+        updateYearTo(year) {
+            this.dateTo.year = year
+        },
+
+
         goBack() {
             this.$router.go(-1);
         },
@@ -395,7 +441,6 @@ $content-color: rgb(0, 76, 143);
     border: 1px solid lightgrey;
     width: fit-content;
     border-radius: 10px;
-    // padding: 16px;
     margin-bottom: 16px;
     span {
         font-weight: 700;
@@ -424,11 +469,13 @@ $content-color: rgb(0, 76, 143);
         border: none; 
         color: $content-color;      
     }
+    a {
+        color: green;
+    }
     &__item {
         position: relative;
         margin-bottom: 12px;
         display: flex;
-        // justify-content: flex-end;
         align-items: center;
     }
 

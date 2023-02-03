@@ -67,14 +67,17 @@ __webpack_require__.r(__webpack_exports__);
     },
     selectDay: function selectDay(day) {
       this.day = day;
+      this.$emit('updateDay', this.day);
       this.isDayListOpen = false;
     },
     selectMonth: function selectMonth(month) {
       this.month = month;
+      this.$emit('updateMonth', this.month);
       this.isMonthListOpen = false;
     },
     selectYear: function selectYear(year) {
       this.year = year;
+      this.$emit('updateYear', this.year);
       this.isYearListOpen = false;
     }
   }
@@ -666,6 +669,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -686,6 +701,7 @@ __webpack_require__.r(__webpack_exports__);
       isPrintBackOpen: false,
       isMechanicListOpen: false,
       isDispetcherListOpen: false,
+      isSameDate: false,
       relation: {},
       car: {},
       driver: {},
@@ -693,14 +709,14 @@ __webpack_require__.r(__webpack_exports__);
       dispetcherList: [],
       waybillNumber: '',
       dateFrom: {
-        day: '25',
-        month: 'Октября',
-        year: '2023'
+        day: '',
+        month: '',
+        year: ''
       },
       dateTo: {
-        day: '27',
-        month: 'Декабря',
-        year: '2024'
+        day: '',
+        month: '',
+        year: ''
       },
       customer: 'ООО АК "Волга-Днепр"',
       address: 'г. Ульяновск, ул. Карбышева, д. 14',
@@ -731,6 +747,32 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    makeSameDate: function makeSameDate() {
+      this.dateTo = this.dateFrom;
+      this.isSameDate = true;
+    },
+    makeDiffDate: function makeDiffDate() {
+      this.dateTo = {};
+      this.isSameDate = false;
+    },
+    updateDayFrom: function updateDayFrom(day) {
+      this.dateFrom.day = day;
+    },
+    updateMonthFrom: function updateMonthFrom(month) {
+      this.dateFrom.month = month;
+    },
+    updateYearFrom: function updateYearFrom(year) {
+      this.dateFrom.year = year;
+    },
+    updateDayTo: function updateDayTo(day) {
+      this.dateTo.day = day;
+    },
+    updateMonthTo: function updateMonthTo(month) {
+      this.dateTo.month = month;
+    },
+    updateYearTo: function updateYearTo(year) {
+      this.dateTo.year = year;
+    },
     goBack: function goBack() {
       this.$router.go(-1);
     },
@@ -873,7 +915,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".date-picker[data-v-fa816ef2] {\n  display: flex;\n}\n.date-picker__day[data-v-fa816ef2] {\n  width: 40px;\n  margin-right: 8px;\n}\n.date-picker__month[data-v-fa816ef2] {\n  width: 100px;\n  margin-right: 8px;\n}\n.date-picker__year[data-v-fa816ef2] {\n  width: 60px;\n}\n.date-picker__drop-day[data-v-fa816ef2] {\n  width: 55px;\n}\n.date-picker__drop-month[data-v-fa816ef2] {\n  width: 115px;\n}\n.date-picker__drop-year[data-v-fa816ef2] {\n  width: 75px;\n}\n.date-picker input[data-v-fa816ef2] {\n  width: 100%;\n  height: 32px;\n  font-size: 16px;\n  color: rgb(0, 76, 143);\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  outline: none;\n}\n.date-picker ul[data-v-fa816ef2] {\n  position: absolute;\n  z-index: 2;\n  background-color: #fff;\n  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);\n  text-align: center;\n  color: rgb(0, 76, 143);\n  height: 150px;\n  overflow: hidden;\n  overflow-y: scroll;\n}\n.date-picker li[data-v-fa816ef2]:hover {\n  background-color: rgb(150, 189, 213);\n  color: white;\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".date-picker[data-v-fa816ef2] {\n  display: flex;\n}\n.date-picker__item[data-v-fa816ef2] {\n  margin-right: 8px;\n}\n.date-picker__day[data-v-fa816ef2] {\n  width: 40px;\n}\n.date-picker__month[data-v-fa816ef2] {\n  width: 100px;\n}\n.date-picker__year[data-v-fa816ef2] {\n  width: 60px;\n}\n.date-picker__drop-day[data-v-fa816ef2] {\n  width: 55px;\n}\n.date-picker__drop-month[data-v-fa816ef2] {\n  width: 115px;\n}\n.date-picker__drop-year[data-v-fa816ef2] {\n  width: 75px;\n}\n.date-picker input[data-v-fa816ef2] {\n  width: 100%;\n  height: 32px;\n  font-size: 16px;\n  color: rgb(0, 76, 143);\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  outline: none;\n}\n.date-picker input[data-v-fa816ef2]::-moz-placeholder {\n  font-size: 12px;\n}\n.date-picker input[data-v-fa816ef2]::placeholder {\n  font-size: 12px;\n}\n.date-picker ul[data-v-fa816ef2] {\n  position: absolute;\n  z-index: 2;\n  background-color: #fff;\n  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);\n  text-align: center;\n  color: rgb(0, 76, 143);\n  height: 150px;\n  overflow: hidden;\n  overflow-y: scroll;\n}\n.date-picker li[data-v-fa816ef2]:hover {\n  background-color: rgb(150, 189, 213);\n  color: white;\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -896,7 +938,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".back-side-list-of-paper[data-v-dc491a60] {\n  display: flex;\n  justify-content: flex-end;\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  width: 1200px;\n  margin: 0 auto;\n}\n.align-button[data-v-dc491a60] {\n  margin: 0 auto;\n}\n.print-header-back[data-v-dc491a60] {\n  background-color: rgba(90, 140, 162, 0.454);\n  height: 10px;\n}\n.document-back-side[data-v-dc491a60] {\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 540px;\n  margin-left: 570px;\n  height: 734px;\n  padding: 0 12px;\n}\n.document-back-side img[data-v-dc491a60] {\n  width: 100%;\n  height: auto;\n}\n.back-side-top-devider[data-v-dc491a60] {\n  height: 48px;\n}\n.back-side-top-label[data-v-dc491a60] {\n  text-align: end;\n  font-size: 12px;\n  padding-right: 2px;\n}\n.table[data-v-dc491a60] {\n  display: flex;\n  border-color: black;\n  border-style: solid;\n  border-width: 1.5px 1.5px 0 1.5px;\n}\n.table-number[data-v-dc491a60] {\n  flex-basis: 26px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-number__header[data-v-dc491a60] {\n  height: 78px;\n  line-height: 11px;\n  width: 100%;\n  text-align: center;\n  writing-mode: vertical-rl;\n  transform: scale(-1);\n  font-size: 9px;\n  border-top: 1.5px solid black;\n}\n.table-number__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n  text-align: center;\n  line-height: 31px;\n  font-size: 10px;\n}\n.table-place[data-v-dc491a60] {\n  flex-basis: 225px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-place__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-place__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-place__departure-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__departure-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-place__arrive-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time[data-v-dc491a60] {\n  border-right: 1.5px solid black;\n  flex-basis: 148px;\n}\n.table-time__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-time__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__departure-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__arrive-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__arrive-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance[data-v-dc491a60] {\n  width: 56px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-distance__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  text-align: center;\n  padding-top: 25px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}\n.table-signature[data-v-dc491a60] {\n  flex-grow: 1;\n  height: 100%;\n}\n.table-signature__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  line-height: 11px;\n  text-align: center;\n  padding-top: 4px;\n  border-bottom: 1.5px solid black;\n}\n.table-signature__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".back-side-list-of-paper[data-v-dc491a60] {\n  display: flex;\n  justify-content: flex-end;\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  width: 1270px;\n  margin: 0 auto;\n}\n.align-button[data-v-dc491a60] {\n  margin: 0 auto;\n}\n.print-header-back[data-v-dc491a60] {\n  background-color: rgba(90, 140, 162, 0.454);\n  height: 10px;\n}\n.document-back-side[data-v-dc491a60] {\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 540px;\n  margin-left: 570px;\n  height: 734px;\n  padding: 0 12px;\n}\n.document-back-side img[data-v-dc491a60] {\n  width: 100%;\n  height: auto;\n}\n.back-side-top-devider[data-v-dc491a60] {\n  height: 48px;\n}\n.back-side-top-label[data-v-dc491a60] {\n  text-align: end;\n  font-size: 12px;\n  padding-right: 2px;\n}\n.table[data-v-dc491a60] {\n  display: flex;\n  border-color: black;\n  border-style: solid;\n  border-width: 1.5px 1.5px 0 1.5px;\n}\n.table-number[data-v-dc491a60] {\n  flex-basis: 26px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-number__header[data-v-dc491a60] {\n  height: 78px;\n  line-height: 11px;\n  width: 100%;\n  text-align: center;\n  writing-mode: vertical-rl;\n  transform: scale(-1);\n  font-size: 9px;\n  border-top: 1.5px solid black;\n}\n.table-number__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n  text-align: center;\n  line-height: 31px;\n  font-size: 10px;\n}\n.table-place[data-v-dc491a60] {\n  flex-basis: 225px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-place__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-place__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-place__departure-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__departure-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-place__arrive-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time[data-v-dc491a60] {\n  border-right: 1.5px solid black;\n  flex-basis: 148px;\n}\n.table-time__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-time__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__departure-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__arrive-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__arrive-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance[data-v-dc491a60] {\n  width: 56px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-distance__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  text-align: center;\n  padding-top: 25px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}\n.table-signature[data-v-dc491a60] {\n  flex-grow: 1;\n  height: 100%;\n}\n.table-signature__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  line-height: 11px;\n  text-align: center;\n  padding-top: 4px;\n  border-bottom: 1.5px solid black;\n}\n.table-signature__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -942,7 +984,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".relation[data-v-c7ea9f90] {\n  position: relative;\n  padding: 64px 32px;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-content[data-v-c7ea9f90] {\n  border: 1px solid lightgrey;\n  width: -moz-fit-content;\n  width: fit-content;\n  border-radius: 10px;\n  margin-bottom: 16px;\n}\n.relation-content span[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(0, 76, 143);\n  margin-left: 4px;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".relation[data-v-c7ea9f90] {\n  position: relative;\n  padding: 64px 32px;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-content[data-v-c7ea9f90] {\n  border: 1px solid lightgrey;\n  width: -moz-fit-content;\n  width: fit-content;\n  border-radius: 10px;\n  margin-bottom: 16px;\n}\n.relation-content span[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(0, 76, 143);\n  margin-left: 4px;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form a[data-v-c7ea9f90] {\n  color: green;\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1413,7 +1455,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "date-picker" }, [
-    _c("div", { staticClass: "date-picker__day" }, [
+    _c("div", { staticClass: "date-picker__item date-picker__day" }, [
       _c("input", {
         directives: [
           {
@@ -1423,7 +1465,7 @@ var render = function () {
             expression: "day",
           },
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "День" },
         domProps: { value: _vm.day },
         on: {
           click: _vm.toggleDayList,
@@ -1459,7 +1501,7 @@ var render = function () {
         : _vm._e(),
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "date-picker__month" }, [
+    _c("div", { staticClass: "date-picker__item date-picker__month" }, [
       _c("input", {
         directives: [
           {
@@ -1469,7 +1511,7 @@ var render = function () {
             expression: "month",
           },
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Месяц" },
         domProps: { value: _vm.month },
         on: {
           click: _vm.toggleMonthList,
@@ -1505,7 +1547,7 @@ var render = function () {
         : _vm._e(),
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "date-picker__year" }, [
+    _c("div", { staticClass: "date-picker__item date-picker__year" }, [
       _c("input", {
         directives: [
           {
@@ -1515,7 +1557,7 @@ var render = function () {
             expression: "year",
           },
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Год" },
         domProps: { value: _vm.year },
         on: {
           click: _vm.toggleYearList,
@@ -2711,7 +2753,13 @@ var render = function () {
           [
             _c("label", { attrs: { for: "" } }, [_vm._v("Дата выезда: ")]),
             _vm._v(" "),
-            _c("date-picker"),
+            _c("date-picker", {
+              on: {
+                updateDay: _vm.updateDayFrom,
+                updateMonth: _vm.updateMonthFrom,
+                updateYear: _vm.updateYearFrom,
+              },
+            }),
           ],
           1
         ),
@@ -2722,7 +2770,31 @@ var render = function () {
           [
             _c("label", { attrs: { for: "" } }, [_vm._v("Дата заезда: ")]),
             _vm._v(" "),
-            _c("date-picker"),
+            !_vm.isSameDate
+              ? _c("date-picker", {
+                  on: {
+                    updateDay: _vm.updateDayTo,
+                    updateMonth: _vm.updateMonthTo,
+                    updateYear: _vm.updateYearTo,
+                  },
+                })
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.isSameDate
+              ? _c(
+                  "a",
+                  { attrs: { href: "#" }, on: { click: _vm.makeSameDate } },
+                  [_vm._v("Заезд в тот же день")]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.isSameDate
+              ? _c(
+                  "a",
+                  { attrs: { href: "#" }, on: { click: _vm.makeDiffDate } },
+                  [_vm._v("Добавить дату заезда")]
+                )
+              : _vm._e(),
           ],
           1
         ),
