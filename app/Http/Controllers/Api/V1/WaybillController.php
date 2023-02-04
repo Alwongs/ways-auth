@@ -16,7 +16,7 @@ class WaybillController extends Controller
      */
     public function index()
     {
-        return WaybillResource::collection(Waybill::orderBy('number', 'asc')->get());
+        return WaybillResource::collection(Waybill::orderBy('number', 'desc')->get());
     }
 
     /**

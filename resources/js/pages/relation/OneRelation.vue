@@ -1,171 +1,178 @@
 <template>
-    <div class="relation">
-        <!-- Modals -->
-        <div v-if="isPrintOpen" class="background-print-document">
-            <div class="background-print-document__header">                 
-                <button class="app-btn close-btn" @click="togglePrintDocument">Закрыть</button>
-                <button class="app-btn app-btn__print close-btn" @click="printDocument">Печать</button>
+    <div class="relation-page">
+        <div class="relation">
+            <!-- Modals -->
+            <div v-if="isPrintOpen" class="background-print-document">
+                <div class="background-print-document__header">                 
+                    <button class="app-btn close-btn" @click="togglePrintDocument">Закрыть</button>
+                    <button class="app-btn app-btn__print close-btn" @click="printDocument">Печать</button>
+                </div>
+                <print-document 
+                    :model="car.model"
+                    :number="car.number"
+                    :fuel="car.fuel"
+                    :last_name="driver.last_name"
+                    :first_name="driver.first_name"
+                    :middle_name="driver.middle_name"
+                    :person_number="driver.person_number"
+                    :driver_license="driver.driver_license"
+                    :mechanic="selectedMechanic"
+                    :dispetcher="selectedDispetcher"
+                    :waybillNumber="waybillNumber"
+                    :date="formatDate(dateFrom, dateTo)"
+                    :customer="customer"
+                    :address="address"
+                />
             </div>
-            <print-document 
-                :model="car.model"
-                :number="car.number"
-                :fuel="car.fuel"
-                :last_name="driver.last_name"
-                :first_name="driver.first_name"
-                :middle_name="driver.middle_name"
-                :person_number="driver.person_number"
-                :driver_license="driver.driver_license"
-                :mechanic="selectedMechanic"
-                :dispetcher="selectedDispetcher"
-                :waybillNumber="waybillNumber"
-                :date="formatDate(dateFrom, dateTo)"
-                :customer="customer"
-                :address="address"
-            />
-        </div>
-        <div v-if="isPrintBackOpen" class="background-print-document">
-            <div class="background-print-document__header">
-                <button class="app-btn close-btn" @click="printBackSide">Печать</button>                 
-                <button class="app-btn close-btn" @click="togglePrintBack">Закрыть</button>
+            <div v-if="isPrintBackOpen" class="background-print-document">
+                <div class="background-print-document__header">
+                    <button class="app-btn close-btn" @click="printBackSide">Печать</button>                 
+                    <button class="app-btn close-btn" @click="togglePrintBack">Закрыть</button>
+                </div>
+                <print-back-side />
             </div>
-            <print-back-side />
-        </div>
-        <!-- /Modals -->
+            <!-- /Modals -->
 
-        <div class="relation__title-car">
-            {{ car.model }} - <span class="relation__car-number">{{ car.number }}</span>
-        </div>
-        <div class="relation__title-driver">
-            {{ driver.last_name }} {{ driver.first_name }} {{ driver.middle_name }}                
-        </div>
-
-        <app-loader v-if="loading" />
-        <error-notification v-if="errored" />
-
-        <div class="relation-content">
-            <div>вод. удостоверение: <span>{{ driver.driver_license}}</span></div>
-            <div>табельный номер: <span>{{ driver.person_number}}</span></div>
-            <div>Марка топлива: <span>{{ car.fuel }}</span></div>
-        </div>    
-
-        <div class="relation-form">
-
-            <div class="relation-form__item waybill">
-                <label for="">№ п. листа: </label>
-                <input v-model="waybillNumber" type="text">
+            <div class="relation__title-car">
+                {{ car.model }} - <span class="relation__car-number">{{ car.number }}</span>
+            </div>
+            <div class="relation__title-driver">
+                {{ driver.last_name }} {{ driver.first_name }} {{ driver.middle_name }}                
             </div>
 
+            <app-loader v-if="loading" />
+            <error-notification v-if="errored" />
 
-            <div class="relation-form__item">
-                <label for="">Дата выезда: </label>
-                <date-picker 
-                    @updateDay="updateDayFrom"
-                    @updateMonth="updateMonthFrom"
-                    @updateYear="updateYearFrom"                  
-                />                
-            </div>
+            <!-- <div class="relation-content">
+                <div>вод. удостоверение: <span>{{ driver.driver_license}}</span></div>
+                <div>табельный номер: <span>{{ driver.person_number}}</span></div>
+                <div>Марка топлива: <span>{{ car.fuel }}</span></div>
+            </div>     -->
 
-            <div class="relation-form__item">
-                <label for="">Дата заезда: </label>
-                <date-picker 
-                    v-if="!isSameDate"
-                    @updateDay="updateDayTo"
-                    @updateMonth="updateMonthTo"
-                    @updateYear="updateYearTo"
-                />  
-                <a v-if="!isSameDate" href="#" @click="makeSameDate">Заезд в тот же день</a>              
-                <a v-if="isSameDate" href="#" @click="makeDiffDate">Добавить дату заезда</a>              
-            </div>
+            <div class="relation-form">
+
+                <div class="relation-form__item waybill">
+                    <label for="">№ п. листа: </label>
+                    <input v-model="waybillNumber" type="text">
+                </div>
 
 
-            <div class="relation-form__item mechanic">
-                <label for="">заказчик: </label>
-                <input 
-                    v-model="customer" 
-                    type="text" 
-                    class="relation-form__customer" 
-                >
-            </div>
+                <div class="relation-form__item">
+                    <label for="">Дата выезда: </label>
+                    <date-picker 
+                        @updateDay="updateDayFrom"
+                        @updateMonth="updateMonthFrom"
+                        @updateYear="updateYearFrom"                  
+                    />                
+                </div>
 
-            <div class="relation-form__item mechanic">
-                <label for="">адрес подачи: </label>
-                <input 
-                    v-model="address" 
-                    type="text" 
-                    class="relation-form__address" 
-                >
-            </div>
+                <div class="relation-form__item">
+                    <label for="">Дата заезда: </label>
+                    <date-picker 
+                        v-if="!isSameDate"
+                        @updateDay="updateDayTo"
+                        @updateMonth="updateMonthTo"
+                        @updateYear="updateYearTo"
+                    />  
+                    <a v-if="!isSameDate" href="#" @click="makeSameDate">Заезд в тот же день</a>              
+                    <a v-if="isSameDate" href="#" @click="makeDiffDate">Добавить дату заезда</a>              
+                </div>
 
-            <div class="relation-form__item mechanic">
-                <label for="">механик: </label>
-                <input 
-                    v-model="mechanicFullName" 
-                    type="text" 
-                    readonly
-                    class="relation-form__mechanic" 
-                    @click="toggleMechanicList"
-                >
-                <ul 
-                    v-if="isMechanicListOpen" 
-                    class="relation-form__drop-list"
-                >
-                    <li class="closeBtn" @click="toggleMechanicList">x</li>                
-                    <li 
-                        v-for="mechanic in mechanicList" 
-                        :key="mechanic.id" 
-                        class="relation-form__drop-item"
-                        @click="selectMechanic(mechanic)"
+
+                <div class="relation-form__item mechanic">
+                    <label for="">заказчик: </label>
+                    <input 
+                        v-model="customer" 
+                        type="text" 
+                        class="relation-form__customer" 
                     >
-                        {{ mechanic.last_name }} {{ mechanic.first_name }} {{ mechanic.middle_name }}
-                    </li>
-                </ul>
-            </div>
-            <div class="relation-form__item dispetcher">
-                <label for="">диспетчер: </label>
-                <input 
-                    v-model="dispetcherFullName" 
-                    type="text" 
-                    readonly
-                    class="relation-form__mechanic" 
-                    @click="toggleDispetcherList"
-                >
-                <ul 
-                    v-if="isDispetcherListOpen" 
-                    class="relation-form__drop-list"
-                >
-                    <li class="closeBtn" @click="toggleDispetcherList">x</li>
-                    <li 
-                        v-for="dispetcher in dispetcherList" 
-                        :key="dispetcher.id" 
-                        class="relation-form__drop-item"
-                        @click="selectDispetcher(dispetcher)"
+                </div>
+
+                <div class="relation-form__item mechanic">
+                    <label for="">адрес подачи: </label>
+                    <input 
+                        v-model="address" 
+                        type="text" 
+                        class="relation-form__address" 
                     >
-                        {{ dispetcher.last_name }} {{ dispetcher.first_name }} {{ dispetcher.middle_name }}
-                    </li>
-                </ul>
+                </div>
+
+                <div class="relation-form__item mechanic">
+                    <label for="">механик: </label>
+                    <input 
+                        v-model="mechanicFullName" 
+                        type="text" 
+                        readonly
+                        class="relation-form__mechanic" 
+                        @click="toggleMechanicList"
+                    >
+                    <ul 
+                        v-if="isMechanicListOpen" 
+                        class="relation-form__drop-list"
+                    >
+                        <li class="closeBtn" @click="toggleMechanicList">x</li>                
+                        <li 
+                            v-for="mechanic in mechanicList" 
+                            :key="mechanic.id" 
+                            class="relation-form__drop-item"
+                            @click="selectMechanic(mechanic)"
+                        >
+                            {{ mechanic.last_name }} {{ mechanic.first_name }} {{ mechanic.middle_name }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="relation-form__item dispetcher">
+                    <label for="">диспетчер: </label>
+                    <input 
+                        v-model="dispetcherFullName" 
+                        type="text" 
+                        readonly
+                        class="relation-form__mechanic" 
+                        @click="toggleDispetcherList"
+                    >
+                    <ul 
+                        v-if="isDispetcherListOpen" 
+                        class="relation-form__drop-list"
+                    >
+                        <li class="closeBtn" @click="toggleDispetcherList">x</li>
+                        <li 
+                            v-for="dispetcher in dispetcherList" 
+                            :key="dispetcher.id" 
+                            class="relation-form__drop-item"
+                            @click="selectDispetcher(dispetcher)"
+                        >
+                            {{ dispetcher.last_name }} {{ dispetcher.first_name }} {{ dispetcher.middle_name }}
+                        </li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="app-btn-group">
+                <button 
+                    class="app-btn app-btn__back mr-16" 
+                    @click.prevent="goBack"
+                >
+                    Назад
+                </button>             
+                <button 
+                    class="app-btn app-btn__print" 
+                    @click="togglePrintDocument"
+                >
+                    Распечатать
+                </button>       
+                <button 
+                    class="app-btn app-btn__print" 
+                    @click="togglePrintBack"
+                >
+                    Обр. сторона
+                </button> 
+            </div>      
         </div>
 
-        <div class="app-btn-group">
-            <button 
-                class="app-btn app-btn__back mr-16" 
-                @click.prevent="goBack"
-            >
-                Назад
-            </button>             
-            <button 
-                class="app-btn app-btn__print" 
-                @click="togglePrintDocument"
-            >
-                Распечатать
-            </button>       
-            <button 
-                class="app-btn app-btn__print" 
-                @click="togglePrintBack"
-            >
-                Обр. сторона
-            </button> 
-        </div>      
+        <div class="relation-page__journal">
+            <h3 class="relation-page__journal-title">Журнал</h3>
+            <journal-component />
+        </div>
     </div>
 </template>
 
@@ -173,13 +180,15 @@
 import PrintDocument from '../../components/PrintDocument.vue';
 import PrintBackSide from '../../components/PrintBackSide.vue';
 import DatePicker from '../../components/DatePicker.vue';
+import JournalComponent from '../../components/JournalComponent.vue';
 
 export default {
     name: 'OneRelation',
     components: { 
         PrintDocument,
         PrintBackSide,
-        DatePicker 
+        DatePicker,
+        JournalComponent
     },
     props: ['relationId'],
     data() {
@@ -412,9 +421,21 @@ export default {
 $bg-color: rgb(214, 214, 214);
 $content-color: rgb(0, 76, 143);
 
+.relation-page {
+    padding: 64px 32px;    
+    display: flex;
+    &__journal {
+        padding: 0 0 0 32px;
+        flex: 0 0 380px;   
+    }
+    &__journal-title {
+        margin-bottom: 16px;             
+    }
+}
+
 .relation {
     position: relative;
-    padding: 64px 32px;
+    flex-grow: 1;
     &__title-car {
         font-weight: 700;
         color: rgb(138, 0, 0);
