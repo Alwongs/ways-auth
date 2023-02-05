@@ -39,6 +39,8 @@ $border-bold: 2.5px;
 
 
 .journal-table-row {
+    font-size: 12px;    
+    margin: 0 0 0 30px;        
     width: 903px;
     @include border(0, $border-middle, $border-middle, $border-middle);
     display: flex;

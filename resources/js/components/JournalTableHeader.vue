@@ -45,6 +45,8 @@ $border-bold: 2.5px;
 }
 
 .journal-table-header { 
+    font-size: 12px;
+    margin: 30px 0 0 30px;
     width: 903px;
     @include border($border-middle, $border-middle, 0, $border-middle);
     display: flex;

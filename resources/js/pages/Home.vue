@@ -1,6 +1,6 @@
 <template>
-    <div class="page home-page">
-        <h1 class="page__title">Транспорт</h1> 
+    <div class="home-page">
+        <h1 class="home-page__title">Транспорт</h1> 
         <div class="home-page__image-block">
             <img :src="image" alt="image">            
         </div>    
@@ -22,8 +22,16 @@ export default {
 
 <style lang="scss" scoped>
 
+.home-page {
+    padding-top: 86px;
+    &__title {
+        text-align: center;
+        margin-bottom: 64px;
+    }
+}
 .home-page__image-block {
-    padding-top: 48px;
+    width: 70%;
+    margin: 0 auto;
     img {
         width: 100%;
     }

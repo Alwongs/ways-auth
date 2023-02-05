@@ -1,19 +1,24 @@
 <template>
     <div class="journal">
-        <h1 class="page__title">Журнал</h1>   
+        <h1 class="page__title">Журнал</h1> 
+        <div class="link-group">
+            <span class="link-group__print" @click="printJournal">Печать</span>
+            <span class="link-group__clear" @click="clearJournal">Очистить журнал</span>
+        </div>  
 
         <app-loader v-if="loading" />
         <error-notification v-if="errored" />
 
-        <div class="journal-table">
+        <div class="journal-table print-journal">
+
             <journal-table-header />
             <journal-table-numbers />
-
             <journal-table-row 
                 v-for="waybill in waybills"
                 :key="waybill.id" 
                 :data="waybill"               
             />
+
         </div>
     </div>
 </template>
@@ -41,7 +46,33 @@ export default {
     mounted() {
         this.getJournal();
     },
-    methods: {
+    methods: {  
+        printJournal() {           
+            const body = document.querySelector('body');
+            const bodyContent = body.innerHTML;
+            const el = document.querySelector('.print-journal');
+
+            body.innerHTML = el.innerHTML;
+            window.print();
+            body.innerHTML = bodyContent; 
+            // this.$router.go(); 
+        },    
+        clearJournal() {
+            if (confirm('Внимание! Все записи будут удалены!')) {
+                axios.get('/api/V1/clear')
+                .then(response => {
+            
+                })
+                .catch(error => {
+                    console.log(error)
+                    this.errored = true
+                })
+                .finally(() => {
+                    this.loading = false 
+                    this.getJournal();            
+                })
+            }
+        },
         getJournal() {
             axios.get('/api/V1/waybills')
             .then(response => {
@@ -54,7 +85,7 @@ export default {
             .finally(() => {
                 this.loading = false             
             })
-        },
+        },      
     } 
 }
 </script>
@@ -74,6 +105,23 @@ $border-bold: 2.5px;
     border-width: $top $right $bottom $left; 
 }
 
+.link-group {
+    display: flex;
+    justify-content: space-between;
+    width: 903px;
+    margin: 0 auto 5px;
+    &__print {
+        color: blue;
+    }
+    &__clear {
+        color: rgb(161, 0, 0);
+    }
+    span:hover {
+        width: fit-content;
+        color: red;
+        cursor: pointer;
+    }
+}
 .journal {
     position: relative;
     padding: 64px 32px;

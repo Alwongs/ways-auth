@@ -34,6 +34,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'DatePicker',
@@ -43,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
       isMonthListOpen: false,
       isYearListOpen: false,
       monthList: ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'],
-      yearList: ['2023', '2024', '2025', '2026', '2027', '2028', '2029'],
+      yearList: ['23', '24', '25', '26', '27', '28', '29'],
       day: '',
       month: '',
       year: ''
@@ -70,9 +114,9 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('updateDay', this.day);
       this.isDayListOpen = false;
     },
-    selectMonth: function selectMonth(month) {
+    selectMonth: function selectMonth(month, index) {
       this.month = month;
-      this.$emit('updateMonth', this.month);
+      this.$emit('updateMonth', index);
       this.isMonthListOpen = false;
     },
     selectYear: function selectYear(year) {
@@ -110,30 +154,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'JounalComponent',
-  data: function data() {
-    return {
-      errored: false,
-      loading: true,
-      waybills: []
-    };
-  },
-  mounted: function mounted() {
-    this.getJournal();
-  },
+  props: ['data'],
   methods: {
-    getJournal: function getJournal() {
+    deleteWaybill: function deleteWaybill(id) {
       var _this = this;
-      axios.get('/api/V1/waybills').then(function (response) {
-        _this.waybills = response.data.data;
-      })["catch"](function (error) {
-        console.log(error);
-        _this.errored = true;
-      })["finally"](function () {
-        _this.loading = false;
-      });
+      if (confirm('Вы действительно хотите удалить автомобиль?')) {
+        axios.post('/api/V1/waybills/' + id, {
+          _method: 'DELETE'
+        }).then(function (response) {
+          _this.$emit('updateJournal');
+        })["catch"](function (error) {
+          console.log(error);
+          _this.errored = true;
+        })["finally"](function () {
+          _this.loading = false;
+        });
+      }
     }
   }
 });
@@ -566,9 +606,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_PrintBackSide_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/PrintBackSide.vue */ "./resources/js/components/PrintBackSide.vue");
 /* harmony import */ var _components_DatePicker_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/DatePicker.vue */ "./resources/js/components/DatePicker.vue");
 /* harmony import */ var _components_JournalComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/JournalComponent.vue */ "./resources/js/components/JournalComponent.vue");
-//
-//
-//
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 //
 //
 //
@@ -772,6 +813,7 @@ __webpack_require__.r(__webpack_exports__);
       driver: {},
       mechanicList: [],
       dispetcherList: [],
+      waybills: [],
       waybillNumber: '',
       dateFrom: {
         day: '',
@@ -812,6 +854,26 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    updateJournal: function updateJournal() {
+      this.getJournal();
+    },
+    saveWaybillToJournal: function saveWaybillToJournal() {
+      var _this = this;
+      axios.post('/api/V1/waybills', {
+        number: this.waybillNumber,
+        date: this.formatDate(this.dateFrom, this.dateTo).day + '.' + this.formatDate(this.dateFrom, this.dateTo).month + '.' + this.formatDate(this.dateFrom, this.dateTo).year,
+        full_name: this.driver.last_name + ' ' + this.driver.first_name + ' ' + this.driver.middle_name,
+        person_number: this.driver.person_number,
+        car_number: this.car.number
+      }).then(function (response) {
+        // this.$router.push({name: 'cars'})
+      })["catch"](function (error) {
+        console.log(error);
+        _this.errored = true;
+      })["finally"](function () {
+        _this.loading = false;
+      });
+    },
     makeSameDate: function makeSameDate() {
       this.dateTo = this.dateFrom;
       this.isSameDate = true;
@@ -875,16 +937,16 @@ __webpack_require__.r(__webpack_exports__);
       this.isDispetcherListOpen = !this.isDispetcherListOpen;
     },
     getAllMechanics: function getAllMechanics() {
-      var _this = this;
+      var _this2 = this;
       axios.get('/api/V1/drivers').then(function (response) {
         var driverList = response.data.data;
-        _this.mechanicList = _this.selectAllMechanics(driverList);
-        _this.dispetcherList = _this.mechanicList;
+        _this2.mechanicList = _this2.selectAllMechanics(driverList);
+        _this2.dispetcherList = _this2.mechanicList;
       })["catch"](function (error) {
         console.log(error);
-        _this.errored = true;
+        _this2.errored = true;
       })["finally"](function () {
-        _this.loading = false;
+        _this2.loading = false;
       });
     },
     togglePrintDocument: function togglePrintDocument() {
@@ -894,6 +956,7 @@ __webpack_require__.r(__webpack_exports__);
       this.isPrintBackOpen = !this.isPrintBackOpen;
     },
     printDocument: function printDocument() {
+      this.saveWaybillToJournal();
       var body = document.querySelector('body');
       var bodyContent = body.innerHTML;
       var el = document.querySelector('.print');
@@ -912,22 +975,11 @@ __webpack_require__.r(__webpack_exports__);
       this.$router.go();
     },
     getOneRelation: function getOneRelation() {
-      var _this2 = this;
-      axios.get('/api/V1/relations/' + this.relationId).then(function (response) {
-        _this2.relation = response.data.data;
-        _this2.getCar(_this2.relation.car_id);
-        _this2.getDriver(_this2.relation.driver_id);
-      })["catch"](function (error) {
-        console.log(error);
-        _this2.errored = true;
-      })["finally"](function () {
-        _this2.loading = false;
-      });
-    },
-    getCar: function getCar(id) {
       var _this3 = this;
-      axios.get('/api/V1/cars/' + id).then(function (response) {
-        _this3.car = response.data.data;
+      axios.get('/api/V1/relations/' + this.relationId).then(function (response) {
+        _this3.relation = response.data.data;
+        _this3.getCar(_this3.relation.car_id);
+        _this3.getDriver(_this3.relation.driver_id);
       })["catch"](function (error) {
         console.log(error);
         _this3.errored = true;
@@ -935,15 +987,26 @@ __webpack_require__.r(__webpack_exports__);
         _this3.loading = false;
       });
     },
-    getDriver: function getDriver(id) {
+    getCar: function getCar(id) {
       var _this4 = this;
-      axios.get('/api/V1/drivers/' + id).then(function (response) {
-        _this4.driver = response.data.data;
+      axios.get('/api/V1/cars/' + id).then(function (response) {
+        _this4.car = response.data.data;
       })["catch"](function (error) {
         console.log(error);
         _this4.errored = true;
       })["finally"](function () {
         _this4.loading = false;
+      });
+    },
+    getDriver: function getDriver(id) {
+      var _this5 = this;
+      axios.get('/api/V1/drivers/' + id).then(function (response) {
+        _this5.driver = response.data.data;
+      })["catch"](function (error) {
+        console.log(error);
+        _this5.errored = true;
+      })["finally"](function () {
+        _this5.loading = false;
       });
     },
     selectAllMechanics: function selectAllMechanics(drivers) {
@@ -954,11 +1017,39 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
       return mechanics;
+    },
+    getJournal: function getJournal() {
+      var _this6 = this;
+      axios.get('/api/V1/waybills').then(function (response) {
+        _this6.waybills = response.data.data;
+        if (response.data.data[0]) {
+          _this6.waybillNumber = Number(response.data.data[0].number) + 1;
+        } else {
+          _this6.waybillNumber = 1;
+        }
+      })["catch"](function (error) {
+        console.log(error);
+        _this6.errored = true;
+      })["finally"](function () {
+        _this6.loading = false;
+      });
     }
   },
   mounted: function mounted() {
-    this.getOneRelation();
-    this.getAllMechanics();
+    var _this7 = this;
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            _this7.getOneRelation();
+            _this7.getAllMechanics();
+            _this7.getJournal();
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }))();
   }
 });
 
@@ -1003,7 +1094,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".journal-component__item[data-v-1dffca1e] {\n  border-bottom: 1px solid rgb(182, 182, 182);\n  font-size: 12px;\n  margin-bottom: 4px;\n  display: flex;\n}\n.journal-component__item-number[data-v-1dffca1e] {\n  color: red;\n  flex: 0 0 30px;\n}\n.journal-component__item-car-number[data-v-1dffca1e] {\n  background-color: #fff;\n  border: 1px solid black;\n  border-radius: 3px;\n  font-size: 10px;\n  text-align: center;\n  color: black;\n  font-weight: 700;\n  flex: 0 0 72px;\n  margin-right: 4px;\n}\n.journal-component__item-name[data-v-1dffca1e] {\n  flex: 0 1 240px;\n  padding: 0 5px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".journal-component__item[data-v-1dffca1e] {\n  border-bottom: 1px solid rgb(182, 182, 182);\n  font-size: 12px;\n  height: 18px;\n  margin-bottom: 4px;\n  display: flex;\n}\n.journal-component__item-number[data-v-1dffca1e] {\n  color: rgb(136, 0, 0);\n  flex: 0 0 25px;\n}\n.journal-component__item-car-number[data-v-1dffca1e] {\n  font-size: 12px;\n  text-align: center;\n  color: blue;\n  line-height: 18px;\n  flex: 0 0 72px;\n  margin-right: 4px;\n  text-transform: lowercase;\n}\n.journal-component__item-name[data-v-1dffca1e] {\n  flex: 0 1 240px;\n  padding: 0 5px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.journal-component__item-del[data-v-1dffca1e] {\n  border: 1px solid transparent;\n  height: 16px;\n  width: 16px;\n  text-align: center;\n  line-height: 16px;\n  color: rgb(166, 0, 0);\n  cursor: pointer;\n}\n.journal-component__item-del[data-v-1dffca1e]:hover {\n  color: rgb(255, 0, 0);\n  border: 1px solid red;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1072,7 +1163,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".relation-page[data-v-c7ea9f90] {\n  padding: 64px 32px;\n  display: flex;\n}\n.relation-page__journal[data-v-c7ea9f90] {\n  padding: 0 0 0 32px;\n  flex: 0 0 380px;\n}\n.relation-page__journal-title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation[data-v-c7ea9f90] {\n  position: relative;\n  flex-grow: 1;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-content[data-v-c7ea9f90] {\n  border: 1px solid lightgrey;\n  width: -moz-fit-content;\n  width: fit-content;\n  border-radius: 10px;\n  margin-bottom: 16px;\n}\n.relation-content span[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(0, 76, 143);\n  margin-left: 4px;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form a[data-v-c7ea9f90] {\n  color: green;\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".relation-page[data-v-c7ea9f90] {\n  padding: 64px 32px;\n  display: flex;\n}\n.relation-page__journal[data-v-c7ea9f90] {\n  padding: 0 0 0 32px;\n  flex: 0 0 380px;\n}\n.relation-page__journal-title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation[data-v-c7ea9f90] {\n  position: relative;\n  flex-grow: 1;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form a[data-v-c7ea9f90] {\n  color: green;\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1693,7 +1784,7 @@ var render = function () {
                     },
                   },
                 },
-                [_vm._v(_vm._s(n))]
+                [_vm._v("\n                " + _vm._s(n) + "\n            ")]
               )
             }),
             0
@@ -1728,18 +1819,22 @@ var render = function () {
         ? _c(
             "ul",
             { staticClass: "date-picker__drop-month" },
-            _vm._l(_vm.monthList, function (month) {
+            _vm._l(_vm.monthList, function (month, index) {
               return _c(
                 "li",
                 {
                   key: month,
                   on: {
                     click: function ($event) {
-                      return _vm.selectMonth(month)
+                      return _vm.selectMonth(month, index + 1)
                     },
                   },
                 },
-                [_vm._v(_vm._s(month))]
+                [
+                  _vm._v(
+                    "\n                " + _vm._s(month) + "\n            "
+                  ),
+                ]
               )
             }),
             0
@@ -1785,7 +1880,11 @@ var render = function () {
                     },
                   },
                 },
-                [_vm._v(_vm._s(year))]
+                [
+                  _vm._v(
+                    "\n                20" + _vm._s(year) + "\n            "
+                  ),
+                ]
               )
             }),
             0
@@ -1819,7 +1918,7 @@ var render = function () {
   return _c(
     "ul",
     { staticClass: "journal-component" },
-    _vm._l(_vm.waybills, function (waybill) {
+    _vm._l(_vm.data, function (waybill) {
       return _c(
         "li",
         {
@@ -1839,6 +1938,19 @@ var render = function () {
           _c("div", { staticClass: "journal-component__item-name" }, [
             _vm._v(_vm._s(waybill.full_name)),
           ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "journal-component__item-del",
+              on: {
+                click: function ($event) {
+                  return _vm.deleteWaybill(waybill.id)
+                },
+              },
+            },
+            [_vm._v("✖")]
+          ),
         ]
       )
     }),
@@ -2154,7 +2266,7 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "date-block__year" }, [
-              _vm._v(_vm._s(_vm.date.year)),
+              _vm._v("20" + _vm._s(_vm.date.year)),
             ]),
             _vm._v(" "),
             _c("p", [_vm._v("г.")]),
@@ -3282,7 +3394,10 @@ var render = function () {
           _vm._v("Журнал"),
         ]),
         _vm._v(" "),
-        _c("journal-component"),
+        _c("journal-component", {
+          attrs: { data: _vm.waybills },
+          on: { updateJournal: _vm.updateJournal },
+        }),
       ],
       1
     ),

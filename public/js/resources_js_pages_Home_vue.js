@@ -52,7 +52,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".home-page__image-block[data-v-b3c5cf30] {\n  padding-top: 48px;\n}\n.home-page__image-block img[data-v-b3c5cf30] {\n  width: 100%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".home-page[data-v-b3c5cf30] {\n  padding-top: 86px;\n}\n.home-page__title[data-v-b3c5cf30] {\n  text-align: center;\n  margin-bottom: 64px;\n}\n.home-page__image-block[data-v-b3c5cf30] {\n  width: 70%;\n  margin: 0 auto;\n}\n.home-page__image-block img[data-v-b3c5cf30] {\n  width: 100%;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -202,8 +202,8 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "page home-page" }, [
-    _c("h1", { staticClass: "page__title" }, [_vm._v("Транспорт")]),
+  return _c("div", { staticClass: "home-page" }, [
+    _c("h1", { staticClass: "home-page__title" }, [_vm._v("Транспорт")]),
     _vm._v(" "),
     _c("div", { staticClass: "home-page__image-block" }, [
       _c("img", { attrs: { src: _vm.image, alt: "image" } }),

@@ -1,7 +1,7 @@
 <template>
     <ul class="journal-component">
         <li
-            v-for="waybill in waybills"
+            v-for="waybill in data"
             :key="waybill.id" 
             :data="waybill" 
             class="journal-component__item"
@@ -9,6 +9,7 @@
             <div class="journal-component__item-number">{{ waybill.number }}.</div>
             <div class="journal-component__item-car-number">{{ waybill.car_number }}</div>
             <div class="journal-component__item-name">{{ waybill.full_name }}</div>
+            <div class="journal-component__item-del" @click="deleteWaybill(waybill.id)">&#10006;</div>
         </li>
     </ul>
 </template>
@@ -17,32 +18,26 @@
 
 export default {
     name: 'JounalComponent',
-    data() {
-        return {
-            errored: false,
-            loading: true,
-
-            waybills: []
-        }
-    },
-    mounted() {
-        this.getJournal();
-    },
+    props: ['data'],
     methods: {
-        getJournal() {
-            axios.get('/api/V1/waybills')
-            .then(response => {
-                this.waybills = response.data.data           
-            })
-            .catch(error => {
-                console.log(error)
-                this.errored = true
-            })
-            .finally(() => {
-                this.loading = false             
-            })
-        },
-    } 
+        deleteWaybill(id) {
+            if (confirm('Вы действительно хотите удалить автомобиль?')) {
+                axios.post('/api/V1/waybills/' + id, {
+                    _method: 'DELETE'
+                })
+                .then(response => {
+                    this.$emit('updateJournal')
+                })
+                .catch(error => {
+                    console.log(error)
+                    this.errored = true
+                })
+                .finally(() => {
+                    this.loading = false           
+                })
+            }
+        }
+    }
 }
 </script>
 
@@ -52,23 +47,22 @@ export default {
     &__item {
         border-bottom: 1px solid rgb(182, 182, 182);
         font-size: 12px;
-        margin-bottom: 4px;
+        height: 18px;
+        margin-bottom: 4px;       
         display: flex;
     }
     &__item-number {
-        color: red;
-        flex: 0 0 30px;
+        color: rgb(136, 0, 0);
+        flex: 0 0 25px;
     }
     &__item-car-number {
-        background-color: #fff;
-        border: 1px solid black;
-        border-radius: 3px;
-        font-size: 10px;
+        font-size: 12px;
         text-align: center;
-        color: black;
-        font-weight: 700;
+        color: blue;
+        line-height: 18px;
         flex: 0 0 72px;
         margin-right: 4px;
+        text-transform: lowercase;
     }
     &__item-name {
         flex: 0 1 240px;
@@ -76,6 +70,19 @@ export default {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    &__item-del {
+        border: 1px solid transparent; 
+        height: 16px;
+        width: 16px; 
+        text-align: center;
+        line-height: 16px;
+        color: rgb(166, 0, 0);
+        cursor: pointer;
+        &:hover {
+            color: rgb(255, 0, 0);   
+            border: 1px solid red;        
+        }
     }
 }
 </style>

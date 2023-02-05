@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Waybill;
+use App\Http\Requests\WaybillStoreRequest;
 use App\Http\Resources\WaybillResource;
+use Illuminate\Http\Response;
 
 class WaybillController extends Controller
 {
@@ -25,9 +27,11 @@ class WaybillController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(WaybillStoreRequest $request)
     {
-        //
+        $created_waybill = Waybill::create($request->validated());
+
+        return new WaybillResource($created_waybill);
     }
 
     /**
@@ -59,8 +63,10 @@ class WaybillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Waybill $waybill)
     {
-        //
+        $waybill->delete();
+
+        return response(null, Response::HTTP_NO_CONTENT);
     }
 }

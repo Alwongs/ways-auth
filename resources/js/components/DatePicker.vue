@@ -1,21 +1,65 @@
 <template>
     <div class="date-picker">
         <div class="date-picker__item date-picker__day">
-            <input v-model="day" type="text" @click="toggleDayList" placeholder="День">   
-            <ul v-if="isDayListOpen" class="date-picker__drop-day">
-                <li v-for="n in 31" :key="n" @click="selectDay(n)">{{ n }}</li>
+            <input 
+                v-model="day" 
+                type="text" 
+                placeholder="День"
+                @click="toggleDayList" 
+            >   
+            <ul 
+                v-if="isDayListOpen" 
+                class="date-picker__drop-day"
+            >
+                <li 
+                    v-for="n in 31" 
+                    :key="n" 
+                    @click="selectDay(n)"
+                >
+                    {{ n }}
+                </li>
             </ul>         
         </div>
+
         <div class="date-picker__item date-picker__month">
-            <input v-model="month" type="text" @click="toggleMonthList" placeholder="Месяц">
-            <ul v-if="isMonthListOpen" class="date-picker__drop-month">
-                <li v-for="month in monthList" :key="month" @click="selectMonth(month)">{{ month }}</li>
+            <input 
+                v-model="month" 
+                type="text"  
+                placeholder="Месяц"
+                @click="toggleMonthList"
+            >
+            <ul 
+                v-if="isMonthListOpen" 
+                class="date-picker__drop-month"
+            >
+                <li 
+                    v-for="(month, index) in monthList" 
+                    :key="month" 
+                    @click="selectMonth(month, index+1)"
+                >
+                    {{ month }}
+                </li>
             </ul>             
         </div>
+
         <div class="date-picker__item date-picker__year">
-            <input v-model="year" type="text" @click="toggleYearList" placeholder="Год">
-            <ul v-if="isYearListOpen" class="date-picker__drop-year">
-                <li v-for="year in yearList" :key="year" @click="selectYear(year)">{{ year }}</li>
+            <input 
+                v-model="year" 
+                type="text"  
+                placeholder="Год"
+                @click="toggleYearList"
+            >
+            <ul 
+                v-if="isYearListOpen" 
+                class="date-picker__drop-year"
+            >
+                <li 
+                    v-for="year in yearList" 
+                    :key="year" 
+                    @click="selectYear(year)"
+                >
+                    20{{ year }}
+                </li>
             </ul>             
         </div>
     </div>  
@@ -45,13 +89,13 @@ export default {
                 'Декабря'
             ],
             yearList: [
-                '2023',
-                '2024',
-                '2025',
-                '2026',
-                '2027',
-                '2028',
-                '2029',
+                '23',
+                '24',
+                '25',
+                '26',
+                '27',
+                '28',
+                '29',
             ],
 
             day: '',
@@ -82,9 +126,9 @@ export default {
             this.$emit('updateDay', this.day)
             this.isDayListOpen = false;            
         },
-        selectMonth(month) {
+        selectMonth(month, index) {
             this.month = month;
-            this.$emit('updateMonth', this.month)            
+            this.$emit('updateMonth', index)            
             this.isMonthListOpen = false;            
         },
         selectYear(year) {

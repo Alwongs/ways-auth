@@ -43,12 +43,6 @@
             <app-loader v-if="loading" />
             <error-notification v-if="errored" />
 
-            <!-- <div class="relation-content">
-                <div>вод. удостоверение: <span>{{ driver.driver_license}}</span></div>
-                <div>табельный номер: <span>{{ driver.person_number}}</span></div>
-                <div>Марка топлива: <span>{{ car.fuel }}</span></div>
-            </div>     -->
-
             <div class="relation-form">
 
                 <div class="relation-form__item waybill">
@@ -171,7 +165,10 @@
 
         <div class="relation-page__journal">
             <h3 class="relation-page__journal-title">Журнал</h3>
-            <journal-component />
+            <journal-component 
+                :data="waybills" 
+                @updateJournal="updateJournal"
+            />
         </div>
     </div>
 </template>
@@ -206,6 +203,7 @@ export default {
             driver: {},
             mechanicList: [],
             dispetcherList: [],
+            waybills: [],
 
             waybillNumber: '',
 
@@ -248,8 +246,29 @@ export default {
             return '';
         }
     },    
-    methods: {    
-        
+    methods: {   
+        updateJournal() {
+            this.getJournal();
+        },
+        saveWaybillToJournal() {
+            axios.post('/api/V1/waybills', {
+                number: this.waybillNumber,
+                date: this.formatDate(this.dateFrom, this.dateTo).day + '.' + this.formatDate(this.dateFrom, this.dateTo).month + '.' + this.formatDate(this.dateFrom, this.dateTo).year,
+                full_name: this.driver.last_name + ' ' + this.driver.first_name + ' ' + this.driver.middle_name ,
+                person_number: this.driver.person_number,
+                car_number: this.car.number
+            })
+            .then(response => {
+                // this.$router.push({name: 'cars'})
+            })
+            .catch(error => {
+                console.log(error)
+                this.errored = true
+            })
+            .finally(() => {
+                this.loading = false           
+            })            
+        },       
         makeSameDate() {
             this.dateTo = this.dateFrom;
             this.isSameDate = true;
@@ -258,7 +277,6 @@ export default {
             this.dateTo = {};
             this.isSameDate = false;
         },
-
         updateDayFrom(day) {
             this.dateFrom.day = day
         },
@@ -268,7 +286,6 @@ export default {
         updateYearFrom(year) {
             this.dateFrom.year = year
         },
-
         updateDayTo(day) {
             this.dateTo.day = day
         },
@@ -278,8 +295,6 @@ export default {
         updateYearTo(year) {
             this.dateTo.year = year
         },
-
-
         goBack() {
             this.$router.go(-1);
         },
@@ -337,6 +352,7 @@ export default {
             this.isPrintBackOpen = !this.isPrintBackOpen;
         },
         printDocument() {
+            this.saveWaybillToJournal();            
             const body = document.querySelector('body');
             const bodyContent = body.innerHTML;
             const el = document.querySelector('.print');
@@ -344,7 +360,6 @@ export default {
             body.innerHTML = el.innerHTML;
             window.print();
             body.innerHTML = bodyContent; 
-
             this.$router.go();          
         },       
         printBackSide() {
@@ -407,11 +422,30 @@ export default {
                 }
             })
             return mechanics;
-        }
+        },
+        getJournal() {
+            axios.get('/api/V1/waybills')
+            .then(response => {
+                this.waybills = response.data.data;
+                if (response.data.data[0]) {
+                    this.waybillNumber = Number(response.data.data[0].number) + 1
+                } else {
+                    this.waybillNumber = 1;
+                }
+            })
+            .catch(error => {
+                console.log(error)
+                this.errored = true
+            })
+            .finally(() => {
+                this.loading = false             
+            })
+        },        
     },    
-    mounted() {
+    async mounted() {
        this.getOneRelation();
        this.getAllMechanics();
+       this.getJournal();  
     }
 }
 </script>
@@ -456,17 +490,6 @@ $content-color: rgb(0, 76, 143);
         background-color: #fff;
         padding: 0 4px;
         color: black;
-    }
-}
-.relation-content {
-    border: 1px solid lightgrey;
-    width: fit-content;
-    border-radius: 10px;
-    margin-bottom: 16px;
-    span {
-        font-weight: 700;
-        color: $content-color;
-        margin-left: 4px; 
     }
 }
 .relation-form {
