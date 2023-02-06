@@ -21,7 +21,7 @@ export default {
     props: ['data'],
     methods: {
         deleteWaybill(id) {
-            if (confirm('Вы действительно хотите удалить автомобиль?')) {
+            if (confirm('Вы действительно хотите удалить запись?')) {
                 axios.post('/api/V1/waybills/' + id, {
                     _method: 'DELETE'
                 })

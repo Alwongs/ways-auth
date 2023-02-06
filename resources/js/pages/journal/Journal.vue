@@ -16,7 +16,8 @@
             <journal-table-row 
                 v-for="waybill in waybills"
                 :key="waybill.id" 
-                :data="waybill"               
+                :data="waybill"   
+                @updateJournal="getJournal"                           
             />
 
         </div>

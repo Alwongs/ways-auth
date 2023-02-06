@@ -162,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     deleteWaybill: function deleteWaybill(id) {
       var _this = this;
-      if (confirm('Вы действительно хотите удалить автомобиль?')) {
+      if (confirm('Вы действительно хотите удалить запись?')) {
         axios.post('/api/V1/waybills/' + id, {
           _method: 'DELETE'
         }).then(function (response) {
@@ -574,6 +574,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'PrintDocument',
   props: ['relationId', 'model', 'number', 'fuel', 'last_name', 'first_name', 'middle_name', 'person_number', 'driver_license', 'mechanic', 'dispetcher', 'waybillNumber', 'date', 'customer', 'address'],
+  data: function data() {
+    return {
+      monthList: ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря']
+    };
+  },
   computed: {
     mechanicName: function mechanicName() {
       if (this.mechanic.last_name) {
@@ -854,9 +859,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   methods: {
-    updateJournal: function updateJournal() {
-      this.getJournal();
-    },
     saveWaybillToJournal: function saveWaybillToJournal() {
       var _this = this;
       axios.post('/api/V1/waybills', {
@@ -2262,7 +2264,7 @@ var render = function () {
             _c("p", [_vm._v('"')]),
             _vm._v(" "),
             _c("div", { staticClass: "date-block__month" }, [
-              _vm._v(_vm._s(_vm.date.month)),
+              _vm._v(_vm._s(_vm.monthList[_vm.date.month])),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "date-block__year" }, [
@@ -3396,7 +3398,7 @@ var render = function () {
         _vm._v(" "),
         _c("journal-component", {
           attrs: { data: _vm.waybills },
-          on: { updateJournal: _vm.updateJournal },
+          on: { updateJournal: _vm.getJournal },
         }),
       ],
       1

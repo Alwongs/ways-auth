@@ -167,7 +167,7 @@
             <h3 class="relation-page__journal-title">Журнал</h3>
             <journal-component 
                 :data="waybills" 
-                @updateJournal="updateJournal"
+                @updateJournal="getJournal"
             />
         </div>
     </div>
@@ -247,9 +247,6 @@ export default {
         }
     },    
     methods: {   
-        updateJournal() {
-            this.getJournal();
-        },
         saveWaybillToJournal() {
             axios.post('/api/V1/waybills', {
                 number: this.waybillNumber,

@@ -97,10 +97,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'JournalTableNumbers',
-  props: ['data']
+  props: ['data'],
+  methods: {
+    deleteWaybill: function deleteWaybill(id) {
+      var _this = this;
+      if (confirm('Вы действительно хотите удалить запись?')) {
+        axios.post('/api/V1/waybills/' + id, {
+          _method: 'DELETE'
+        }).then(function (response) {
+          _this.$emit('updateJournal');
+        })["catch"](function (error) {
+          console.log(error);
+          _this.errored = true;
+        })["finally"](function () {
+          _this.loading = false;
+        });
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -118,6 +137,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_JournalTableHeader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/JournalTableHeader.vue */ "./resources/js/components/JournalTableHeader.vue");
 /* harmony import */ var _components_JournalTableNumbers_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/JournalTableNumbers.vue */ "./resources/js/components/JournalTableNumbers.vue");
 /* harmony import */ var _components_JournalTableRow_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/JournalTableRow.vue */ "./resources/js/components/JournalTableRow.vue");
+//
 //
 //
 //
@@ -264,7 +284,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-row[data-v-2fd96b30] {\n  font-size: 12px;\n  margin: 0 0 0 30px;\n  width: 903px;\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 2px 2px;\n  display: flex;\n  text-align: center;\n  height: 20px;\n}\n.journal-table-row__column-1[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n}\n.journal-table-row__column-2[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 104px;\n}\n.journal-table-row__column-3[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 256px;\n}\n.journal-table-row__column-4[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-5[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n}\n.journal-table-row__column-6[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 90px;\n}\n.journal-table-row__column-7[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 110px;\n}\n.journal-table-row__column-8[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-9[data-v-2fd96b30] {\n  flex: 0 0 52px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-row[data-v-2fd96b30] {\n  font-size: 12px;\n  margin: 0 0 0 30px;\n  width: 903px;\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 2px 2px;\n  display: flex;\n  text-align: center;\n  height: 20px;\n}\n.journal-table-row__column-1[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n}\n.journal-table-row__column-2[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 104px;\n}\n.journal-table-row__column-3[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 256px;\n}\n.journal-table-row__column-4[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-5[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n}\n.journal-table-row__column-6[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 90px;\n}\n.journal-table-row__column-7[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 110px;\n}\n.journal-table-row__column-8[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-9[data-v-2fd96b30] {\n  position: relative;\n  flex: 0 0 52px;\n  cursor: pointer;\n}\n.journal-table-row__column-9 span[data-v-2fd96b30] {\n  position: absolute;\n  left: 58px;\n  top: 0;\n  color: rgb(222, 0, 0);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -976,7 +996,19 @@ var render = function () {
     _vm._v(" "),
     _c("div", { staticClass: "journal-table-row__column-8" }),
     _vm._v(" "),
-    _c("div", { staticClass: "journal-table-row__column-9" }),
+    _c("div", { staticClass: "journal-table-row__column-9" }, [
+      _c(
+        "span",
+        {
+          on: {
+            click: function ($event) {
+              return _vm.deleteWaybill(_vm.data.id)
+            },
+          },
+        },
+        [_vm._v("Удалить")]
+      ),
+    ]),
   ])
 }
 var staticRenderFns = []
@@ -1037,6 +1069,7 @@ var render = function () {
             return _c("journal-table-row", {
               key: waybill.id,
               attrs: { data: waybill },
+              on: { updateJournal: _vm.getJournal },
             })
           }),
         ],

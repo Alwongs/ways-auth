@@ -8,7 +8,9 @@
         <div class="journal-table-row__column-6"></div>
         <div class="journal-table-row__column-7"></div>
         <div class="journal-table-row__column-8"></div>
-        <div class="journal-table-row__column-9"></div>
+        <div class="journal-table-row__column-9">
+            <span @click="deleteWaybill(data.id)">Удалить</span>
+        </div>
     </div>
 </template>
 
@@ -18,7 +20,26 @@ export default {
     name: 'JournalTableNumbers',
     props: [
         'data'
-    ]
+    ],
+    methods: {
+        deleteWaybill(id) {
+            if (confirm('Вы действительно хотите удалить запись?')) {
+                axios.post('/api/V1/waybills/' + id, {
+                    _method: 'DELETE'
+                })
+                .then(response => {
+                    this.$emit('updateJournal')
+                })
+                .catch(error => {
+                    console.log(error)
+                    this.errored = true
+                })
+                .finally(() => {
+                    this.loading = false           
+                })
+            }
+        }        
+    }
 }
 </script>
 
@@ -78,8 +99,16 @@ $border-bold: 2.5px;
         @include border(0, $border-middle, 0, 0);         
         flex: 0 0 74px;
     }
-    &__column-9 {        
+    &__column-9 {     
+        position: relative;   
         flex: 0 0 52px;
+        cursor: pointer;
+        span {
+            position: absolute;
+            left: 58px;
+            top: 0;
+            color: rgb(222, 0, 0);
+        }
     }
 }
 </style>
