@@ -217,6 +217,20 @@ export default {
                 month: '',
                 year: ''
             },
+            monthList: [
+                'Января',
+                'Февраля',
+                'Марта',
+                'Апреля',
+                'Мая',
+                'Июня',
+                'Июля',
+                'Августа',
+                'Сентября',
+                'Октября',
+                'Ноября',
+                'Декабря'
+            ],            
 
             customer: 'ООО АК "Волга-Днепр"',
             address: 'г. Ульяновск, ул. Карбышева, д. 14',            
@@ -247,10 +261,14 @@ export default {
         }
     },    
     methods: {   
+        formatDateToJournal(dateFrom, dateTo) {
+
+        },
         saveWaybillToJournal() {
+                // console.log(this.dateFrom.day.length)
             axios.post('/api/V1/waybills', {
                 number: this.waybillNumber,
-                date: this.formatDate(this.dateFrom, this.dateTo).day + '.' + this.formatDate(this.dateFrom, this.dateTo).month + '.' + this.formatDate(this.dateFrom, this.dateTo).year,
+                date: `${this.dateFrom.day}.${this.dateFrom.month}.${this.dateFrom.year} - ${this.dateTo.day}.${this.dateTo.month}.${this.dateTo.year}`,
                 full_name: this.driver.last_name + ' ' + this.driver.first_name + ' ' + this.driver.middle_name ,
                 person_number: this.driver.person_number,
                 car_number: this.car.number
@@ -304,7 +322,7 @@ export default {
             } else day = dateFrom.day;
 
             if (dateTo.month !== dateFrom.month) {
-                month = dateFrom.month + '-' + dateTo.month;
+                month = this.monthList[dateFrom.month - 1] + '-' + this.monthList[dateTo.month - 1];
             } else month = dateFrom.month;
 
             if (dateTo.year !== dateFrom.year) {

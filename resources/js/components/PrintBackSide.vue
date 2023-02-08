@@ -135,7 +135,7 @@ $border-bold: 2.5px;
     background-color: rgb(255, 255, 255); 
     color: black;
     width: 530px;
-    margin-left: 580px;
+    margin-left: 10px;
     height: 734px;
     padding: 0 12px; 
     img {

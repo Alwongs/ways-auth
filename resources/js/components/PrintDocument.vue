@@ -18,7 +18,7 @@
                         <p>"</p>
                         <div class="date-block__day">{{ date.day }}</div>
                         <p>"</p>
-                        <div class="date-block__month">{{ monthList[date.month] }}</div>
+                        <div class="date-block__month">{{ date.month }}</div>
                         <div class="date-block__year">20{{ date.year }}</div>
                         <p>г.</p>
                         <div class="date-block__series-label">серия</div>                
