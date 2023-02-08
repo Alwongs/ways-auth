@@ -268,14 +268,19 @@
                 </div>
             </div>
             <footer class="print-footer"></footer>
+
+        <print-back-side />
+
         </div>
 
     </div>
 </template>
 
 <script>
+import PrintBackSide from './PrintBackSide.vue';
 
 export default {
+  components: { PrintBackSide, PrintBackSide },
     name: 'PrintDocument',
     props: [
         'relationId',
@@ -369,7 +374,7 @@ $border-bold: 2.5px;
     width: 550px;
 }
 .document {
-    margin-left: 20px; // левый отступ документа
+    margin-left: 580px; // левый отступ документа
     background-color: rgba(255, 255, 255, 1);     
     color: black;
     width: 526px;

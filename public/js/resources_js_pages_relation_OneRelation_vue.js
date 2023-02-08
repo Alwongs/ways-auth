@@ -295,6 +295,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _PrintBackSide_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PrintBackSide.vue */ "./resources/js/components/PrintBackSide.vue");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+//
+//
+//
 //
 //
 //
@@ -571,7 +579,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: _defineProperty({
+    PrintBackSide: _PrintBackSide_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }, "PrintBackSide", _PrintBackSide_vue__WEBPACK_IMPORTED_MODULE_0__["default"]),
   name: 'PrintDocument',
   props: ['relationId', 'model', 'number', 'fuel', 'last_name', 'first_name', 'middle_name', 'person_number', 'driver_license', 'mechanic', 'dispetcher', 'waybillNumber', 'date', 'customer', 'address'],
   data: function data() {
@@ -1119,7 +1131,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".back-side-list-of-paper[data-v-dc491a60] {\n  display: flex;\n  justify-content: flex-end;\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  width: 1270px;\n  margin: 0 auto;\n}\n.align-button[data-v-dc491a60] {\n  margin: 0 auto;\n}\n.print-header-back[data-v-dc491a60] {\n  background-color: rgba(90, 140, 162, 0.454);\n  height: 10px;\n}\n.document-back-side[data-v-dc491a60] {\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 540px;\n  margin-left: 570px;\n  height: 734px;\n  padding: 0 12px;\n}\n.document-back-side img[data-v-dc491a60] {\n  width: 100%;\n  height: auto;\n}\n.back-side-top-devider[data-v-dc491a60] {\n  height: 48px;\n}\n.back-side-top-label[data-v-dc491a60] {\n  text-align: end;\n  font-size: 12px;\n  padding-right: 2px;\n}\n.table[data-v-dc491a60] {\n  display: flex;\n  border-color: black;\n  border-style: solid;\n  border-width: 1.5px 1.5px 0 1.5px;\n}\n.table-number[data-v-dc491a60] {\n  flex-basis: 26px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-number__header[data-v-dc491a60] {\n  height: 78px;\n  line-height: 11px;\n  width: 100%;\n  text-align: center;\n  writing-mode: vertical-rl;\n  transform: scale(-1);\n  font-size: 9px;\n  border-top: 1.5px solid black;\n}\n.table-number__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n  text-align: center;\n  line-height: 31px;\n  font-size: 10px;\n}\n.table-place[data-v-dc491a60] {\n  flex-basis: 225px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-place__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-place__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-place__departure-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__departure-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-place__arrive-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time[data-v-dc491a60] {\n  border-right: 1.5px solid black;\n  flex-basis: 148px;\n}\n.table-time__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-time__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__departure-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__arrive-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__arrive-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance[data-v-dc491a60] {\n  width: 56px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-distance__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  text-align: center;\n  padding-top: 25px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}\n.table-signature[data-v-dc491a60] {\n  flex-grow: 1;\n  height: 100%;\n}\n.table-signature__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  line-height: 11px;\n  text-align: center;\n  padding-top: 4px;\n  border-bottom: 1.5px solid black;\n}\n.table-signature__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".back-side-list-of-paper[data-v-dc491a60] {\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  width: 1270px;\n  margin: 0 auto;\n}\n.align-button[data-v-dc491a60] {\n  margin: 0 auto;\n}\n.print-header-back[data-v-dc491a60] {\n  background-color: rgba(90, 140, 162, 0.454);\n  height: 10px;\n}\n.document-back-side[data-v-dc491a60] {\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 530px;\n  margin-left: 580px;\n  height: 734px;\n  padding: 0 12px;\n}\n.document-back-side img[data-v-dc491a60] {\n  width: 100%;\n  height: auto;\n}\n.back-side-top-devider[data-v-dc491a60] {\n  height: 48px;\n}\n.back-side-top-label[data-v-dc491a60] {\n  text-align: end;\n  font-size: 12px;\n  padding-right: 2px;\n}\n.table[data-v-dc491a60] {\n  display: flex;\n  border-color: black;\n  border-style: solid;\n  border-width: 1.5px 1.5px 0 1.5px;\n}\n.table-number[data-v-dc491a60] {\n  flex-basis: 26px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-number__header[data-v-dc491a60] {\n  height: 78px;\n  line-height: 11px;\n  width: 100%;\n  text-align: center;\n  writing-mode: vertical-rl;\n  transform: scale(-1);\n  font-size: 9px;\n  border-top: 1.5px solid black;\n}\n.table-number__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n  text-align: center;\n  line-height: 31px;\n  font-size: 10px;\n}\n.table-place[data-v-dc491a60] {\n  flex-basis: 225px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-place__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-place__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-place__departure-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__departure-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-place__arrive-header[data-v-dc491a60] {\n  height: 53px;\n  line-height: 53px;\n  font-size: 10px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-place__arrive-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time[data-v-dc491a60] {\n  border-right: 1.5px solid black;\n  flex-basis: 148px;\n}\n.table-time__header[data-v-dc491a60] {\n  height: 25px;\n  font-size: 10px;\n  line-height: 25px;\n  text-align: center;\n  border-bottom: 1.5px solid black;\n}\n.table-time__columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__departure-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__departure-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__departure-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__departure-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-header[data-v-dc491a60] {\n  height: 27px;\n  font-size: 10px;\n  text-align: center;\n  line-height: 27px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-columns[data-v-dc491a60] {\n  display: flex;\n}\n.table-time__arrive-hours[data-v-dc491a60] {\n  width: 50%;\n  border-right: 1.5px solid black;\n}\n.table-time__arrive-hours-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-hours-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes[data-v-dc491a60] {\n  width: 50%;\n}\n.table-time__arrive-minutes-header[data-v-dc491a60] {\n  font-size: 10px;\n  text-align: center;\n  height: 26px;\n  line-height: 26px;\n  border-bottom: 1.5px solid black;\n}\n.table-time__arrive-minutes-value[data-v-dc491a60] {\n  height: 31px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance[data-v-dc491a60] {\n  width: 56px;\n  height: 100%;\n  border-right: 1.5px solid black;\n}\n.table-distance__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  text-align: center;\n  padding-top: 25px;\n  border-bottom: 1.5px solid black;\n}\n.table-distance__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}\n.table-signature[data-v-dc491a60] {\n  flex-grow: 1;\n  height: 100%;\n}\n.table-signature__header[data-v-dc491a60] {\n  height: 78px;\n  font-size: 9px;\n  line-height: 11px;\n  text-align: center;\n  padding-top: 4px;\n  border-bottom: 1.5px solid black;\n}\n.table-signature__value[data-v-dc491a60] {\n  border-bottom: 1.5px solid black;\n  height: 31px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1142,7 +1154,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".align-button[data-v-5b96528d] {\n  margin: 0 auto;\n}\n.modal[data-v-5b96528d] {\n  display: flex;\n  justify-content: center;\n}\n.list-of-paper[data-v-5b96528d] {\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  background-color: #fff;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  margin-bottom: 16px;\n}\n.print-header[data-v-5b96528d] {\n  height: 30px;\n  width: 550px;\n}\n.print-footer[data-v-5b96528d] {\n  height: 20px;\n  width: 550px;\n}\n.document[data-v-5b96528d] {\n  margin-left: 20px;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 526px;\n  height: 734px;\n}\n.stamp-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 41px;\n}\n.stamp-block p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 10px;\n  width: 177px;\n  height: 30px;\n}\n.title-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 41px;\n  font-size: 13px;\n}\n.title-block h1[data-v-5b96528d] {\n  font-size: inherit;\n  text-align: start;\n  margin: 0;\n  margin-right: 16px;\n}\n.title-block__series[data-v-5b96528d] {\n  width: 85px;\n  border-bottom: 1px solid black;\n  margin-right: 6px;\n}\n.title-block__number[data-v-5b96528d] {\n  width: 75px;\n  border-bottom: 1px solid black;\n  text-align: center;\n  margin-left: 4px;\n}\n.date-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n  font-size: 12px;\n  font-weight: 700;\n}\n.date-block__day[data-v-5b96528d] {\n  width: 38px;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.date-block__month[data-v-5b96528d] {\n  width: 140px;\n  text-align: center;\n  border-bottom: 1px solid black;\n  margin-left: 6px;\n}\n.date-block__year[data-v-5b96528d] {\n  width: 75px;\n  text-align: end;\n  padding-right: 4px;\n  border-bottom: 1px solid black;\n}\n.date-block__series-label[data-v-5b96528d] {\n  font-weight: 500;\n  width: 150px;\n  text-align: center;\n  align-self: flex-start;\n  font-size: 7px;\n}\n.company-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 32px;\n  font-size: 9px;\n}\n.company-block__label[data-v-5b96528d] {\n  margin-right: 25px;\n  align-self: center;\n}\n.company-block__info[data-v-5b96528d] {\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.company-labels-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  padding-right: 100px;\n  height: 12px;\n  font-size: 8px;\n}\n.model-block[data-v-5b96528d] {\n  display: flex;\n  height: 26px;\n}\n.model-block__label[data-v-5b96528d] {\n  align-self: center;\n  font-size: 9px;\n  margin-right: 16px;\n  margin-bottom: -8px;\n}\n.model-block__type[data-v-5b96528d] {\n  font-size: 14px;\n  font-weight: 700;\n  width: 140px;\n  text-align: end;\n  padding-right: 12px;\n  align-self: flex-end;\n  border-bottom: 1px solid black;\n}\n.model-block__model[data-v-5b96528d] {\n  font-size: 14px;\n  font-weight: 700;\n  min-width: 160px;\n  text-align: start;\n  align-self: flex-end;\n  border-bottom: 1px solid black;\n}\n.car-number-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n}\n.car-number-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.car-number-block__number[data-v-5b96528d] {\n  line-height: 16px;\n  font-size: 13px;\n  font-weight: 700;\n  width: 155px;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.driver-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n}\n.driver-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 6px;\n  align-self: center;\n}\n.driver-block__name[data-v-5b96528d] {\n  line-height: 15px;\n  font-size: 14px;\n  font-weight: 700;\n  width: 270px;\n  text-align: start;\n  padding-left: 4px;\n  margin-right: 24px;\n  border-bottom: 1px solid black;\n  white-space: nowrap;\n}\n.driver-block__label-2[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 4px;\n  align-self: center;\n}\n.driver-block__person-number[data-v-5b96528d] {\n  border: 2.5px solid black;\n  height: 18px;\n  line-height: 15px;\n  flex-grow: 1;\n  font-size: 12px;\n  align-self: center;\n  text-align: center;\n}\n.driver-labels-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  padding-right: 140px;\n  height: 12px;\n  font-size: 8px;\n}\n.license-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 13px;\n}\n.license-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  line-height: 9px;\n  margin-right: 24px;\n  align-self: center;\n}\n.license-block__number[data-v-5b96528d] {\n  width: 220px;\n  border-bottom: 1px solid black;\n  font-size: 12px;\n  line-height: 12px;\n  font-weight: 700;\n  margin-right: 16px;\n  padding-left: 8px;\n}\n.license-block__label-2[data-v-5b96528d] {\n  font-size: 9px;\n  line-height: 9px;\n  align-self: center;\n  margin-right: 14px;\n}\n.license-block__class[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  flex-grow: 1;\n}\n.big-bottom-block[data-v-5b96528d] {\n  display: flex;\n  height: 530px;\n}\n.big-bottom-block__left[data-v-5b96528d] {\n  width: 270px;\n  height: 100%;\n  padding-right: 5px;\n}\n.big-bottom-block__right[data-v-5b96528d] {\n  height: 100%;\n  padding-left: 5px;\n  flex-grow: 1;\n}\n.license-card-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 21px;\n}\n.license-card-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n}\n.license-card-block__right[data-v-5b96528d] {\n  flex-grow: 1;\n  text-align: center;\n}\n.license-card-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 9px;\n}\n.license-card-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.task-header-block[data-v-5b96528d] {\n  height: 39px;\n  text-align: center;\n  vertical-align: bottom;\n  font-size: 12px;\n  font-weight: 700;\n  padding-top: 18px;\n}\n.customer-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 36px;\n}\n.customer-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 8px;\n}\n.customer-block__right[data-v-5b96528d] {\n  flex-grow: 1;\n  text-align: center;\n}\n.customer-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 14px;\n  font-weight: 700;\n}\n.customer-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.organization-block[data-v-5b96528d] {\n  height: 35px;\n  padding-top: 5px;\n  text-align: center;\n  width: 170px;\n}\n.organization-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 9px;\n  font-weight: 700;\n}\n.organization-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.customer-address-block[data-v-5b96528d] {\n  height: 51px;\n}\n.customer-address-block__label-block[data-v-5b96528d] {\n  display: flex;\n  height: 21px;\n}\n.customer-address-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 16px;\n  padding-top: 8px;\n}\n.customer-address-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 8px;\n  flex-grow: 1;\n}\n.customer-address-block__value-2[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  text-align: center;\n  height: 14px;\n  font-size: 13px;\n  font-weight: 700;\n  line-height: 13px;\n  flex-grow: 1;\n}\n.customer-address-block__value-3[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 13px;\n  font-weight: 700;\n  line-height: 13px;\n  flex-grow: 1;\n}\n.departure-time-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  padding-left: 29px;\n}\n.departure-time-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 24px;\n  font-weight: 700;\n}\n.departure-time-block__value[data-v-5b96528d] {\n  flex-grow: 1;\n  height: 32px;\n  border: 2.5px solid black;\n}\n.dispetcher-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 35px;\n}\n.dispetcher-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 10px;\n  align-self: center;\n}\n.dispetcher-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.dispetcher-block__signature-value[data-v-5b96528d] {\n  width: 54px;\n  border-bottom: 1px solid black;\n}\n.dispetcher-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.dispetcher-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.dispetcher-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.dispetcher-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.arrive-time-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 36px;\n  padding-left: 15px;\n}\n.arrive-time-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 15px;\n  font-weight: 700;\n}\n.arrive-time-block__value[data-v-5b96528d] {\n  flex-grow: 1;\n  height: 32px;\n  border: 2.5px solid black;\n}\n.divider-block[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 20px;\n}\n.comments-block__label[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 8px;\n  text-align: center;\n  height: 28px;\n}\n.comments-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n}\n.logistic-block__routes[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n  padding-left: 2px;\n}\n.logistic-block__payload[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n  padding-left: 2px;\n}\n.finish-drive-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 37px;\n}\n.finish-drive-block__label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: end;\n  width: 70px;\n  margin-right: 30px;\n}\n.finish-drive-block__value-1[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  margin-right: 20px;\n  width: 54px;\n}\n.finish-drive-block__value-2[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  flex-grow: 1;\n}\n.bottom-labels-block[data-v-5b96528d] {\n  display: flex;\n  height: 30px;\n}\n.bottom-labels-block__stamp-place[data-v-5b96528d] {\n  align-self: flex-end;\n  font-size: 9px;\n  text-align: end;\n  width: 70px;\n  margin-right: 30px;\n  padding-right: 10px;\n}\n.bottom-labels-block__label-1[data-v-5b96528d] {\n  text-align: center;\n  margin-right: 20px;\n  width: 54px;\n  font-size: 8px;\n}\n.bottom-labels-block__label-2[data-v-5b96528d] {\n  text-align: center;\n  flex-grow: 1;\n  font-size: 8px;\n}\n.mechanic-check-title[data-v-5b96528d] {\n  height: 25px;\n  font-size: 11px;\n  text-align: center;\n  padding-top: 8px;\n}\n.odometer-departure-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 22px;\n  margin-bottom: 3px;\n}\n.odometer-departure-block__label[data-v-5b96528d] {\n  font-size: 10px;\n  width: 150px;\n  text-align: center;\n}\n.odometer-departure-block__value[data-v-5b96528d] {\n  height: 100%;\n  flex-grow: 1;\n  border: 2.5px solid black;\n}\n.mechanic-departure-block[data-v-5b96528d] {\n  border: 1px solid black;\n}\n.mechanic-departure-block p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 9px;\n}\n.mechanic-departure-block h3[data-v-5b96528d] {\n  text-align: center;\n  font-size: 9px;\n  text-transform: uppercase;\n}\n.mechanic-departure-block__date[data-v-5b96528d] {\n  display: flex;\n  justify-content: center;\n  height: 15px;\n  font-size: 9px;\n  padding-top: 4px;\n}\n.mechanic-departure-block__date div[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n}\n.mechanic-departure-block__date p[data-v-5b96528d] {\n  margin: 0 1px;\n}\n.mechanic-departure-block__day[data-v-5b96528d] {\n  width: 28px;\n}\n.mechanic-departure-block__month[data-v-5b96528d] {\n  width: 38px;\n  margin-left: 4px;\n  margin-right: 2px;\n}\n.mechanic-departure-block__year[data-v-5b96528d] {\n  width: 20px;\n  margin-left: 2px;\n}\n.mechanic-departure-block__hours[data-v-5b96528d] {\n  width: 18px;\n  margin-left: 4px;\n}\n.mechanic-departure-block__minutes[data-v-5b96528d] {\n  width: 18px;\n  margin-left: 2px;\n}\n.mechanic-departure-block__signature[data-v-5b96528d] {\n  height: 25px;\n  text-align: end;\n  padding-right: 8px;\n  padding-top: 8px;\n  font-size: 13px;\n  font-weight: 700;\n  border-bottom: 1px solid black;\n}\n.mechanic-departure-block__labels[data-v-5b96528d] {\n  display: flex;\n  height: 12px;\n  text-align: end;\n  font-size: 8px;\n}\n.mechanic-departure-block__label-1[data-v-5b96528d] {\n  text-align: center;\n  width: 140px;\n}\n.mechanic-departure-block__label-2[data-v-5b96528d] {\n  text-align: center;\n  flex-grow: 1;\n}\n.driver-check-title p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 11px;\n  width: 160px;\n  margin: 0 auto;\n  line-height: 11px;\n}\n.driver-check-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 28px;\n  margin-bottom: 3px;\n}\n.driver-check-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.driver-check-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.driver-check-block__signature-value[data-v-5b96528d] {\n  width: 62px;\n  border-bottom: 1px solid black;\n}\n.driver-check-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.driver-check-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.driver-check-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.driver-check-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.fuel-type-block[data-v-5b96528d] {\n  display: flex;\n  height: 50px;\n}\n.fuel-type-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  width: 95px;\n  padding-top: 7px;\n}\n.fuel-type-block__type[data-v-5b96528d] {\n  font-size: 8px;\n  width: 75px;\n}\n.fuel-type-block__type-title[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 0 1px 1px;\n}\n.fuel-type-block__type-value[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 0 0 1px 1px;\n}\n.fuel-type-block__code[data-v-5b96528d] {\n  font-size: 8px;\n  flex-grow: 1;\n}\n.fuel-type-block__code-title[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 1px 2.5px 1px;\n}\n.fuel-type-block__code-value[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n}\n.fuel-type-block__code-value[data-v-5b96528d]:not(:last-child) {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2.5px 1px 2.5px;\n}\n.fuel-type-block__code-value[data-v-5b96528d]:last-child {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2.5px 2.5px 2.5px;\n}\n.fuel-check-title[data-v-5b96528d] {\n  font-size: 10px;\n  font-weight: 700;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.fuel-check-section[data-v-5b96528d] {\n  display: flex;\n}\n.fuel-check-section__left[data-v-5b96528d] {\n  height: 100%;\n  width: 170px;\n  font-size: 9px;\n}\n.fuel-check-section__left-title[data-v-5b96528d] {\n  height: 17px;\n  text-align: center;\n}\n.fuel-check-section__left-recieved[data-v-5b96528d] {\n  position: relative;\n  height: 34px;\n  font-size: 9px;\n  padding-right: 45px;\n}\n.fuel-check-section__left-recieved div[data-v-5b96528d] {\n  text-align: center;\n  height: 13px;\n  margin-top: -3px;\n}\n.fuel-check-section__left-doc-number[data-v-5b96528d] {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  display: inline-block;\n  height: 13px;\n  line-height: 13px;\n  margin-right: 4px;\n  padding-left: 8px;\n}\n.fuel-check-section__left-devider[data-v-5b96528d] {\n  display: inline-block;\n  height: 14px;\n  width: 60px;\n  margin-left: 51px;\n  border-bottom: 1px solid black;\n}\n.fuel-check-section__left-rest-before[data-v-5b96528d] {\n  height: 24px;\n  padding-top: 11px;\n}\n.fuel-check-section__left-rest-after[data-v-5b96528d] {\n  height: 21px;\n  padding-top: 9px;\n  text-align: end;\n  padding-right: 16px;\n}\n.fuel-check-section__left-spent-norm[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__left-spent-fact[data-v-5b96528d] {\n  height: 14px;\n  text-align: end;\n  padding-right: 16px;\n}\n.fuel-check-section__left-economy[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__left-spent-over[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__right[data-v-5b96528d] {\n  background-color: rgb(255, 255, 255);\n  height: 100%;\n  flex-grow: 1;\n}\n.fuel-check-section__right-title[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 1px 0 1px;\n  height: 17px;\n  font-size: 10px;\n  text-align: center;\n}\n.fuel-check-section__right-recieved[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 2.5px 2.5px 0 2.5px;\n  height: 34px;\n}\n.fuel-check-section__right-rest-before[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 21px;\n}\n.fuel-check-section__right-rest-after[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 21px;\n}\n.fuel-check-section__right-spent-norm[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-spent-fact[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-economy[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-spent-over[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 2.5px 2.5px;\n  height: 14px;\n}\n.odometer-arrive-block[data-v-5b96528d] {\n  margin-bottom: 16px;\n}\n.odometer-arrive-block__title[data-v-5b96528d] {\n  font-size: 9px;\n  width: 190px;\n  height: 25px;\n}\n.odometer-arrive-block__value[data-v-5b96528d] {\n  display: flex;\n  font-size: 9px;\n}\n.odometer-arrive-block__value-devider[data-v-5b96528d] {\n  font-size: 9px;\n  width: 150px;\n  height: 22px;\n}\n.odometer-arrive-block__value-place[data-v-5b96528d] {\n  font-size: 9px;\n  flex-grow: 1;\n  height: 22px;\n  border: 2.5px solid black;\n}\n.mechanic-arrive-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 28px;\n  margin-bottom: 3px;\n}\n.mechanic-arrive-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.mechanic-arrive-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.mechanic-arrive-block__signature-value[data-v-5b96528d] {\n  width: 62px;\n  border-bottom: 1px solid black;\n}\n.mechanic-arrive-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.mechanic-arrive-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.mechanic-arrive-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.mechanic-arrive-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".align-button[data-v-5b96528d] {\n  margin: 0 auto;\n}\n.modal[data-v-5b96528d] {\n  display: flex;\n  justify-content: center;\n}\n.list-of-paper[data-v-5b96528d] {\n  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);\n  background-color: #fff;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  margin-bottom: 16px;\n}\n.print-header[data-v-5b96528d] {\n  height: 30px;\n  width: 550px;\n}\n.print-footer[data-v-5b96528d] {\n  height: 20px;\n  width: 550px;\n}\n.document[data-v-5b96528d] {\n  margin-left: 580px;\n  background-color: rgb(255, 255, 255);\n  color: black;\n  width: 526px;\n  height: 734px;\n}\n.stamp-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 41px;\n}\n.stamp-block p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 10px;\n  width: 177px;\n  height: 30px;\n}\n.title-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 41px;\n  font-size: 13px;\n}\n.title-block h1[data-v-5b96528d] {\n  font-size: inherit;\n  text-align: start;\n  margin: 0;\n  margin-right: 16px;\n}\n.title-block__series[data-v-5b96528d] {\n  width: 85px;\n  border-bottom: 1px solid black;\n  margin-right: 6px;\n}\n.title-block__number[data-v-5b96528d] {\n  width: 75px;\n  border-bottom: 1px solid black;\n  text-align: center;\n  margin-left: 4px;\n}\n.date-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n  font-size: 12px;\n  font-weight: 700;\n}\n.date-block__day[data-v-5b96528d] {\n  width: 38px;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.date-block__month[data-v-5b96528d] {\n  width: 140px;\n  text-align: center;\n  border-bottom: 1px solid black;\n  margin-left: 6px;\n}\n.date-block__year[data-v-5b96528d] {\n  width: 75px;\n  text-align: end;\n  padding-right: 4px;\n  border-bottom: 1px solid black;\n}\n.date-block__series-label[data-v-5b96528d] {\n  font-weight: 500;\n  width: 150px;\n  text-align: center;\n  align-self: flex-start;\n  font-size: 7px;\n}\n.company-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 32px;\n  font-size: 9px;\n}\n.company-block__label[data-v-5b96528d] {\n  margin-right: 25px;\n  align-self: center;\n}\n.company-block__info[data-v-5b96528d] {\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.company-labels-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  padding-right: 100px;\n  height: 12px;\n  font-size: 8px;\n}\n.model-block[data-v-5b96528d] {\n  display: flex;\n  height: 26px;\n}\n.model-block__label[data-v-5b96528d] {\n  align-self: center;\n  font-size: 9px;\n  margin-right: 16px;\n  margin-bottom: -8px;\n}\n.model-block__type[data-v-5b96528d] {\n  font-size: 14px;\n  font-weight: 700;\n  width: 140px;\n  text-align: end;\n  padding-right: 12px;\n  align-self: flex-end;\n  border-bottom: 1px solid black;\n}\n.model-block__model[data-v-5b96528d] {\n  font-size: 14px;\n  font-weight: 700;\n  min-width: 160px;\n  text-align: start;\n  align-self: flex-end;\n  border-bottom: 1px solid black;\n}\n.car-number-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n}\n.car-number-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.car-number-block__number[data-v-5b96528d] {\n  line-height: 16px;\n  font-size: 13px;\n  font-weight: 700;\n  width: 155px;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.driver-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 16px;\n}\n.driver-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 6px;\n  align-self: center;\n}\n.driver-block__name[data-v-5b96528d] {\n  line-height: 15px;\n  font-size: 14px;\n  font-weight: 700;\n  width: 270px;\n  text-align: start;\n  padding-left: 4px;\n  margin-right: 24px;\n  border-bottom: 1px solid black;\n  white-space: nowrap;\n}\n.driver-block__label-2[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 4px;\n  align-self: center;\n}\n.driver-block__person-number[data-v-5b96528d] {\n  border: 2.5px solid black;\n  height: 18px;\n  line-height: 15px;\n  flex-grow: 1;\n  font-size: 12px;\n  align-self: center;\n  text-align: center;\n}\n.driver-labels-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  padding-right: 140px;\n  height: 12px;\n  font-size: 8px;\n}\n.license-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 13px;\n}\n.license-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  line-height: 9px;\n  margin-right: 24px;\n  align-self: center;\n}\n.license-block__number[data-v-5b96528d] {\n  width: 220px;\n  border-bottom: 1px solid black;\n  font-size: 12px;\n  line-height: 12px;\n  font-weight: 700;\n  margin-right: 16px;\n  padding-left: 8px;\n}\n.license-block__label-2[data-v-5b96528d] {\n  font-size: 9px;\n  line-height: 9px;\n  align-self: center;\n  margin-right: 14px;\n}\n.license-block__class[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  flex-grow: 1;\n}\n.big-bottom-block[data-v-5b96528d] {\n  display: flex;\n  height: 530px;\n}\n.big-bottom-block__left[data-v-5b96528d] {\n  width: 270px;\n  height: 100%;\n  padding-right: 5px;\n}\n.big-bottom-block__right[data-v-5b96528d] {\n  height: 100%;\n  padding-left: 5px;\n  flex-grow: 1;\n}\n.license-card-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 21px;\n}\n.license-card-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n}\n.license-card-block__right[data-v-5b96528d] {\n  flex-grow: 1;\n  text-align: center;\n}\n.license-card-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 9px;\n}\n.license-card-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.task-header-block[data-v-5b96528d] {\n  height: 39px;\n  text-align: center;\n  vertical-align: bottom;\n  font-size: 12px;\n  font-weight: 700;\n  padding-top: 18px;\n}\n.customer-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 36px;\n}\n.customer-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 8px;\n}\n.customer-block__right[data-v-5b96528d] {\n  flex-grow: 1;\n  text-align: center;\n}\n.customer-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 14px;\n  font-weight: 700;\n}\n.customer-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.organization-block[data-v-5b96528d] {\n  height: 35px;\n  padding-top: 5px;\n  text-align: center;\n  width: 170px;\n}\n.organization-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 9px;\n  font-weight: 700;\n}\n.organization-block__value-label[data-v-5b96528d] {\n  font-size: 8px;\n}\n.customer-address-block[data-v-5b96528d] {\n  height: 51px;\n}\n.customer-address-block__label-block[data-v-5b96528d] {\n  display: flex;\n  height: 21px;\n}\n.customer-address-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 16px;\n  padding-top: 8px;\n}\n.customer-address-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 8px;\n  flex-grow: 1;\n}\n.customer-address-block__value-2[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  text-align: center;\n  height: 14px;\n  font-size: 13px;\n  font-weight: 700;\n  line-height: 13px;\n  flex-grow: 1;\n}\n.customer-address-block__value-3[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 13px;\n  font-weight: 700;\n  line-height: 13px;\n  flex-grow: 1;\n}\n.departure-time-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  padding-left: 29px;\n}\n.departure-time-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 24px;\n  font-weight: 700;\n}\n.departure-time-block__value[data-v-5b96528d] {\n  flex-grow: 1;\n  height: 32px;\n  border: 2.5px solid black;\n}\n.dispetcher-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 35px;\n}\n.dispetcher-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 10px;\n  align-self: center;\n}\n.dispetcher-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.dispetcher-block__signature-value[data-v-5b96528d] {\n  width: 54px;\n  border-bottom: 1px solid black;\n}\n.dispetcher-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.dispetcher-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.dispetcher-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.dispetcher-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.arrive-time-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 36px;\n  padding-left: 15px;\n}\n.arrive-time-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 15px;\n  font-weight: 700;\n}\n.arrive-time-block__value[data-v-5b96528d] {\n  flex-grow: 1;\n  height: 32px;\n  border: 2.5px solid black;\n}\n.divider-block[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 20px;\n}\n.comments-block__label[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  font-size: 8px;\n  text-align: center;\n  height: 28px;\n}\n.comments-block__value[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n}\n.logistic-block__routes[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n  padding-left: 2px;\n}\n.logistic-block__payload[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  height: 14px;\n  font-size: 8px;\n  padding-left: 2px;\n}\n.finish-drive-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 37px;\n}\n.finish-drive-block__label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: end;\n  width: 70px;\n  margin-right: 30px;\n}\n.finish-drive-block__value-1[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  margin-right: 20px;\n  width: 54px;\n}\n.finish-drive-block__value-2[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n  flex-grow: 1;\n}\n.bottom-labels-block[data-v-5b96528d] {\n  display: flex;\n  height: 30px;\n}\n.bottom-labels-block__stamp-place[data-v-5b96528d] {\n  align-self: flex-end;\n  font-size: 9px;\n  text-align: end;\n  width: 70px;\n  margin-right: 30px;\n  padding-right: 10px;\n}\n.bottom-labels-block__label-1[data-v-5b96528d] {\n  text-align: center;\n  margin-right: 20px;\n  width: 54px;\n  font-size: 8px;\n}\n.bottom-labels-block__label-2[data-v-5b96528d] {\n  text-align: center;\n  flex-grow: 1;\n  font-size: 8px;\n}\n.mechanic-check-title[data-v-5b96528d] {\n  height: 25px;\n  font-size: 11px;\n  text-align: center;\n  padding-top: 8px;\n}\n.odometer-departure-block[data-v-5b96528d] {\n  display: flex;\n  align-items: center;\n  height: 22px;\n  margin-bottom: 3px;\n}\n.odometer-departure-block__label[data-v-5b96528d] {\n  font-size: 10px;\n  width: 150px;\n  text-align: center;\n}\n.odometer-departure-block__value[data-v-5b96528d] {\n  height: 100%;\n  flex-grow: 1;\n  border: 2.5px solid black;\n}\n.mechanic-departure-block[data-v-5b96528d] {\n  border: 1px solid black;\n}\n.mechanic-departure-block p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 9px;\n}\n.mechanic-departure-block h3[data-v-5b96528d] {\n  text-align: center;\n  font-size: 9px;\n  text-transform: uppercase;\n}\n.mechanic-departure-block__date[data-v-5b96528d] {\n  display: flex;\n  justify-content: center;\n  height: 15px;\n  font-size: 9px;\n  padding-top: 4px;\n}\n.mechanic-departure-block__date div[data-v-5b96528d] {\n  border-bottom: 1px solid black;\n}\n.mechanic-departure-block__date p[data-v-5b96528d] {\n  margin: 0 1px;\n}\n.mechanic-departure-block__day[data-v-5b96528d] {\n  width: 28px;\n}\n.mechanic-departure-block__month[data-v-5b96528d] {\n  width: 38px;\n  margin-left: 4px;\n  margin-right: 2px;\n}\n.mechanic-departure-block__year[data-v-5b96528d] {\n  width: 20px;\n  margin-left: 2px;\n}\n.mechanic-departure-block__hours[data-v-5b96528d] {\n  width: 18px;\n  margin-left: 4px;\n}\n.mechanic-departure-block__minutes[data-v-5b96528d] {\n  width: 18px;\n  margin-left: 2px;\n}\n.mechanic-departure-block__signature[data-v-5b96528d] {\n  height: 25px;\n  text-align: end;\n  padding-right: 8px;\n  padding-top: 8px;\n  font-size: 13px;\n  font-weight: 700;\n  border-bottom: 1px solid black;\n}\n.mechanic-departure-block__labels[data-v-5b96528d] {\n  display: flex;\n  height: 12px;\n  text-align: end;\n  font-size: 8px;\n}\n.mechanic-departure-block__label-1[data-v-5b96528d] {\n  text-align: center;\n  width: 140px;\n}\n.mechanic-departure-block__label-2[data-v-5b96528d] {\n  text-align: center;\n  flex-grow: 1;\n}\n.driver-check-title p[data-v-5b96528d] {\n  text-align: center;\n  font-size: 11px;\n  width: 160px;\n  margin: 0 auto;\n  line-height: 11px;\n}\n.driver-check-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 28px;\n  margin-bottom: 3px;\n}\n.driver-check-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.driver-check-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.driver-check-block__signature-value[data-v-5b96528d] {\n  width: 62px;\n  border-bottom: 1px solid black;\n}\n.driver-check-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.driver-check-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.driver-check-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.driver-check-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.fuel-type-block[data-v-5b96528d] {\n  display: flex;\n  height: 50px;\n}\n.fuel-type-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  width: 95px;\n  padding-top: 7px;\n}\n.fuel-type-block__type[data-v-5b96528d] {\n  font-size: 8px;\n  width: 75px;\n}\n.fuel-type-block__type-title[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 0 1px 1px;\n}\n.fuel-type-block__type-value[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 0 0 1px 1px;\n}\n.fuel-type-block__code[data-v-5b96528d] {\n  font-size: 8px;\n  flex-grow: 1;\n}\n.fuel-type-block__code-title[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 1px 2.5px 1px;\n}\n.fuel-type-block__code-value[data-v-5b96528d] {\n  text-align: center;\n  height: 15px;\n}\n.fuel-type-block__code-value[data-v-5b96528d]:not(:last-child) {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2.5px 1px 2.5px;\n}\n.fuel-type-block__code-value[data-v-5b96528d]:last-child {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2.5px 2.5px 2.5px;\n}\n.fuel-check-title[data-v-5b96528d] {\n  font-size: 10px;\n  font-weight: 700;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.fuel-check-section[data-v-5b96528d] {\n  display: flex;\n}\n.fuel-check-section__left[data-v-5b96528d] {\n  height: 100%;\n  width: 170px;\n  font-size: 9px;\n}\n.fuel-check-section__left-title[data-v-5b96528d] {\n  height: 17px;\n  text-align: center;\n}\n.fuel-check-section__left-recieved[data-v-5b96528d] {\n  position: relative;\n  height: 34px;\n  font-size: 9px;\n  padding-right: 45px;\n}\n.fuel-check-section__left-recieved div[data-v-5b96528d] {\n  text-align: center;\n  height: 13px;\n  margin-top: -3px;\n}\n.fuel-check-section__left-doc-number[data-v-5b96528d] {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  display: inline-block;\n  height: 13px;\n  line-height: 13px;\n  margin-right: 4px;\n  padding-left: 8px;\n}\n.fuel-check-section__left-devider[data-v-5b96528d] {\n  display: inline-block;\n  height: 14px;\n  width: 60px;\n  margin-left: 51px;\n  border-bottom: 1px solid black;\n}\n.fuel-check-section__left-rest-before[data-v-5b96528d] {\n  height: 24px;\n  padding-top: 11px;\n}\n.fuel-check-section__left-rest-after[data-v-5b96528d] {\n  height: 21px;\n  padding-top: 9px;\n  text-align: end;\n  padding-right: 16px;\n}\n.fuel-check-section__left-spent-norm[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__left-spent-fact[data-v-5b96528d] {\n  height: 14px;\n  text-align: end;\n  padding-right: 16px;\n}\n.fuel-check-section__left-economy[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__left-spent-over[data-v-5b96528d] {\n  height: 14px;\n}\n.fuel-check-section__right[data-v-5b96528d] {\n  background-color: rgb(255, 255, 255);\n  height: 100%;\n  flex-grow: 1;\n}\n.fuel-check-section__right-title[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 1px 0 1px;\n  height: 17px;\n  font-size: 10px;\n  text-align: center;\n}\n.fuel-check-section__right-recieved[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 2.5px 2.5px 0 2.5px;\n  height: 34px;\n}\n.fuel-check-section__right-rest-before[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 21px;\n}\n.fuel-check-section__right-rest-after[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 21px;\n}\n.fuel-check-section__right-spent-norm[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-spent-fact[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-economy[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 0 2.5px;\n  height: 14px;\n}\n.fuel-check-section__right-spent-over[data-v-5b96528d] {\n  border-color: black;\n  border-style: solid;\n  border-width: 1px 2.5px 2.5px 2.5px;\n  height: 14px;\n}\n.odometer-arrive-block[data-v-5b96528d] {\n  margin-bottom: 16px;\n}\n.odometer-arrive-block__title[data-v-5b96528d] {\n  font-size: 9px;\n  width: 190px;\n  height: 25px;\n}\n.odometer-arrive-block__value[data-v-5b96528d] {\n  display: flex;\n  font-size: 9px;\n}\n.odometer-arrive-block__value-devider[data-v-5b96528d] {\n  font-size: 9px;\n  width: 150px;\n  height: 22px;\n}\n.odometer-arrive-block__value-place[data-v-5b96528d] {\n  font-size: 9px;\n  flex-grow: 1;\n  height: 22px;\n  border: 2.5px solid black;\n}\n.mechanic-arrive-block[data-v-5b96528d] {\n  display: flex;\n  align-items: flex-end;\n  height: 28px;\n  margin-bottom: 3px;\n}\n.mechanic-arrive-block__label[data-v-5b96528d] {\n  font-size: 9px;\n  margin-right: 14px;\n  align-self: center;\n}\n.mechanic-arrive-block__signature-block[data-v-5b96528d] {\n  margin-right: 16px;\n}\n.mechanic-arrive-block__signature-value[data-v-5b96528d] {\n  width: 62px;\n  border-bottom: 1px solid black;\n}\n.mechanic-arrive-block__signature-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}\n.mechanic-arrive-block__name-block[data-v-5b96528d] {\n  flex-grow: 1;\n}\n.mechanic-arrive-block__name-value[data-v-5b96528d] {\n  font-size: 12px;\n  font-weight: 700;\n  text-align: center;\n  border-bottom: 1px solid black;\n}\n.mechanic-arrive-block__name-label[data-v-5b96528d] {\n  font-size: 8px;\n  text-align: center;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1165,7 +1177,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".relation-page[data-v-c7ea9f90] {\n  padding: 64px 32px;\n  display: flex;\n}\n.relation-page__journal[data-v-c7ea9f90] {\n  padding: 0 0 0 32px;\n  flex: 0 0 380px;\n}\n.relation-page__journal-title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation[data-v-c7ea9f90] {\n  position: relative;\n  flex-grow: 1;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form a[data-v-c7ea9f90] {\n  color: green;\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".relation-page[data-v-c7ea9f90] {\n  padding: 64px 32px;\n  display: flex;\n}\n.relation-page__journal[data-v-c7ea9f90] {\n  padding: 0 0 0 32px;\n  flex: 0 0 380px;\n}\n.relation-page__journal-title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation[data-v-c7ea9f90] {\n  flex-grow: 1;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form a[data-v-c7ea9f90] {\n  color: green;\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2235,305 +2247,316 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "modal" }, [
-    _c("div", { staticClass: "list-of-paper print" }, [
-      _c("header", { staticClass: "print-header" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "document" }, [
-        _c("div", { staticClass: "big-top-block" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "title-block" }, [
-            _c("h1", [_vm._v("ПУТЕВОЙ ЛИСТ АВТОМОБИЛЯ")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "title-block__series" }),
-            _vm._v(" "),
-            _vm._m(1),
-            _vm._v(" "),
-            _c("div", { staticClass: "title-block__number" }, [
-              _c("b", [_vm._v(_vm._s(_vm.waybillNumber))]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "date-block" }, [
-            _c("p", [_vm._v('"')]),
-            _vm._v(" "),
-            _c("div", { staticClass: "date-block__day" }, [
-              _vm._v(_vm._s(_vm.date.day)),
-            ]),
-            _vm._v(" "),
-            _c("p", [_vm._v('"')]),
-            _vm._v(" "),
-            _c("div", { staticClass: "date-block__month" }, [
-              _vm._v(_vm._s(_vm.monthList[_vm.date.month])),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "date-block__year" }, [
-              _vm._v("20" + _vm._s(_vm.date.year)),
-            ]),
-            _vm._v(" "),
-            _c("p", [_vm._v("г.")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "date-block__series-label" }, [
-              _vm._v("серия"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _vm._m(2),
-          _vm._v(" "),
-          _c("div", { staticClass: "company-labels-block" }, [
-            _vm._v(
-              "\n                    наименование, адрес, номер телефона\n                "
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "model-block" }, [
-            _c("div", { staticClass: "model-block__label" }, [
-              _vm._v("Марка автомобиля"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "model-block__type" }, [
-              _vm._v("Легковой"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "model-block__model" }, [
-              _vm._v(_vm._s(_vm.model)),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "car-number-block" }, [
-            _c("div", { staticClass: "car-number-block__label" }, [
-              _vm._v("Государственный номерной знак"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "car-number-block__number" }, [
-              _vm._v(_vm._s(_vm.number)),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "driver-block" }, [
-            _c("div", { staticClass: "driver-block__label" }, [
-              _vm._v("Водитель"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "driver-block__name" }, [
-              _vm._v(
-                _vm._s(_vm.last_name) +
-                  " " +
-                  _vm._s(_vm.first_name) +
-                  " " +
-                  _vm._s(_vm.middle_name)
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "driver-block__label-2" }, [
-              _vm._v("Табельный номер"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "driver-block__person-number" }, [
-              _vm._v(_vm._s(_vm.person_number)),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "driver-labels-block" }, [
-            _vm._v(
-              "\n                    фамилия имя отчество\n                "
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "license-block" }, [
-            _c("div", { staticClass: "license-block__label" }, [
-              _vm._v("Удостоверение №"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "license-block__number" }, [
-              _vm._v(_vm._s(_vm.driver_license)),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "license-block__label-2" }, [
-              _vm._v("Класс"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "license-block__class" }),
-          ]),
-        ]),
+    _c(
+      "div",
+      { staticClass: "list-of-paper print" },
+      [
+        _c("header", { staticClass: "print-header" }),
         _vm._v(" "),
-        _c("div", { staticClass: "big-bottom-block" }, [
-          _c("div", { staticClass: "big-bottom-block__left" }, [
-            _vm._m(3),
+        _c("div", { staticClass: "document" }, [
+          _c("div", { staticClass: "big-top-block" }, [
+            _vm._m(0),
             _vm._v(" "),
-            _c("div", { staticClass: "task-header-block" }, [
+            _c("div", { staticClass: "title-block" }, [
+              _c("h1", [_vm._v("ПУТЕВОЙ ЛИСТ АВТОМОБИЛЯ")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "title-block__series" }),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "title-block__number" }, [
+                _c("b", [_vm._v(_vm._s(_vm.waybillNumber))]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "date-block" }, [
+              _c("p", [_vm._v('"')]),
+              _vm._v(" "),
+              _c("div", { staticClass: "date-block__day" }, [
+                _vm._v(_vm._s(_vm.date.day)),
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v('"')]),
+              _vm._v(" "),
+              _c("div", { staticClass: "date-block__month" }, [
+                _vm._v(_vm._s(_vm.monthList[_vm.date.month])),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "date-block__year" }, [
+                _vm._v("20" + _vm._s(_vm.date.year)),
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("г.")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "date-block__series-label" }, [
+                _vm._v("серия"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _c("div", { staticClass: "company-labels-block" }, [
               _vm._v(
-                "\n                        Задание водителю\n                    "
+                "\n                    наименование, адрес, номер телефона\n                "
               ),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "customer-block" }, [
-              _c("div", { staticClass: "customer-block__label" }, [
-                _vm._v("В распоряжение"),
+            _c("div", { staticClass: "model-block" }, [
+              _c("div", { staticClass: "model-block__label" }, [
+                _vm._v("Марка автомобиля"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "customer-block__right" }, [
-                _c("div", { staticClass: "customer-block__value" }, [
-                  _vm._v(_vm._s(_vm.customer)),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "customer-block__value-label" }, [
-                  _vm._v("наименование"),
-                ]),
+              _c("div", { staticClass: "model-block__type" }, [
+                _vm._v("Легковой"),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "model-block__model" }, [
+                _vm._v(_vm._s(_vm.model)),
               ]),
             ]),
             _vm._v(" "),
-            _vm._m(4),
-            _vm._v(" "),
-            _c("div", { staticClass: "customer-address-block" }, [
-              _vm._m(5),
-              _vm._v(" "),
-              _c("div", { staticClass: "customer-address-block__value-2" }, [
-                _vm._v(_vm._s(_vm.address)),
+            _c("div", { staticClass: "car-number-block" }, [
+              _c("div", { staticClass: "car-number-block__label" }, [
+                _vm._v("Государственный номерной знак"),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "customer-address-block__value-3" }),
-            ]),
-            _vm._v(" "),
-            _vm._m(6),
-            _vm._v(" "),
-            _c("div", { staticClass: "dispetcher-block" }, [
-              _c("div", { staticClass: "dispetcher-block__label" }, [
-                _vm._v("Диспетчер-нарядчик"),
-              ]),
-              _vm._v(" "),
-              _vm._m(7),
-              _vm._v(" "),
-              _c("div", { staticClass: "dispetcher-block__name-block" }, [
-                _c("div", { staticClass: "dispetcher-block__name-value" }, [
-                  _vm._v(_vm._s(_vm.dispetcherName)),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "dispetcher-block__name-label" }, [
-                  _vm._v("расшифровка подписи"),
-                ]),
+              _c("div", { staticClass: "car-number-block__number" }, [
+                _vm._v(_vm._s(_vm.number)),
               ]),
             ]),
             _vm._v(" "),
-            _vm._m(8),
-            _vm._v(" "),
-            _c("div", { staticClass: "dispetcher-block" }, [
-              _c("div", { staticClass: "dispetcher-block__label" }, [
-                _vm._v("Диспетчер-нарядчик"),
+            _c("div", { staticClass: "driver-block" }, [
+              _c("div", { staticClass: "driver-block__label" }, [
+                _vm._v("Водитель"),
               ]),
               _vm._v(" "),
-              _vm._m(9),
-              _vm._v(" "),
-              _c("div", { staticClass: "dispetcher-block__name-block" }, [
-                _c("div", { staticClass: "dispetcher-block__name-value" }, [
-                  _vm._v(_vm._s(_vm.dispetcherName)),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "dispetcher-block__name-label" }, [
-                  _vm._v("расшифровка подписи"),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "divider-block" }),
-            _vm._v(" "),
-            _vm._m(10),
-            _vm._v(" "),
-            _vm._m(11),
-            _vm._v(" "),
-            _vm._m(12),
-            _vm._v(" "),
-            _vm._m(13),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "big-bottom-block__right" }, [
-            _c("div", { staticClass: "mechanic-check-title" }, [
-              _vm._v(
-                "\n                        Автомобиль технически исправен\n                    "
-              ),
-            ]),
-            _vm._v(" "),
-            _vm._m(14),
-            _vm._v(" "),
-            _c("div", { staticClass: "mechanic-departure-block" }, [
-              _c("p", [_vm._v("контроль технического состояния пройден")]),
-              _vm._v(" "),
-              _c("h3", [_vm._v("выпуск на линию разрешен")]),
-              _vm._v(" "),
-              _vm._m(15),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "mechanic-departure-block__signature" },
-                [_vm._v(_vm._s(_vm.mechanicName))]
-              ),
-              _vm._v(" "),
-              _vm._m(16),
-            ]),
-            _vm._v(" "),
-            _vm._m(17),
-            _vm._v(" "),
-            _vm._m(18),
-            _vm._v(" "),
-            _c("div", { staticClass: "fuel-type-block" }, [
-              _c("div", { staticClass: "fuel-type-block__label" }, [
+              _c("div", { staticClass: "driver-block__name" }, [
                 _vm._v(
-                  "\n                            Горючее\n                        "
+                  _vm._s(_vm.last_name) +
+                    " " +
+                    _vm._s(_vm.first_name) +
+                    " " +
+                    _vm._s(_vm.middle_name)
                 ),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "fuel-type-block__type" }, [
-                _c("div", { staticClass: "fuel-type-block__type-title" }, [
-                  _vm._v("марка"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "fuel-type-block__type-value" }, [
-                  _vm._v(_vm._s(_vm.fuel)),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "fuel-type-block__type-value" }),
+              _c("div", { staticClass: "driver-block__label-2" }, [
+                _vm._v("Табельный номер"),
               ]),
               _vm._v(" "),
-              _vm._m(19),
+              _c("div", { staticClass: "driver-block__person-number" }, [
+                _vm._v(_vm._s(_vm.person_number)),
+              ]),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "fuel-check-title" }, [
+            _c("div", { staticClass: "driver-labels-block" }, [
               _vm._v(
-                "\n                        Движение горючего\n                    "
+                "\n                    фамилия имя отчество\n                "
               ),
             ]),
             _vm._v(" "),
-            _vm._m(20),
-            _vm._v(" "),
-            _vm._m(21),
-            _vm._v(" "),
-            _c("div", { staticClass: "mechanic-arrive-block" }, [
-              _c("div", { staticClass: "mechanic-arrive-block__label" }, [
-                _vm._v("Механик"),
+            _c("div", { staticClass: "license-block" }, [
+              _c("div", { staticClass: "license-block__label" }, [
+                _vm._v("Удостоверение №"),
               ]),
               _vm._v(" "),
-              _vm._m(22),
+              _c("div", { staticClass: "license-block__number" }, [
+                _vm._v(_vm._s(_vm.driver_license)),
+              ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mechanic-arrive-block__name-block" }, [
+              _c("div", { staticClass: "license-block__label-2" }, [
+                _vm._v("Класс"),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "license-block__class" }),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "big-bottom-block" }, [
+            _c("div", { staticClass: "big-bottom-block__left" }, [
+              _vm._m(3),
+              _vm._v(" "),
+              _c("div", { staticClass: "task-header-block" }, [
+                _vm._v(
+                  "\n                        Задание водителю\n                    "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "customer-block" }, [
+                _c("div", { staticClass: "customer-block__label" }, [
+                  _vm._v("В распоряжение"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "customer-block__right" }, [
+                  _c("div", { staticClass: "customer-block__value" }, [
+                    _vm._v(_vm._s(_vm.customer)),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "customer-block__value-label" }, [
+                    _vm._v("наименование"),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _c("div", { staticClass: "customer-address-block" }, [
+                _vm._m(5),
+                _vm._v(" "),
+                _c("div", { staticClass: "customer-address-block__value-2" }, [
+                  _vm._v(_vm._s(_vm.address)),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "customer-address-block__value-3" }),
+              ]),
+              _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _c("div", { staticClass: "dispetcher-block" }, [
+                _c("div", { staticClass: "dispetcher-block__label" }, [
+                  _vm._v("Диспетчер-нарядчик"),
+                ]),
+                _vm._v(" "),
+                _vm._m(7),
+                _vm._v(" "),
+                _c("div", { staticClass: "dispetcher-block__name-block" }, [
+                  _c("div", { staticClass: "dispetcher-block__name-value" }, [
+                    _vm._v(_vm._s(_vm.dispetcherName)),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "dispetcher-block__name-label" }, [
+                    _vm._v("расшифровка подписи"),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _vm._m(8),
+              _vm._v(" "),
+              _c("div", { staticClass: "dispetcher-block" }, [
+                _c("div", { staticClass: "dispetcher-block__label" }, [
+                  _vm._v("Диспетчер-нарядчик"),
+                ]),
+                _vm._v(" "),
+                _vm._m(9),
+                _vm._v(" "),
+                _c("div", { staticClass: "dispetcher-block__name-block" }, [
+                  _c("div", { staticClass: "dispetcher-block__name-value" }, [
+                    _vm._v(_vm._s(_vm.dispetcherName)),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "dispetcher-block__name-label" }, [
+                    _vm._v("расшифровка подписи"),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider-block" }),
+              _vm._v(" "),
+              _vm._m(10),
+              _vm._v(" "),
+              _vm._m(11),
+              _vm._v(" "),
+              _vm._m(12),
+              _vm._v(" "),
+              _vm._m(13),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "big-bottom-block__right" }, [
+              _c("div", { staticClass: "mechanic-check-title" }, [
+                _vm._v(
+                  "\n                        Автомобиль технически исправен\n                    "
+                ),
+              ]),
+              _vm._v(" "),
+              _vm._m(14),
+              _vm._v(" "),
+              _c("div", { staticClass: "mechanic-departure-block" }, [
+                _c("p", [_vm._v("контроль технического состояния пройден")]),
+                _vm._v(" "),
+                _c("h3", [_vm._v("выпуск на линию разрешен")]),
+                _vm._v(" "),
+                _vm._m(15),
+                _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "mechanic-arrive-block__name-value" },
+                  { staticClass: "mechanic-departure-block__signature" },
                   [_vm._v(_vm._s(_vm.mechanicName))]
                 ),
                 _vm._v(" "),
+                _vm._m(16),
+              ]),
+              _vm._v(" "),
+              _vm._m(17),
+              _vm._v(" "),
+              _vm._m(18),
+              _vm._v(" "),
+              _c("div", { staticClass: "fuel-type-block" }, [
+                _c("div", { staticClass: "fuel-type-block__label" }, [
+                  _vm._v(
+                    "\n                            Горючее\n                        "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "fuel-type-block__type" }, [
+                  _c("div", { staticClass: "fuel-type-block__type-title" }, [
+                    _vm._v("марка"),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "fuel-type-block__type-value" }, [
+                    _vm._v(_vm._s(_vm.fuel)),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "fuel-type-block__type-value" }),
+                ]),
+                _vm._v(" "),
+                _vm._m(19),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "fuel-check-title" }, [
+                _vm._v(
+                  "\n                        Движение горючего\n                    "
+                ),
+              ]),
+              _vm._v(" "),
+              _vm._m(20),
+              _vm._v(" "),
+              _vm._m(21),
+              _vm._v(" "),
+              _c("div", { staticClass: "mechanic-arrive-block" }, [
+                _c("div", { staticClass: "mechanic-arrive-block__label" }, [
+                  _vm._v("Механик"),
+                ]),
+                _vm._v(" "),
+                _vm._m(22),
+                _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "mechanic-arrive-block__name-label" },
-                  [_vm._v("расшифровка подписи")]
+                  { staticClass: "mechanic-arrive-block__name-block" },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "mechanic-arrive-block__name-value" },
+                      [_vm._v(_vm._s(_vm.mechanicName))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "mechanic-arrive-block__name-label" },
+                      [_vm._v("расшифровка подписи")]
+                    ),
+                  ]
                 ),
               ]),
             ]),
           ]),
         ]),
-      ]),
-      _vm._v(" "),
-      _c("footer", { staticClass: "print-footer" }),
-    ]),
+        _vm._v(" "),
+        _c("footer", { staticClass: "print-footer" }),
+        _vm._v(" "),
+        _c("print-back-side"),
+      ],
+      1
+    ),
   ])
 }
 var staticRenderFns = [

@@ -106,8 +106,8 @@ $border-bold: 2.5px;
     border-width: $top $right $bottom $left; 
 }
 .back-side-list-of-paper {
-    display: flex;
-    justify-content: flex-end;
+    // display: flex;
+    // justify-content: flex-end;
     box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);  
     width: 1270px;
     margin: 0 auto;
@@ -134,8 +134,8 @@ $border-bold: 2.5px;
     position: relative;
     background-color: rgb(255, 255, 255); 
     color: black;
-    width: 540px;
-    margin-left: 570px;
+    width: 530px;
+    margin-left: 580px;
     height: 734px;
     padding: 0 12px; 
     img {

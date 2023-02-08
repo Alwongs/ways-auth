@@ -465,7 +465,7 @@ $content-color: rgb(0, 76, 143);
 }
 
 .relation {
-    position: relative;
+    // position: relative;
     flex-grow: 1;
     &__title-car {
         font-weight: 700;
