@@ -262,6 +262,8 @@ export default {
     },    
     methods: {   
         formatDateToJournal(dateFrom, dateTo) {
+            let dateFromString = JSON.stringify({ x: 5, y: 6 });
+            let dateFrom = JSON.parse(dateFromString);
 
         },
         saveWaybillToJournal() {
