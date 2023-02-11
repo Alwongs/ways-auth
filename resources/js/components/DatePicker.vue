@@ -2,9 +2,10 @@
     <div class="date-picker">
         <div class="date-picker__item date-picker__day">
             <input 
-                v-model="day" 
+                v-model="getDateFrom.day" 
                 type="text" 
                 placeholder="День"
+                required
                 @click="toggleDayList" 
             >   
             <ul 
@@ -23,9 +24,10 @@
 
         <div class="date-picker__item date-picker__month">
             <input 
-                v-model="month" 
+                v-model="monthList[getDateFrom.month - 1]" 
                 type="text"  
                 placeholder="Месяц"
+                required
                 @click="toggleMonthList"
             >
             <ul 
@@ -35,7 +37,7 @@
                 <li 
                     v-for="(month, index) in monthList" 
                     :key="month" 
-                    @click="selectMonth(month, index+1)"
+                    @click="selectMonth(month, index + 1)"
                 >
                     {{ month }}
                 </li>
@@ -44,9 +46,10 @@
 
         <div class="date-picker__item date-picker__year">
             <input 
-                v-model="year" 
+                v-model="getDateFrom.year" 
                 type="text"  
                 placeholder="Год"
+                required
                 @click="toggleYearList"
             >
             <ul 
@@ -68,6 +71,12 @@
 <script>
 export default {
     name: 'DatePicker',
+    props: ['date'],
+    computed: {
+        getDateFrom: function() {
+            return this.date;
+        }
+    },   
     data() {
         return {
             isDayListOpen: false,
@@ -98,9 +107,9 @@ export default {
                 '29',
             ],
 
-            day: '',
-            month: '',
-            year: ''
+            day: this.date.day || '',
+            month: this.date.month || '',
+            year: this.date.year || '',
         }
     }, 
     methods: {

@@ -94,7 +94,15 @@ const router = new VueRouter({
             path: '/journal',
             name: 'journal',
             component: () => import('./pages/journal/Journal.vue'),            
-        }        
+        },
+
+        // -------------- settings -----------------
+        {
+            path: '/settings',
+            name: 'settings',
+            component: () => import('./pages/Settings.vue'),            
+        },
+
     ]
 })
 

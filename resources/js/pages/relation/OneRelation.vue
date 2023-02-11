@@ -16,8 +16,8 @@
                     :middle_name="driver.middle_name"
                     :person_number="driver.person_number"
                     :driver_license="driver.driver_license"
-                    :mechanic="selectedMechanic"
-                    :dispetcher="selectedDispetcher"
+                    :mechanic="mechanic"
+                    :dispetcher="dispetcher"
                     :waybillNumber="waybillNumber"
                     :date="formatDate(dateFrom, dateTo)"
                     :customer="customer"
@@ -33,8 +33,8 @@
             </div>
             <!-- /Modals -->
 
-            <div class="relation__title-car">
-                {{ car.model }} - <span class="relation__car-number">{{ car.number }}</span>
+            <div class="relation__title">
+                Путевой лист автомобиля <span class="relation__title-car">{{ car.model }}</span> - <span class="relation__car-number">{{ car.number }}</span>
             </div>
             <div class="relation__title-driver">
                 {{ driver.last_name }} {{ driver.first_name }} {{ driver.middle_name }}                
@@ -44,101 +44,38 @@
             <error-notification v-if="errored" />
 
             <div class="relation-form">
-
                 <div class="relation-form__item waybill">
                     <label for="">№ п. листа: </label>
                     <input v-model="waybillNumber" type="text">
                 </div>
 
-
                 <div class="relation-form__item">
-                    <label for="">Дата выезда: </label>
-                    <date-picker 
-                        @updateDay="updateDayFrom"
-                        @updateMonth="updateMonthFrom"
-                        @updateYear="updateYearFrom"                  
-                    />                
+                    <label>Дата выезда: </label>             
+                    <p>{{ dateFrom.day }} {{ monthList[dateFrom.month - 1] }} 20{{ dateFrom.year }}  <router-link :to="{name: 'settings'}">Изменить</router-link> </p>               
                 </div>
 
                 <div class="relation-form__item">
-                    <label for="">Дата заезда: </label>
-                    <date-picker 
-                        v-if="!isSameDate"
-                        @updateDay="updateDayTo"
-                        @updateMonth="updateMonthTo"
-                        @updateYear="updateYearTo"
-                    />  
-                    <a v-if="!isSameDate" href="#" @click="makeSameDate">Заезд в тот же день</a>              
-                    <a v-if="isSameDate" href="#" @click="makeDiffDate">Добавить дату заезда</a>              
+                    <label for="">Дата заезда: </label>             
+                    <p for="">{{ dateTo.day }} {{ monthList[dateTo.month - 1] }} 20{{ dateTo.year }}</p>             
+                </div>
+                
+                <div class="relation-form__item">
+                    <label for="">Заказчик: </label>             
+                    <p for="">{{ customer }}</p>             
+                </div>
+                <div class="relation-form__item">
+                    <label for="">Адрес: </label>             
+                    <p for="">{{ address }}</p>             
+                </div>
+                <div class="relation-form__item">
+                    <label for="">Диспетчер: </label>             
+                    <p for="">{{ dispetcherShortName }}</p>             
+                </div>
+                <div class="relation-form__item">
+                    <label for="">Механик: </label>             
+                    <p for="">{{ mechanicShortName }}</p>             
                 </div>
 
-
-                <div class="relation-form__item mechanic">
-                    <label for="">заказчик: </label>
-                    <input 
-                        v-model="customer" 
-                        type="text" 
-                        class="relation-form__customer" 
-                    >
-                </div>
-
-                <div class="relation-form__item mechanic">
-                    <label for="">адрес подачи: </label>
-                    <input 
-                        v-model="address" 
-                        type="text" 
-                        class="relation-form__address" 
-                    >
-                </div>
-
-                <div class="relation-form__item mechanic">
-                    <label for="">механик: </label>
-                    <input 
-                        v-model="mechanicFullName" 
-                        type="text" 
-                        readonly
-                        class="relation-form__mechanic" 
-                        @click="toggleMechanicList"
-                    >
-                    <ul 
-                        v-if="isMechanicListOpen" 
-                        class="relation-form__drop-list"
-                    >
-                        <li class="closeBtn" @click="toggleMechanicList">x</li>                
-                        <li 
-                            v-for="mechanic in mechanicList" 
-                            :key="mechanic.id" 
-                            class="relation-form__drop-item"
-                            @click="selectMechanic(mechanic)"
-                        >
-                            {{ mechanic.last_name }} {{ mechanic.first_name }} {{ mechanic.middle_name }}
-                        </li>
-                    </ul>
-                </div>
-                <div class="relation-form__item dispetcher">
-                    <label for="">диспетчер: </label>
-                    <input 
-                        v-model="dispetcherFullName" 
-                        type="text" 
-                        readonly
-                        class="relation-form__mechanic" 
-                        @click="toggleDispetcherList"
-                    >
-                    <ul 
-                        v-if="isDispetcherListOpen" 
-                        class="relation-form__drop-list"
-                    >
-                        <li class="closeBtn" @click="toggleDispetcherList">x</li>
-                        <li 
-                            v-for="dispetcher in dispetcherList" 
-                            :key="dispetcher.id" 
-                            class="relation-form__drop-item"
-                            @click="selectDispetcher(dispetcher)"
-                        >
-                            {{ dispetcher.last_name }} {{ dispetcher.first_name }} {{ dispetcher.middle_name }}
-                        </li>
-                    </ul>
-                </div>
             </div>
 
             <div class="app-btn-group">
@@ -176,7 +113,6 @@
 <script>
 import PrintDocument from '../../components/PrintDocument.vue';
 import PrintBackSide from '../../components/PrintBackSide.vue';
-import DatePicker from '../../components/DatePicker.vue';
 import JournalComponent from '../../components/JournalComponent.vue';
 
 export default {
@@ -184,25 +120,20 @@ export default {
     components: { 
         PrintDocument,
         PrintBackSide,
-        DatePicker,
         JournalComponent
     },
     props: ['relationId'],
     data() {
         return {
             errored: false,
-            loading: true,
+            loading: false,
             isPrintOpen: false,
-            isPrintBackOpen: false,
-            isMechanicListOpen: false,
-            isDispetcherListOpen: false,
-            isSameDate: false,
+            isPrintBackOpen: false,            
 
             relation: {},
             car: {},
             driver: {},
-            mechanicList: [],
-            dispetcherList: [],
+
             waybills: [],
 
             waybillNumber: '',
@@ -217,6 +148,7 @@ export default {
                 month: '',
                 year: ''
             },
+
             monthList: [
                 'Января',
                 'Февраля',
@@ -232,51 +164,60 @@ export default {
                 'Декабря'
             ],            
 
-            customer: 'ООО АК "Волга-Днепр"',
-            address: 'г. Ульяновск, ул. Карбышева, д. 14',            
-            selectedMechanic: {
-                last_name: 'Братышев',
-                first_name: 'Александр',
-                middle_name: 'Сергеевич',
-            },
-            selectedDispetcher: {
-                last_name: 'Асташов',
-                first_name: 'Дмитирий',
-                middle_name: 'Васильевич',
-            },
+            customer: '',
+            address: '',            
+            dispetcher: {},
+            mechanic: {}, 
         }
-    },
+    }, 
     computed: {
-        mechanicFullName() {
-            if (this.selectedMechanic.last_name) {
-                return `${this.selectedMechanic.last_name} ${this.selectedMechanic.first_name} ${this.selectedMechanic.middle_name}`;
-            }
-            return '';
+        dispetcherShortName() {
+            if (this.dispetcher.last_name) {
+                return `${this.dispetcher.last_name} ${this.dispetcher.first_name[0]} ${this.dispetcher.middle_name[0]}`
+            } else '';
         },
-        dispetcherFullName() {
-            if (this.selectedDispetcher.last_name) {
-                return `${this.selectedDispetcher.last_name} ${this.selectedDispetcher.first_name} ${this.selectedDispetcher.middle_name}`;
-            }
-            return '';
-        }
-    },    
+        mechanicShortName() {
+            if (this.mechanic.last_name) {
+                return `${this.mechanic.last_name} ${this.mechanic.first_name[0]} ${this.mechanic.middle_name[0]}`
+            } else '';
+        },
+    },          
     methods: {   
-        formatDateToJournal(dateFrom, dateTo) {
-            let dateFromString = JSON.stringify({ x: 5, y: 6 });
-            let dateFrom = JSON.parse(dateFromString);
+        getSettings() {
+            axios.get('/api/V1/settings')
+            .then(response => {
+                let setting = response.data.data[0];
+                  
+                this.dateFrom = JSON.parse(setting.date_from);
+                this.dateTo = JSON.parse(setting.date_to);
+                this.customer = setting.customer;       
+                this.address = setting.address; 
+                this.dispetcher = JSON.parse(setting.dispetcher);       
+                this.mechanic = JSON.parse(setting.mechanic);  
+            })
+            .catch(error => {
+                console.log(error)
+                this.errored = true
+            })
+            .finally(() => {
+                this.loading = false             
+            })
+        },        
 
-        },
         saveWaybillToJournal() {
-                // console.log(this.dateFrom.day.length)
             axios.post('/api/V1/waybills', {
                 number: this.waybillNumber,
-                date: `${this.dateFrom.day}.${this.dateFrom.month}.${this.dateFrom.year} - ${this.dateTo.day}.${this.dateTo.month}.${this.dateTo.year}`,
+
+                date_from: JSON.stringify(this.dateFrom),
+                date_to: JSON.stringify(this.dateTo),
+
+                // date: `${this.dateFrom.day}.${this.dateFrom.month}.${this.dateFrom.year} - ${this.dateTo.day}.${this.dateTo.month}.${this.dateTo.year}`,
                 full_name: this.driver.last_name + ' ' + this.driver.first_name + ' ' + this.driver.middle_name ,
                 person_number: this.driver.person_number,
                 car_number: this.car.number
             })
             .then(response => {
-                // this.$router.push({name: 'cars'})
+
             })
             .catch(error => {
                 console.log(error)
@@ -286,32 +227,8 @@ export default {
                 this.loading = false           
             })            
         },       
-        makeSameDate() {
-            this.dateTo = this.dateFrom;
-            this.isSameDate = true;
-        },
-        makeDiffDate() {
-            this.dateTo = {};
-            this.isSameDate = false;
-        },
-        updateDayFrom(day) {
-            this.dateFrom.day = day
-        },
-        updateMonthFrom(month) {
-            this.dateFrom.month = month
-        },
-        updateYearFrom(year) {
-            this.dateFrom.year = year
-        },
-        updateDayTo(day) {
-            this.dateTo.day = day
-        },
-        updateMonthTo(month) {
-            this.dateTo.month = month
-        },
-        updateYearTo(year) {
-            this.dateTo.year = year
-        },
+
+
         goBack() {
             this.$router.go(-1);
         },
@@ -332,35 +249,6 @@ export default {
             } else year = dateFrom.year;
 
             return { day, month, year }
-        },
-        selectMechanic(mechanic) {
-            this.selectedMechanic = mechanic;
-            this.isMechanicListOpen = false;
-        },
-        selectDispetcher(dispetcher) {
-            this.selectedDispetcher = dispetcher;
-            this.isDispetcherListOpen = false;
-        },
-        toggleMechanicList() {
-            this.isMechanicListOpen = !this.isMechanicListOpen
-        },
-        toggleDispetcherList() {
-            this.isDispetcherListOpen = !this.isDispetcherListOpen
-        },
-        getAllMechanics() {
-            axios.get('/api/V1/drivers')
-            .then(response => {
-                const driverList = response.data.data;
-                this.mechanicList = this.selectAllMechanics(driverList);
-                this.dispetcherList = this.mechanicList;
-            })
-            .catch(error => {
-                console.log(error)
-                this.errored = true
-            })
-            .finally(() => {
-                this.loading = false           
-            })
         },
         togglePrintDocument() {
             this.isPrintOpen = !this.isPrintOpen;
@@ -431,15 +319,6 @@ export default {
                 this.loading = false           
             })             
         },
-        selectAllMechanics(drivers) {
-            let mechanics = [];
-            drivers.map(driver => {
-                if (driver.is_mechanic) {
-                    mechanics.push(driver);
-                }
-            })
-            return mechanics;
-        },
         getJournal() {
             axios.get('/api/V1/waybills')
             .then(response => {
@@ -461,8 +340,8 @@ export default {
     },    
     async mounted() {
        this.getOneRelation();
-       this.getAllMechanics();
        this.getJournal();  
+       this.getSettings();  
     }
 }
 </script>
@@ -472,6 +351,9 @@ export default {
 $bg-color: rgb(214, 214, 214);
 $content-color: rgb(0, 76, 143);
 
+.date-element {
+    border: 2px solid red;
+}
 .relation-page {
     padding: 64px 32px;    
     display: flex;

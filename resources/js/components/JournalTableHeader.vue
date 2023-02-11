@@ -47,7 +47,7 @@ $border-bold: 2.5px;
 .journal-table-header { 
     font-size: 12px;
     margin: 30px 0 0 30px;
-    width: 903px;
+    width: 920px;
     @include border($border-middle, $border-middle, 0, $border-middle);
     display: flex;
     height: 72px;
@@ -60,7 +60,7 @@ $border-bold: 2.5px;
     }
     &__date {
         @include border(0, $border-middle, 0, 0);   
-        flex: 0 0 104px;    
+        flex: 0 0 121px;    
         padding-top: 20px;           
     }
     &__driver {

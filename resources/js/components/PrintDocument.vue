@@ -103,7 +103,7 @@
                                 <div class="dispetcher-block__signature-label">подпись</div>
                             </div>
                             <div class="dispetcher-block__name-block">
-                                <div class="dispetcher-block__name-value">{{ dispetcherName }}</div>
+                                <div class="dispetcher-block__name-value">{{ dispetcherShortName }}</div>
                                 <div class="dispetcher-block__name-label">расшифровка подписи</div>                                
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                                 <div class="dispetcher-block__signature-label">подпись</div>
                             </div>
                             <div class="dispetcher-block__name-block">
-                                <div class="dispetcher-block__name-value">{{ dispetcherName }}</div>
+                                <div class="dispetcher-block__name-value">{{ dispetcherShortName }}</div>
                                 <div class="dispetcher-block__name-label">расшифровка подписи</div>                                
                             </div>
                         </div>  
@@ -177,7 +177,7 @@
                                 <p>мин</p>                                 
 
                             </div>
-                            <div class="mechanic-departure-block__signature">{{ mechanicName }}</div>
+                            <div class="mechanic-departure-block__signature">{{ mechanicShortName }}</div>
                             <div class="mechanic-departure-block__labels">
                                 <div class="mechanic-departure-block__label-1">подпись</div>
                                 <div class="mechanic-departure-block__label-2">расшифровка подписи</div>
@@ -260,7 +260,7 @@
                                 <div class="mechanic-arrive-block__signature-label">подпись</div>
                             </div>
                             <div class="mechanic-arrive-block__name-block">
-                                <div class="mechanic-arrive-block__name-value">{{ mechanicName }}</div>
+                                <div class="mechanic-arrive-block__name-value">{{ mechanicShortName }}</div>
                                 <div class="mechanic-arrive-block__name-label">расшифровка подписи</div>                                
                             </div>                            
                         </div>
@@ -318,18 +318,18 @@ export default {
         }
     },
     computed: {
-        mechanicName() {
+        dispetcherShortName() {
+            if (this.dispetcher.last_name) {
+                return `${this.dispetcher.last_name} ${this.dispetcher.first_name[0]}.${this.dispetcher.middle_name[0]}.`;
+            }
+            return '';
+        },
+        mechanicShortName() {
             if (this.mechanic.last_name) {
                 return `${this.mechanic.last_name} ${this.mechanic.first_name[0]}.${this.mechanic.middle_name[0]}.`;
             }
             return '';
         },
-        dispetcherName() {
-            if (this.dispetcher.last_name) {
-                return `${this.dispetcher.last_name} ${this.dispetcher.first_name[0]}.${this.dispetcher.middle_name[0]}.`;
-            }
-            return '';
-        }
     },    
 }
 </script>

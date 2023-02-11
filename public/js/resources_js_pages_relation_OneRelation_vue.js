@@ -1,134 +1,6 @@
 "use strict";
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_pages_relation_OneRelation_vue"],{
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'DatePicker',
-  data: function data() {
-    return {
-      isDayListOpen: false,
-      isMonthListOpen: false,
-      isYearListOpen: false,
-      monthList: ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'],
-      yearList: ['23', '24', '25', '26', '27', '28', '29'],
-      day: '',
-      month: '',
-      year: ''
-    };
-  },
-  methods: {
-    toggleDayList: function toggleDayList() {
-      this.isDayListOpen = !this.isDayListOpen;
-      this.isMonthListOpen = false;
-      this.isYearListOpen = false;
-    },
-    toggleMonthList: function toggleMonthList() {
-      this.isMonthListOpen = !this.isMonthListOpen;
-      this.isDayListOpen = false;
-      this.isYearListOpen = false;
-    },
-    toggleYearList: function toggleYearList() {
-      this.isYearListOpen = !this.isYearListOpen;
-      this.isDayListOpen = false;
-      this.isMonthListOpen = false;
-    },
-    selectDay: function selectDay(day) {
-      this.day = day;
-      this.$emit('updateDay', this.day);
-      this.isDayListOpen = false;
-    },
-    selectMonth: function selectMonth(month, index) {
-      this.month = month;
-      this.$emit('updateMonth', index);
-      this.isMonthListOpen = false;
-    },
-    selectYear: function selectYear(year) {
-      this.year = year;
-      this.$emit('updateYear', this.year);
-      this.isYearListOpen = false;
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/JournalComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/JournalComponent.vue?vue&type=script&lang=js& ***!
@@ -592,15 +464,15 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     };
   },
   computed: {
-    mechanicName: function mechanicName() {
-      if (this.mechanic.last_name) {
-        return "".concat(this.mechanic.last_name, " ").concat(this.mechanic.first_name[0], ".").concat(this.mechanic.middle_name[0], ".");
+    dispetcherShortName: function dispetcherShortName() {
+      if (this.dispetcher.last_name) {
+        return "".concat(this.dispetcher.last_name, " ").concat(this.dispetcher.first_name[0], ".").concat(this.dispetcher.middle_name[0], ".");
       }
       return '';
     },
-    dispetcherName: function dispetcherName() {
-      if (this.dispetcher.last_name) {
-        return "".concat(this.dispetcher.last_name, " ").concat(this.dispetcher.first_name[0], ".").concat(this.dispetcher.middle_name[0], ".");
+    mechanicShortName: function mechanicShortName() {
+      if (this.mechanic.last_name) {
+        return "".concat(this.mechanic.last_name, " ").concat(this.mechanic.first_name[0], ".").concat(this.mechanic.middle_name[0], ".");
       }
       return '';
     }
@@ -621,8 +493,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _components_PrintDocument_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/PrintDocument.vue */ "./resources/js/components/PrintDocument.vue");
 /* harmony import */ var _components_PrintBackSide_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/PrintBackSide.vue */ "./resources/js/components/PrintBackSide.vue");
-/* harmony import */ var _components_DatePicker_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/DatePicker.vue */ "./resources/js/components/DatePicker.vue");
-/* harmony import */ var _components_JournalComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/JournalComponent.vue */ "./resources/js/components/JournalComponent.vue");
+/* harmony import */ var _components_JournalComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/JournalComponent.vue */ "./resources/js/components/JournalComponent.vue");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -739,70 +610,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 
@@ -812,24 +619,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   components: {
     PrintDocument: _components_PrintDocument_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     PrintBackSide: _components_PrintBackSide_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    DatePicker: _components_DatePicker_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    JournalComponent: _components_JournalComponent_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    JournalComponent: _components_JournalComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   props: ['relationId'],
   data: function data() {
     return {
       errored: false,
-      loading: true,
+      loading: false,
       isPrintOpen: false,
       isPrintBackOpen: false,
-      isMechanicListOpen: false,
-      isDispetcherListOpen: false,
-      isSameDate: false,
       relation: {},
       car: {},
       driver: {},
-      mechanicList: [],
-      dispetcherList: [],
       waybills: [],
       waybillNumber: '',
       dateFrom: {
@@ -843,47 +644,35 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         year: ''
       },
       monthList: ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'],
-      customer: 'ООО АК "Волга-Днепр"',
-      address: 'г. Ульяновск, ул. Карбышева, д. 14',
-      selectedMechanic: {
-        last_name: 'Братышев',
-        first_name: 'Александр',
-        middle_name: 'Сергеевич'
-      },
-      selectedDispetcher: {
-        last_name: 'Асташов',
-        first_name: 'Дмитирий',
-        middle_name: 'Васильевич'
-      }
+      customer: '',
+      address: '',
+      dispetcher: {},
+      mechanic: {}
     };
   },
   computed: {
-    mechanicFullName: function mechanicFullName() {
-      if (this.selectedMechanic.last_name) {
-        return "".concat(this.selectedMechanic.last_name, " ").concat(this.selectedMechanic.first_name, " ").concat(this.selectedMechanic.middle_name);
-      }
-      return '';
+    dispetcherShortName: function dispetcherShortName() {
+      if (this.dispetcher.last_name) {
+        return "".concat(this.dispetcher.last_name, " ").concat(this.dispetcher.first_name[0], " ").concat(this.dispetcher.middle_name[0]);
+      } else '';
     },
-    dispetcherFullName: function dispetcherFullName() {
-      if (this.selectedDispetcher.last_name) {
-        return "".concat(this.selectedDispetcher.last_name, " ").concat(this.selectedDispetcher.first_name, " ").concat(this.selectedDispetcher.middle_name);
-      }
-      return '';
+    mechanicShortName: function mechanicShortName() {
+      if (this.mechanic.last_name) {
+        return "".concat(this.mechanic.last_name, " ").concat(this.mechanic.first_name[0], " ").concat(this.mechanic.middle_name[0]);
+      } else '';
     }
   },
   methods: {
-    formatDateToJournal: function formatDateToJournal(dateFrom, dateTo) {},
-    saveWaybillToJournal: function saveWaybillToJournal() {
+    getSettings: function getSettings() {
       var _this = this;
-      // console.log(this.dateFrom.day.length)
-      axios.post('/api/V1/waybills', {
-        number: this.waybillNumber,
-        date: "".concat(this.dateFrom.day, ".").concat(this.dateFrom.month, ".").concat(this.dateFrom.year, " - ").concat(this.dateTo.day, ".").concat(this.dateTo.month, ".").concat(this.dateTo.year),
-        full_name: this.driver.last_name + ' ' + this.driver.first_name + ' ' + this.driver.middle_name,
-        person_number: this.driver.person_number,
-        car_number: this.car.number
-      }).then(function (response) {
-        // this.$router.push({name: 'cars'})
+      axios.get('/api/V1/settings').then(function (response) {
+        var setting = response.data.data[0];
+        _this.dateFrom = JSON.parse(setting.date_from);
+        _this.dateTo = JSON.parse(setting.date_to);
+        _this.customer = setting.customer;
+        _this.address = setting.address;
+        _this.dispetcher = JSON.parse(setting.dispetcher);
+        _this.mechanic = JSON.parse(setting.mechanic);
       })["catch"](function (error) {
         console.log(error);
         _this.errored = true;
@@ -891,31 +680,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         _this.loading = false;
       });
     },
-    makeSameDate: function makeSameDate() {
-      this.dateTo = this.dateFrom;
-      this.isSameDate = true;
-    },
-    makeDiffDate: function makeDiffDate() {
-      this.dateTo = {};
-      this.isSameDate = false;
-    },
-    updateDayFrom: function updateDayFrom(day) {
-      this.dateFrom.day = day;
-    },
-    updateMonthFrom: function updateMonthFrom(month) {
-      this.dateFrom.month = month;
-    },
-    updateYearFrom: function updateYearFrom(year) {
-      this.dateFrom.year = year;
-    },
-    updateDayTo: function updateDayTo(day) {
-      this.dateTo.day = day;
-    },
-    updateMonthTo: function updateMonthTo(month) {
-      this.dateTo.month = month;
-    },
-    updateYearTo: function updateYearTo(year) {
-      this.dateTo.year = year;
+    saveWaybillToJournal: function saveWaybillToJournal() {
+      var _this2 = this;
+      axios.post('/api/V1/waybills', {
+        number: this.waybillNumber,
+        date_from: JSON.stringify(this.dateFrom),
+        date_to: JSON.stringify(this.dateTo),
+        // date: `${this.dateFrom.day}.${this.dateFrom.month}.${this.dateFrom.year} - ${this.dateTo.day}.${this.dateTo.month}.${this.dateTo.year}`,
+        full_name: this.driver.last_name + ' ' + this.driver.first_name + ' ' + this.driver.middle_name,
+        person_number: this.driver.person_number,
+        car_number: this.car.number
+      }).then(function (response) {})["catch"](function (error) {
+        console.log(error);
+        _this2.errored = true;
+      })["finally"](function () {
+        _this2.loading = false;
+      });
     },
     goBack: function goBack() {
       this.$router.go(-1);
@@ -938,33 +718,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         month: month,
         year: year
       };
-    },
-    selectMechanic: function selectMechanic(mechanic) {
-      this.selectedMechanic = mechanic;
-      this.isMechanicListOpen = false;
-    },
-    selectDispetcher: function selectDispetcher(dispetcher) {
-      this.selectedDispetcher = dispetcher;
-      this.isDispetcherListOpen = false;
-    },
-    toggleMechanicList: function toggleMechanicList() {
-      this.isMechanicListOpen = !this.isMechanicListOpen;
-    },
-    toggleDispetcherList: function toggleDispetcherList() {
-      this.isDispetcherListOpen = !this.isDispetcherListOpen;
-    },
-    getAllMechanics: function getAllMechanics() {
-      var _this2 = this;
-      axios.get('/api/V1/drivers').then(function (response) {
-        var driverList = response.data.data;
-        _this2.mechanicList = _this2.selectAllMechanics(driverList);
-        _this2.dispetcherList = _this2.mechanicList;
-      })["catch"](function (error) {
-        console.log(error);
-        _this2.errored = true;
-      })["finally"](function () {
-        _this2.loading = false;
-      });
     },
     togglePrintDocument: function togglePrintDocument() {
       this.isPrintOpen = !this.isPrintOpen;
@@ -1026,15 +779,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         _this5.loading = false;
       });
     },
-    selectAllMechanics: function selectAllMechanics(drivers) {
-      var mechanics = [];
-      drivers.map(function (driver) {
-        if (driver.is_mechanic) {
-          mechanics.push(driver);
-        }
-      });
-      return mechanics;
-    },
     getJournal: function getJournal() {
       var _this6 = this;
       axios.get('/api/V1/waybills').then(function (response) {
@@ -1059,8 +803,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         while (1) switch (_context.prev = _context.next) {
           case 0:
             _this7.getOneRelation();
-            _this7.getAllMechanics();
             _this7.getJournal();
+            _this7.getSettings();
           case 3:
           case "end":
             return _context.stop();
@@ -1069,29 +813,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }))();
   }
 });
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".date-picker[data-v-fa816ef2] {\n  display: flex;\n}\n.date-picker__item[data-v-fa816ef2] {\n  margin-right: 8px;\n}\n.date-picker__day[data-v-fa816ef2] {\n  width: 40px;\n}\n.date-picker__month[data-v-fa816ef2] {\n  width: 100px;\n}\n.date-picker__year[data-v-fa816ef2] {\n  width: 60px;\n}\n.date-picker__drop-day[data-v-fa816ef2] {\n  width: 55px;\n}\n.date-picker__drop-month[data-v-fa816ef2] {\n  width: 115px;\n}\n.date-picker__drop-year[data-v-fa816ef2] {\n  width: 75px;\n}\n.date-picker input[data-v-fa816ef2] {\n  width: 100%;\n  height: 32px;\n  font-size: 16px;\n  color: rgb(0, 76, 143);\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  outline: none;\n}\n.date-picker input[data-v-fa816ef2]::-moz-placeholder {\n  font-size: 12px;\n}\n.date-picker input[data-v-fa816ef2]::placeholder {\n  font-size: 12px;\n}\n.date-picker ul[data-v-fa816ef2] {\n  position: absolute;\n  z-index: 2;\n  background-color: #fff;\n  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);\n  text-align: center;\n  color: rgb(0, 76, 143);\n  height: 150px;\n  overflow: hidden;\n  overflow-y: scroll;\n}\n.date-picker li[data-v-fa816ef2]:hover {\n  background-color: rgb(150, 189, 213);\n  color: white;\n  cursor: pointer;\n}", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
 
 /***/ }),
 
@@ -1180,39 +901,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".relation-page[data-v-c7ea9f90] {\n  padding: 64px 32px;\n  display: flex;\n}\n.relation-page__journal[data-v-c7ea9f90] {\n  padding: 0 0 0 32px;\n  flex: 0 0 380px;\n}\n.relation-page__journal-title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation[data-v-c7ea9f90] {\n  flex-grow: 1;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form a[data-v-c7ea9f90] {\n  color: green;\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".date-element[data-v-c7ea9f90] {\n  border: 2px solid red;\n}\n.relation-page[data-v-c7ea9f90] {\n  padding: 64px 32px;\n  display: flex;\n}\n.relation-page__journal[data-v-c7ea9f90] {\n  padding: 0 0 0 32px;\n  flex: 0 0 380px;\n}\n.relation-page__journal-title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation[data-v-c7ea9f90] {\n  flex-grow: 1;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form a[data-v-c7ea9f90] {\n  color: green;\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"], options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -1329,46 +1021,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_OneRelation_vue_vue_type_style_index_0_id_c7ea9f90_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
-
-/***/ }),
-
-/***/ "./resources/js/components/DatePicker.vue":
-/*!************************************************!*\
-  !*** ./resources/js/components/DatePicker.vue ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true& */ "./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true&");
-/* harmony import */ var _DatePicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatePicker.vue?vue&type=script&lang=js& */ "./resources/js/components/DatePicker.vue?vue&type=script&lang=js&");
-/* harmony import */ var _DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& */ "./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-;
-
-
-/* normalize component */
-
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _DatePicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  "fa816ef2",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/DatePicker.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
@@ -1532,21 +1184,6 @@ component.options.__file = "resources/js/pages/relation/OneRelation.vue"
 
 /***/ }),
 
-/***/ "./resources/js/components/DatePicker.vue?vue&type=script&lang=js&":
-/*!*************************************************************************!*\
-  !*** ./resources/js/components/DatePicker.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatePicker.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
 /***/ "./resources/js/components/JournalComponent.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/JournalComponent.vue?vue&type=script&lang=js& ***!
@@ -1607,18 +1244,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&":
-/*!**********************************************************************************************************!*\
-  !*** ./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& ***!
-  \**********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_style_index_0_id_fa816ef2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=style&index=0&id=fa816ef2&lang=scss&scoped=true&");
-
-
-/***/ }),
-
 /***/ "./resources/js/components/JournalComponent.vue?vue&type=style&index=0&id=1dffca1e&lang=scss&scoped=true&":
 /*!****************************************************************************************************************!*\
   !*** ./resources/js/components/JournalComponent.vue?vue&type=style&index=0&id=1dffca1e&lang=scss&scoped=true& ***!
@@ -1663,22 +1288,6 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_OneRelation_vue_vue_type_style_index_0_id_c7ea9f90_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./OneRelation.vue?vue&type=style&index=0&id=c7ea9f90&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/relation/OneRelation.vue?vue&type=style&index=0&id=c7ea9f90&lang=scss&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true&":
-/*!*******************************************************************************************!*\
-  !*** ./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true& ***!
-  \*******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatePicker_vue_vue_type_template_id_fa816ef2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true&");
 
 
 /***/ }),
@@ -1743,176 +1352,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OneRelation_vue_vue_type_template_id_c7ea9f90_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OneRelation_vue_vue_type_template_id_c7ea9f90_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./OneRelation.vue?vue&type=template&id=c7ea9f90&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/relation/OneRelation.vue?vue&type=template&id=c7ea9f90&scoped=true&");
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true&":
-/*!**********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/DatePicker.vue?vue&type=template&id=fa816ef2&scoped=true& ***!
-  \**********************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "date-picker" }, [
-    _c("div", { staticClass: "date-picker__item date-picker__day" }, [
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.day,
-            expression: "day",
-          },
-        ],
-        attrs: { type: "text", placeholder: "День" },
-        domProps: { value: _vm.day },
-        on: {
-          click: _vm.toggleDayList,
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.day = $event.target.value
-          },
-        },
-      }),
-      _vm._v(" "),
-      _vm.isDayListOpen
-        ? _c(
-            "ul",
-            { staticClass: "date-picker__drop-day" },
-            _vm._l(31, function (n) {
-              return _c(
-                "li",
-                {
-                  key: n,
-                  on: {
-                    click: function ($event) {
-                      return _vm.selectDay(n)
-                    },
-                  },
-                },
-                [_vm._v("\n                " + _vm._s(n) + "\n            ")]
-              )
-            }),
-            0
-          )
-        : _vm._e(),
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "date-picker__item date-picker__month" }, [
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.month,
-            expression: "month",
-          },
-        ],
-        attrs: { type: "text", placeholder: "Месяц" },
-        domProps: { value: _vm.month },
-        on: {
-          click: _vm.toggleMonthList,
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.month = $event.target.value
-          },
-        },
-      }),
-      _vm._v(" "),
-      _vm.isMonthListOpen
-        ? _c(
-            "ul",
-            { staticClass: "date-picker__drop-month" },
-            _vm._l(_vm.monthList, function (month, index) {
-              return _c(
-                "li",
-                {
-                  key: month,
-                  on: {
-                    click: function ($event) {
-                      return _vm.selectMonth(month, index + 1)
-                    },
-                  },
-                },
-                [
-                  _vm._v(
-                    "\n                " + _vm._s(month) + "\n            "
-                  ),
-                ]
-              )
-            }),
-            0
-          )
-        : _vm._e(),
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "date-picker__item date-picker__year" }, [
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.year,
-            expression: "year",
-          },
-        ],
-        attrs: { type: "text", placeholder: "Год" },
-        domProps: { value: _vm.year },
-        on: {
-          click: _vm.toggleYearList,
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.year = $event.target.value
-          },
-        },
-      }),
-      _vm._v(" "),
-      _vm.isYearListOpen
-        ? _c(
-            "ul",
-            { staticClass: "date-picker__drop-year" },
-            _vm._l(_vm.yearList, function (year) {
-              return _c(
-                "li",
-                {
-                  key: year,
-                  on: {
-                    click: function ($event) {
-                      return _vm.selectYear(year)
-                    },
-                  },
-                },
-                [
-                  _vm._v(
-                    "\n                20" + _vm._s(year) + "\n            "
-                  ),
-                ]
-              )
-            }),
-            0
-          )
-        : _vm._e(),
-    ]),
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
 
 
 /***/ }),
@@ -2424,7 +1863,7 @@ var render = function () {
                 _vm._v(" "),
                 _c("div", { staticClass: "dispetcher-block__name-block" }, [
                   _c("div", { staticClass: "dispetcher-block__name-value" }, [
-                    _vm._v(_vm._s(_vm.dispetcherName)),
+                    _vm._v(_vm._s(_vm.dispetcherShortName)),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "dispetcher-block__name-label" }, [
@@ -2444,7 +1883,7 @@ var render = function () {
                 _vm._v(" "),
                 _c("div", { staticClass: "dispetcher-block__name-block" }, [
                   _c("div", { staticClass: "dispetcher-block__name-value" }, [
-                    _vm._v(_vm._s(_vm.dispetcherName)),
+                    _vm._v(_vm._s(_vm.dispetcherShortName)),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "dispetcher-block__name-label" }, [
@@ -2483,7 +1922,7 @@ var render = function () {
                 _c(
                   "div",
                   { staticClass: "mechanic-departure-block__signature" },
-                  [_vm._v(_vm._s(_vm.mechanicName))]
+                  [_vm._v(_vm._s(_vm.mechanicShortName))]
                 ),
                 _vm._v(" "),
                 _vm._m(16),
@@ -2539,7 +1978,7 @@ var render = function () {
                     _c(
                       "div",
                       { staticClass: "mechanic-arrive-block__name-value" },
-                      [_vm._v(_vm._s(_vm.mechanicName))]
+                      [_vm._v(_vm._s(_vm.mechanicShortName))]
                     ),
                     _vm._v(" "),
                     _c(
@@ -3033,8 +2472,8 @@ var render = function () {
                     middle_name: _vm.driver.middle_name,
                     person_number: _vm.driver.person_number,
                     driver_license: _vm.driver.driver_license,
-                    mechanic: _vm.selectedMechanic,
-                    dispetcher: _vm.selectedDispetcher,
+                    mechanic: _vm.mechanic,
+                    dispetcher: _vm.dispetcher,
                     waybillNumber: _vm.waybillNumber,
                     date: _vm.formatDate(_vm.dateFrom, _vm.dateTo),
                     customer: _vm.customer,
@@ -3081,8 +2520,12 @@ var render = function () {
             )
           : _vm._e(),
         _vm._v(" "),
-        _c("div", { staticClass: "relation__title-car" }, [
-          _vm._v("\n            " + _vm._s(_vm.car.model) + " - "),
+        _c("div", { staticClass: "relation__title" }, [
+          _vm._v("\n            Путевой лист автомобиля "),
+          _c("span", { staticClass: "relation__title-car" }, [
+            _vm._v(_vm._s(_vm.car.model)),
+          ]),
+          _vm._v(" - "),
           _c("span", { staticClass: "relation__car-number" }, [
             _vm._v(_vm._s(_vm.car.number)),
           ]),
@@ -3130,250 +2573,68 @@ var render = function () {
             }),
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "relation-form__item" },
-            [
-              _c("label", { attrs: { for: "" } }, [_vm._v("Дата выезда: ")]),
-              _vm._v(" "),
-              _c("date-picker", {
-                on: {
-                  updateDay: _vm.updateDayFrom,
-                  updateMonth: _vm.updateMonthFrom,
-                  updateYear: _vm.updateYearFrom,
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "relation-form__item" },
-            [
-              _c("label", { attrs: { for: "" } }, [_vm._v("Дата заезда: ")]),
-              _vm._v(" "),
-              !_vm.isSameDate
-                ? _c("date-picker", {
-                    on: {
-                      updateDay: _vm.updateDayTo,
-                      updateMonth: _vm.updateMonthTo,
-                      updateYear: _vm.updateYearTo,
-                    },
-                  })
-                : _vm._e(),
-              _vm._v(" "),
-              !_vm.isSameDate
-                ? _c(
-                    "a",
-                    { attrs: { href: "#" }, on: { click: _vm.makeSameDate } },
-                    [_vm._v("Заезд в тот же день")]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.isSameDate
-                ? _c(
-                    "a",
-                    { attrs: { href: "#" }, on: { click: _vm.makeDiffDate } },
-                    [_vm._v("Добавить дату заезда")]
-                  )
-                : _vm._e(),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item mechanic" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("заказчик: ")]),
+          _c("div", { staticClass: "relation-form__item" }, [
+            _c("label", [_vm._v("Дата выезда: ")]),
             _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.customer,
-                  expression: "customer",
-                },
+            _c(
+              "p",
+              [
+                _vm._v(
+                  _vm._s(_vm.dateFrom.day) +
+                    " " +
+                    _vm._s(_vm.monthList[_vm.dateFrom.month - 1]) +
+                    " 20" +
+                    _vm._s(_vm.dateFrom.year) +
+                    "  "
+                ),
+                _c("router-link", { attrs: { to: { name: "settings" } } }, [
+                  _vm._v("Изменить"),
+                ]),
               ],
-              staticClass: "relation-form__customer",
-              attrs: { type: "text" },
-              domProps: { value: _vm.customer },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.customer = $event.target.value
-                },
-              },
-            }),
+              1
+            ),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item mechanic" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("адрес подачи: ")]),
+          _c("div", { staticClass: "relation-form__item" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Дата заезда: ")]),
             _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.address,
-                  expression: "address",
-                },
-              ],
-              staticClass: "relation-form__address",
-              attrs: { type: "text" },
-              domProps: { value: _vm.address },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.address = $event.target.value
-                },
-              },
-            }),
+            _c("p", { attrs: { for: "" } }, [
+              _vm._v(
+                _vm._s(_vm.dateTo.day) +
+                  " " +
+                  _vm._s(_vm.monthList[_vm.dateTo.month - 1]) +
+                  " 20" +
+                  _vm._s(_vm.dateTo.year)
+              ),
+            ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item mechanic" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("механик: ")]),
+          _c("div", { staticClass: "relation-form__item" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Заказчик: ")]),
             _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.mechanicFullName,
-                  expression: "mechanicFullName",
-                },
-              ],
-              staticClass: "relation-form__mechanic",
-              attrs: { type: "text", readonly: "" },
-              domProps: { value: _vm.mechanicFullName },
-              on: {
-                click: _vm.toggleMechanicList,
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.mechanicFullName = $event.target.value
-                },
-              },
-            }),
-            _vm._v(" "),
-            _vm.isMechanicListOpen
-              ? _c(
-                  "ul",
-                  { staticClass: "relation-form__drop-list" },
-                  [
-                    _c(
-                      "li",
-                      {
-                        staticClass: "closeBtn",
-                        on: { click: _vm.toggleMechanicList },
-                      },
-                      [_vm._v("x")]
-                    ),
-                    _vm._v(" "),
-                    _vm._l(_vm.mechanicList, function (mechanic) {
-                      return _c(
-                        "li",
-                        {
-                          key: mechanic.id,
-                          staticClass: "relation-form__drop-item",
-                          on: {
-                            click: function ($event) {
-                              return _vm.selectMechanic(mechanic)
-                            },
-                          },
-                        },
-                        [
-                          _vm._v(
-                            "\n                        " +
-                              _vm._s(mechanic.last_name) +
-                              " " +
-                              _vm._s(mechanic.first_name) +
-                              " " +
-                              _vm._s(mechanic.middle_name) +
-                              "\n                    "
-                          ),
-                        ]
-                      )
-                    }),
-                  ],
-                  2
-                )
-              : _vm._e(),
+            _c("p", { attrs: { for: "" } }, [_vm._v(_vm._s(_vm.customer))]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "relation-form__item dispetcher" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("диспетчер: ")]),
+          _c("div", { staticClass: "relation-form__item" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Адрес: ")]),
             _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.dispetcherFullName,
-                  expression: "dispetcherFullName",
-                },
-              ],
-              staticClass: "relation-form__mechanic",
-              attrs: { type: "text", readonly: "" },
-              domProps: { value: _vm.dispetcherFullName },
-              on: {
-                click: _vm.toggleDispetcherList,
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.dispetcherFullName = $event.target.value
-                },
-              },
-            }),
+            _c("p", { attrs: { for: "" } }, [_vm._v(_vm._s(_vm.address))]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "relation-form__item" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Диспетчер: ")]),
             _vm._v(" "),
-            _vm.isDispetcherListOpen
-              ? _c(
-                  "ul",
-                  { staticClass: "relation-form__drop-list" },
-                  [
-                    _c(
-                      "li",
-                      {
-                        staticClass: "closeBtn",
-                        on: { click: _vm.toggleDispetcherList },
-                      },
-                      [_vm._v("x")]
-                    ),
-                    _vm._v(" "),
-                    _vm._l(_vm.dispetcherList, function (dispetcher) {
-                      return _c(
-                        "li",
-                        {
-                          key: dispetcher.id,
-                          staticClass: "relation-form__drop-item",
-                          on: {
-                            click: function ($event) {
-                              return _vm.selectDispetcher(dispetcher)
-                            },
-                          },
-                        },
-                        [
-                          _vm._v(
-                            "\n                        " +
-                              _vm._s(dispetcher.last_name) +
-                              " " +
-                              _vm._s(dispetcher.first_name) +
-                              " " +
-                              _vm._s(dispetcher.middle_name) +
-                              "\n                    "
-                          ),
-                        ]
-                      )
-                    }),
-                  ],
-                  2
-                )
-              : _vm._e(),
+            _c("p", { attrs: { for: "" } }, [
+              _vm._v(_vm._s(_vm.dispetcherShortName)),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "relation-form__item" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Механик: ")]),
+            _vm._v(" "),
+            _c("p", { attrs: { for: "" } }, [
+              _vm._v(_vm._s(_vm.mechanicShortName)),
+            ]),
           ]),
         ]),
         _vm._v(" "),

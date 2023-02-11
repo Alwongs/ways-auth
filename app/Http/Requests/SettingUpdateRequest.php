@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class WaybillStoreRequest extends FormRequest
+class SettingUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +24,12 @@ class WaybillStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'number' => 'required|max:255',
             'date_from' => 'required|max:255',
             'date_to' => 'required|max:255',
-            'full_name' => 'required|max:255',
-            'person_number' => 'required|max:255',
-            'car_number' => 'required|max:255',
+            'customer' => 'required|max:255',
+            'address' => 'required|max:255',
+            'dispetcher' => 'required|max:255',
+            'mechanic' => 'required|max:255',
         ];
     }
 }

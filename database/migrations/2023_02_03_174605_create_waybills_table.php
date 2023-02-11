@@ -17,7 +17,8 @@ class CreateWaybillsTable extends Migration
             $table->id();
 
             $table->string('number');
-            $table->string('date');
+            $table->string('date_from');
+            $table->string('date_to');
             $table->string('full_name');
             $table->string('person_number');  
             $table->string('car_number');  

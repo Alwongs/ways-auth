@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class WaybillResource extends JsonResource
+class SettingResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,13 +16,12 @@ class WaybillResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'number' => $this->number,
             'date_from' => $this->date_from,
             'date_to' => $this->date_to,
-            'full_name' => $this->full_name,
-            'person_number' => $this->person_number,
-            'car_number' => $this->car_number,
-            'created_at' => $this->created_at,
+            'customer' => $this->customer,
+            'address' => $this->address,
+            'dispetcher' => $this->dispetcher,
+            'mechanic' => $this->mechanic,
         ];
     }
 }

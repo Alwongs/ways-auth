@@ -102,8 +102,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'JournalTableNumbers',
-  props: ['data'],
+  props: ['number', 'date_from', 'date_to', 'full_name', 'person_number', 'car_number'],
+  computed: {
+    getDateFrom: function getDateFrom() {
+      return this.formatDate(JSON.parse(this.date_from));
+    },
+    getDateTo: function getDateTo() {
+      if (this.date_from != this.date_to) {
+        return " - ".concat(this.formatDate(JSON.parse(this.date_to)));
+      } else '';
+    }
+  },
   methods: {
+    formatDate: function formatDate(obj) {
+      var day = obj.day < 10 ? "0".concat(obj.day) : obj.day;
+      var month = obj.month < 10 ? "0".concat(obj.month) : obj.month;
+      return "".concat(day, ".").concat(month, ".").concat(obj.year);
+    },
     deleteWaybill: function deleteWaybill(id) {
       var _this = this;
       if (confirm('Вы действительно хотите удалить запись?')) {
@@ -137,6 +152,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_JournalTableHeader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/JournalTableHeader.vue */ "./resources/js/components/JournalTableHeader.vue");
 /* harmony import */ var _components_JournalTableNumbers_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/JournalTableNumbers.vue */ "./resources/js/components/JournalTableNumbers.vue");
 /* harmony import */ var _components_JournalTableRow_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/JournalTableRow.vue */ "./resources/js/components/JournalTableRow.vue");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -238,7 +258,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-header[data-v-b5708022] {\n  font-size: 12px;\n  margin: 30px 0 0 30px;\n  width: 903px;\n  border-color: black;\n  border-style: solid;\n  border-width: 2px 2px 0 2px;\n  display: flex;\n  height: 72px;\n  color: black;\n  text-align: center;\n}\n.journal-table-header__number[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n  padding-top: 28px;\n}\n.journal-table-header__date[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 104px;\n  padding-top: 20px;\n}\n.journal-table-header__driver[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 330px;\n  display: flex;\n  flex-direction: column;\n}\n.journal-table-header__driver-title[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 0 2px 0;\n  padding: 2px 0;\n}\n.journal-table-header__driver-subtitle-group[data-v-b5708022] {\n  flex-grow: 1;\n  display: flex;\n}\n.journal-table-header__driver-subtitle-item[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n}\n.journal-table-header__driver-subtitle-item[data-v-b5708022]:first-child {\n  flex: 0 0 256px;\n  padding-top: 16px;\n}\n.journal-table-header__driver-subtitle-item[data-v-b5708022]:last-child {\n  flex: 0 0 74px;\n  padding-top: 8px;\n}\n.journal-table-header__car-number[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n  padding-top: 14px;\n}\n.journal-table-header__signature[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 274px;\n  display: flex;\n  flex-direction: column;\n}\n.journal-table-header__signature-title[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 0 2px 0;\n  padding: 2px 0;\n}\n.journal-table-header__signature-subtitle-group[data-v-b5708022] {\n  flex-grow: 1;\n  display: flex;\n}\n.journal-table-header__signature-subtitle-item[data-v-b5708022] {\n  padding-top: 2px;\n  flex: 0 0 110px;\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n}\n.journal-table-header__signature-subtitle-item[data-v-b5708022]:first-child {\n  flex: 0 0 90px;\n}\n.journal-table-header__signature-subtitle-item[data-v-b5708022]:last-child {\n  flex: 0 0 74px;\n}\n.journal-table-header__comment[data-v-b5708022] {\n  flex: 0 0 52px;\n  padding-top: 30px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-header[data-v-b5708022] {\n  font-size: 12px;\n  margin: 30px 0 0 30px;\n  width: 920px;\n  border-color: black;\n  border-style: solid;\n  border-width: 2px 2px 0 2px;\n  display: flex;\n  height: 72px;\n  color: black;\n  text-align: center;\n}\n.journal-table-header__number[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n  padding-top: 28px;\n}\n.journal-table-header__date[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 121px;\n  padding-top: 20px;\n}\n.journal-table-header__driver[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 330px;\n  display: flex;\n  flex-direction: column;\n}\n.journal-table-header__driver-title[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 0 2px 0;\n  padding: 2px 0;\n}\n.journal-table-header__driver-subtitle-group[data-v-b5708022] {\n  flex-grow: 1;\n  display: flex;\n}\n.journal-table-header__driver-subtitle-item[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n}\n.journal-table-header__driver-subtitle-item[data-v-b5708022]:first-child {\n  flex: 0 0 256px;\n  padding-top: 16px;\n}\n.journal-table-header__driver-subtitle-item[data-v-b5708022]:last-child {\n  flex: 0 0 74px;\n  padding-top: 8px;\n}\n.journal-table-header__car-number[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n  padding-top: 14px;\n}\n.journal-table-header__signature[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 274px;\n  display: flex;\n  flex-direction: column;\n}\n.journal-table-header__signature-title[data-v-b5708022] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 0 2px 0;\n  padding: 2px 0;\n}\n.journal-table-header__signature-subtitle-group[data-v-b5708022] {\n  flex-grow: 1;\n  display: flex;\n}\n.journal-table-header__signature-subtitle-item[data-v-b5708022] {\n  padding-top: 2px;\n  flex: 0 0 110px;\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n}\n.journal-table-header__signature-subtitle-item[data-v-b5708022]:first-child {\n  flex: 0 0 90px;\n}\n.journal-table-header__signature-subtitle-item[data-v-b5708022]:last-child {\n  flex: 0 0 74px;\n}\n.journal-table-header__comment[data-v-b5708022] {\n  flex: 0 0 52px;\n  padding-top: 30px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -261,7 +281,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-numbers[data-v-267c0850] {\n  font-size: 12px;\n  margin: 0 0 0 30px;\n  width: 903px;\n  border-color: black;\n  border-style: solid;\n  border-width: 2px 2px 2px 2px;\n  display: flex;\n  text-align: center;\n  color: black;\n}\n.journal-table-numbers__column-1[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n}\n.journal-table-numbers__column-2[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 104px;\n}\n.journal-table-numbers__column-3[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 256px;\n}\n.journal-table-numbers__column-4[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-numbers__column-5[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n}\n.journal-table-numbers__column-6[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 90px;\n}\n.journal-table-numbers__column-7[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 110px;\n}\n.journal-table-numbers__column-8[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-numbers__column-9[data-v-267c0850] {\n  flex: 0 0 52px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-numbers[data-v-267c0850] {\n  font-size: 12px;\n  margin: 0 0 0 30px;\n  width: 920px;\n  border-color: black;\n  border-style: solid;\n  border-width: 2px 2px 2px 2px;\n  display: flex;\n  text-align: center;\n  color: black;\n}\n.journal-table-numbers__column-1[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n}\n.journal-table-numbers__column-2[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 121px;\n}\n.journal-table-numbers__column-3[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 256px;\n}\n.journal-table-numbers__column-4[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-numbers__column-5[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n}\n.journal-table-numbers__column-6[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 90px;\n}\n.journal-table-numbers__column-7[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 110px;\n}\n.journal-table-numbers__column-8[data-v-267c0850] {\n  border-color: black;\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-numbers__column-9[data-v-267c0850] {\n  flex: 0 0 52px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -284,7 +304,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-row[data-v-2fd96b30] {\n  font-size: 12px;\n  margin: 0 0 0 30px;\n  width: 903px;\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 2px 2px;\n  display: flex;\n  text-align: center;\n  height: 20px;\n}\n.journal-table-row__column-1[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n}\n.journal-table-row__column-2[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 104px;\n}\n.journal-table-row__column-3[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 256px;\n}\n.journal-table-row__column-4[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-5[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n}\n.journal-table-row__column-6[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 90px;\n}\n.journal-table-row__column-7[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 110px;\n}\n.journal-table-row__column-8[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-9[data-v-2fd96b30] {\n  position: relative;\n  flex: 0 0 52px;\n  cursor: pointer;\n}\n.journal-table-row__column-9 span[data-v-2fd96b30] {\n  position: absolute;\n  left: 58px;\n  top: 0;\n  color: rgb(222, 0, 0);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-row[data-v-2fd96b30] {\n  font-size: 12px;\n  margin: 0 0 0 30px;\n  width: 920px;\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 2px 2px;\n  display: flex;\n  text-align: center;\n  height: 20px;\n}\n.journal-table-row__column-1[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n}\n.journal-table-row__column-2[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 121px;\n}\n.journal-table-row__column-3[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 256px;\n}\n.journal-table-row__column-4[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-5[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n}\n.journal-table-row__column-6[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 90px;\n}\n.journal-table-row__column-7[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 110px;\n}\n.journal-table-row__column-8[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-9[data-v-2fd96b30] {\n  position: relative;\n  flex: 0 0 52px;\n  cursor: pointer;\n}\n.journal-table-row__column-9 span[data-v-2fd96b30] {\n  position: absolute;\n  left: 58px;\n  top: 0;\n  color: rgb(222, 0, 0);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -971,23 +991,23 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "journal-table-row" }, [
     _c("div", { staticClass: "journal-table-row__column-1" }, [
-      _vm._v(_vm._s(_vm.data.number)),
+      _vm._v(_vm._s(_vm.number)),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "journal-table-row__column-2" }, [
-      _vm._v(_vm._s(_vm.data.date)),
+      _vm._v(_vm._s(_vm.getDateFrom) + _vm._s(_vm.getDateTo)),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "journal-table-row__column-3" }, [
-      _vm._v(_vm._s(_vm.data.full_name)),
+      _vm._v(_vm._s(_vm.full_name)),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "journal-table-row__column-4" }, [
-      _vm._v(_vm._s(_vm.data.person_number)),
+      _vm._v(_vm._s(_vm.person_number)),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "journal-table-row__column-5" }, [
-      _vm._v(_vm._s(_vm.data.car_number)),
+      _vm._v(_vm._s(_vm.car_number)),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "journal-table-row__column-6" }),
@@ -1068,7 +1088,14 @@ var render = function () {
           _vm._l(_vm.waybills, function (waybill) {
             return _c("journal-table-row", {
               key: waybill.id,
-              attrs: { data: waybill },
+              attrs: {
+                number: waybill.number,
+                date_from: waybill.date_from,
+                date_to: waybill.date_to,
+                full_name: waybill.full_name,
+                person_number: waybill.person_number,
+                car_number: waybill.car_number,
+              },
               on: { updateJournal: _vm.getJournal },
             })
           }),

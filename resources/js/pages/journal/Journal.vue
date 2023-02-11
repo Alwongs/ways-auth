@@ -16,7 +16,12 @@
             <journal-table-row 
                 v-for="waybill in waybills"
                 :key="waybill.id" 
-                :data="waybill"   
+                :number="waybill.number"   
+                :date_from="waybill.date_from"   
+                :date_to="waybill.date_to"   
+                :full_name="waybill.full_name"   
+                :person_number="waybill.person_number"   
+                :car_number="waybill.car_number"   
                 @updateJournal="getJournal"                           
             />
 

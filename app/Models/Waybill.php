@@ -9,5 +9,5 @@ class Waybill extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['number', 'date', 'full_name', 'person_number', 'car_number' ];    
+    protected $fillable = ['number', 'date_from', 'date_to', 'full_name', 'person_number', 'car_number' ];    
 }

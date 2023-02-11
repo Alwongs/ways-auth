@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\V1\DriverController;
 use App\Http\Controllers\Api\V1\CarDriverController;
 use App\Http\Controllers\Api\V1\WaybillController;
 use App\Http\Controllers\Api\V1\ClearJournalController;
+use App\Http\Controllers\Api\V1\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,8 @@ Route::group(['middleware' => 'auth:sanctum'], function() {
         'cars' => CarController::class,
         'drivers' => DriverController::class,
         'relations' => CarDriverController::class,                
-        'waybills' => WaybillController::class,                
+        'waybills' => WaybillController::class,  
+        'settings' => SettingController::class              
     ]);
 
     Route::get('/clear', [ClearJournalController::class, 'index']);

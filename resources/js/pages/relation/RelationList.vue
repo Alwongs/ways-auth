@@ -52,8 +52,7 @@ export default {
         getAllRelations() {
             axios.get('/api/V1/relations')
             .then(response => {
-                this.relations = response.data.data   
-                console.log(this.relations)       
+                this.relations = response.data.data          
             })
             .catch(error => {
                 console.log(error)

@@ -70,7 +70,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
       axios.get('/api/V1/relations').then(function (response) {
         _this.relations = response.data.data;
-        console.log(_this.relations);
       })["catch"](function (error) {
         console.log(error);
         _this.errored = true;
