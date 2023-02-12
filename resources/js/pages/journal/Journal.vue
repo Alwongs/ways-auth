@@ -1,5 +1,5 @@
 <template>
-    <div class="journal">
+    <div class="journal-page">
         <h1 class="page__title">Журнал</h1> 
         <div class="link-group">
             <span class="link-group__print" @click="printJournal">Печать</span>
@@ -127,10 +127,10 @@ $border-bold: 2.5px;
         cursor: pointer;
     }
 }
-.journal {
+.journal-page {
     margin: 0 auto;
     position: relative;
-    padding: 64px 32px;
+    padding: 64px 64px 0 240px;
 }
 
 .journal-table {

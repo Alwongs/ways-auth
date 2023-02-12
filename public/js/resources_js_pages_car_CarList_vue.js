@@ -125,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".car-list__item[data-v-1fbb8e44] {\n  display: flex;\n  align-items: center;\n  margin-bottom: 12px;\n  padding: 6px;\n}\n.car-list__item[data-v-1fbb8e44]:hover {\n  background-color: rgb(208, 234, 246);\n}\n.car-list__devider[data-v-1fbb8e44] {\n  border-bottom: 1px dotted black;\n  flex-grow: 1;\n  margin: 0 16px;\n  height: 32px;\n  cursor: pointer;\n}\n.car-list__number[data-v-1fbb8e44] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  margin-left: 8px;\n  padding: 0 4px;\n  color: black;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".car-list__item[data-v-1fbb8e44] {\n  display: flex;\n  align-items: center;\n  margin-bottom: 8px;\n  padding: 6px;\n}\n.car-list__item[data-v-1fbb8e44]:hover {\n  background-color: rgb(208, 234, 246);\n}\n.car-list__devider[data-v-1fbb8e44] {\n  border-bottom: 1px dotted black;\n  flex-grow: 1;\n  margin: 0 16px;\n  height: 32px;\n  cursor: pointer;\n}\n.car-list__number[data-v-1fbb8e44] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  margin-left: 8px;\n  padding: 0 4px;\n  color: black;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

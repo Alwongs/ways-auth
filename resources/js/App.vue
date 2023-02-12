@@ -11,6 +11,9 @@
 
         <div class="main-view">
             <aside class="left-side">
+                <div class="left-side__image">
+                    <img :src="carImage" alt="image">
+                </div>
                 <nav-list :token="token"/>
             </aside>
             <router-view></router-view>
@@ -20,13 +23,15 @@
 
 <script>
 import NavList from './components/NavList.vue';
+import carImage from '../assets/images/car.png';
 
 export default {
     name: 'App',
     components: { NavList },
     data() {
         return {
-            token: null
+            token: null,
+            carImage: carImage
         }
     },
     mounted() {
@@ -60,7 +65,7 @@ export default {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     background-color: $nav-panel-color;
     width: 100%;
     height: 48px;
@@ -116,13 +121,23 @@ export default {
 }
 
 .main-view {
-    display: flex;
     height: 100vh;
 }
 .left-side {
-    padding-top: 100px;
-    background-color: rgb(151, 181, 207);
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    padding-top: 96px;
+    background-color: rgb(198, 211, 222);
     width: 250px;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    &__image {
+        width: 200px;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        img {
+            width: 100%;
+        }
+    }
 }
 </style>

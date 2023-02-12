@@ -1,6 +1,6 @@
 <template>
-    <div class="home-page">
-        <h1 class="home-page__title">Транспорт</h1> 
+    <div class="page home-page">
+        <h1 class="home-page__title">Печать путевых листов</h1> 
         <div class="home-page__image-block">
             <img :src="image" alt="image">            
         </div>    
@@ -23,15 +23,14 @@ export default {
 <style lang="scss" scoped>
 
 .home-page {
-    flex-grow: 1;
     padding-top: 86px;
     &__title {
         text-align: center;
-        margin-bottom: 64px;
+        margin-bottom: 96px;
     }
 }
 .home-page__image-block {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     img {
         width: 100%;

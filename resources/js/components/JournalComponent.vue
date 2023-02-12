@@ -53,7 +53,8 @@ export default {
     }
     &__item-number {
         color: rgb(136, 0, 0);
-        flex: 0 0 25px;
+        flex: 1 1 10px;
+        margin-right: 6px;
     }
     &__item-car-number {
         font-size: 12px;

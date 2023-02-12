@@ -326,7 +326,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".link-group[data-v-914e7334] {\n  display: flex;\n  justify-content: space-between;\n  width: 903px;\n  margin: 0 auto 5px;\n}\n.link-group__print[data-v-914e7334] {\n  color: blue;\n}\n.link-group__clear[data-v-914e7334] {\n  color: rgb(161, 0, 0);\n}\n.link-group span[data-v-914e7334]:hover {\n  width: -moz-fit-content;\n  width: fit-content;\n  color: red;\n  cursor: pointer;\n}\n.journal[data-v-914e7334] {\n  margin: 0 auto;\n  position: relative;\n  padding: 64px 32px;\n}\n.journal-table[data-v-914e7334] {\n  font-family: \"Arial Cyr\", \"Franklin Gothic Medium\", \"Arial Narrow\", Arial, sans-serif;\n  font-size: 12px;\n  background-color: #fff;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: 0 auto;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".link-group[data-v-914e7334] {\n  display: flex;\n  justify-content: space-between;\n  width: 903px;\n  margin: 0 auto 5px;\n}\n.link-group__print[data-v-914e7334] {\n  color: blue;\n}\n.link-group__clear[data-v-914e7334] {\n  color: rgb(161, 0, 0);\n}\n.link-group span[data-v-914e7334]:hover {\n  width: -moz-fit-content;\n  width: fit-content;\n  color: red;\n  cursor: pointer;\n}\n.journal-page[data-v-914e7334] {\n  margin: 0 auto;\n  position: relative;\n  padding: 64px 64px 0 240px;\n}\n.journal-table[data-v-914e7334] {\n  font-family: \"Arial Cyr\", \"Franklin Gothic Medium\", \"Arial Narrow\", Arial, sans-serif;\n  font-size: 12px;\n  background-color: #fff;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: 0 auto;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1054,7 +1054,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "journal" },
+    { staticClass: "journal-page" },
     [
       _c("h1", { staticClass: "page__title" }, [_vm._v("Журнал")]),
       _vm._v(" "),

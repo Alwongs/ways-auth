@@ -99,7 +99,7 @@ export default {
     &__item {
         display: flex;
         align-items: center;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         padding: 6px;
         &:hover {
             background-color: rgb(208, 234, 246);

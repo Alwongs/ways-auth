@@ -18,20 +18,18 @@ a {
 .page {
     background-color: $bg-color;
     min-height: 100%;
-    width: 800px;
+    width: 1000px;
     height: 100vh;
     margin: 0 auto;
-    padding: 64px 32px;
+    padding: 64px 32px 0 272px;
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
-        width: 600px;
+
     }     
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        width: 100%;
-        padding: 64px 32px;       
+      
     } 
     @media (max-width: $mobile-max) {
-        width: 100%;
-        padding: 64px 32px;
+
     }    
     &__title {
         text-align: center;

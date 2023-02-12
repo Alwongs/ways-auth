@@ -34,7 +34,7 @@
             <!-- /Modals -->
 
             <div class="relation__title">
-                Путевой лист автомобиля <span class="relation__title-car">{{ car.model }}</span> - <span class="relation__car-number">{{ car.number }}</span>
+                <span class="relation__title-car">{{ car.model }}</span> - <span class="relation__car-number">{{ car.number }}</span>
             </div>
             <div class="relation__title-driver">
                 {{ driver.last_name }} {{ driver.first_name }} {{ driver.middle_name }}                
@@ -51,27 +51,32 @@
 
                 <div class="relation-form__item">
                     <label>Дата выезда: </label>             
-                    <p>{{ dateFrom.day }} {{ monthList[dateFrom.month - 1] }} 20{{ dateFrom.year }}  <router-link :to="{name: 'settings'}">Изменить</router-link> </p>               
+                    <p class="relation-form__date">{{ dateFrom.day }} {{ monthList[dateFrom.month - 1] }} 20{{ dateFrom.year }}  <router-link :to="{name: 'settings'}"> - Изменить</router-link> </p>               
                 </div>
 
                 <div class="relation-form__item">
-                    <label for="">Дата заезда: </label>             
-                    <p for="">{{ dateTo.day }} {{ monthList[dateTo.month - 1] }} 20{{ dateTo.year }}</p>             
+                    <label>Дата заезда: </label>             
+                    <p class="relation-form__date">{{ dateTo.day }} {{ monthList[dateTo.month - 1] }} 20{{ dateTo.year }}</p>             
                 </div>
-                
+
                 <div class="relation-form__item">
+                    <a v-if="!showDetails" href="#" @click="showDetails = !showDetails">Подробнее:</a>
+                    <a v-if="showDetails" href="#" @click="showDetails = !showDetails">Скрыть:</a>
+                </div>                    
+
+                <div v-if="showDetails" class="relation-form__item">
                     <label for="">Заказчик: </label>             
                     <p for="">{{ customer }}</p>             
                 </div>
-                <div class="relation-form__item">
+                <div v-if="showDetails" class="relation-form__item">
                     <label for="">Адрес: </label>             
                     <p for="">{{ address }}</p>             
                 </div>
-                <div class="relation-form__item">
+                <div v-if="showDetails" class="relation-form__item">
                     <label for="">Диспетчер: </label>             
                     <p for="">{{ dispetcherShortName }}</p>             
                 </div>
-                <div class="relation-form__item">
+                <div v-if="showDetails" class="relation-form__item">
                     <label for="">Механик: </label>             
                     <p for="">{{ mechanicShortName }}</p>             
                 </div>
@@ -102,6 +107,7 @@
 
         <div class="relation-page__journal">
             <h3 class="relation-page__journal-title">Журнал</h3>
+            <p v-if="loading">Загрузка журнала ...</p>
             <journal-component 
                 :data="waybills" 
                 @updateJournal="getJournal"
@@ -128,7 +134,8 @@ export default {
             errored: false,
             loading: false,
             isPrintOpen: false,
-            isPrintBackOpen: false,            
+            isPrintBackOpen: false, 
+            showDetails: false,           
 
             relation: {},
             car: {},
@@ -184,6 +191,7 @@ export default {
     },          
     methods: {   
         getSettings() {
+            this.loading = true;
             axios.get('/api/V1/settings')
             .then(response => {
                 let setting = response.data.data[0];
@@ -321,6 +329,7 @@ export default {
             })             
         },
         getJournal() {
+            this.loading = true;
             axios.get('/api/V1/waybills')
             .then(response => {
                 this.waybills = response.data.data;
@@ -352,11 +361,9 @@ export default {
 $bg-color: rgb(214, 214, 214);
 $content-color: rgb(0, 76, 143);
 
-.date-element {
-    border: 2px solid red;
-}
 .relation-page {
-    padding: 64px 32px;    
+    padding: 96px 32px 0 272px;  
+    margin: 0 auto;  
     display: flex;
     &__journal {
         padding: 0 0 0 32px;
@@ -368,8 +375,10 @@ $content-color: rgb(0, 76, 143);
 }
 
 .relation {
-    // position: relative;
     flex-grow: 1;
+    &__title {
+        margin-bottom: 16px;
+    }
     &__title-car {
         font-weight: 700;
         color: rgb(138, 0, 0);
@@ -405,6 +414,7 @@ $content-color: rgb(0, 76, 143);
     } 
     input {
         height: 30px;
+        width: 60px;
         padding: 0 8px;
         margin-right: 8px;
         font-size: 15px;
@@ -421,6 +431,9 @@ $content-color: rgb(0, 76, 143);
         margin-bottom: 12px;
         display: flex;
         align-items: center;
+    }
+    &__date {
+        color: rgb(198, 0, 0);
     }
 
     &__mechanic {

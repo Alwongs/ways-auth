@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div class="page settings-page">
         <h1 class="page__title">Настройки</h1>      
         <app-loader v-if="loading" />
         <error-notification v-if="errored" />
@@ -291,9 +291,8 @@ export default {
 $bg-color: rgb(214, 214, 214);
 $content-color: rgb(0, 76, 143);
 
-.date-element {
-    border: 2px solid red;
-    width: fit-content;
+.settings-page {
+    width: 900px;
 }
 .setting-form {
     border: 1px solid rgb(179, 179, 179);
