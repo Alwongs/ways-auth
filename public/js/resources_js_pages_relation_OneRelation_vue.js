@@ -686,7 +686,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         number: this.waybillNumber,
         date_from: JSON.stringify(this.dateFrom),
         date_to: JSON.stringify(this.dateTo),
-        // date: `${this.dateFrom.day}.${this.dateFrom.month}.${this.dateFrom.year} - ${this.dateTo.day}.${this.dateTo.month}.${this.dateTo.year}`,
         full_name: this.driver.last_name + ' ' + this.driver.first_name + ' ' + this.driver.middle_name,
         person_number: this.driver.person_number,
         car_number: this.car.number
@@ -700,12 +699,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     goBack: function goBack() {
       this.$router.go(-1);
     },
+    addZero: function addZero(day, number) {
+      if (day < number) {
+        return '0' + day;
+      } else day;
+    },
     formatDate: function formatDate(dateFrom, dateTo) {
       var day = '';
       var month = '';
       var year = '';
       if (dateTo.day !== dateFrom.day) {
-        day = dateFrom.day + '-' + dateTo.day;
+        day = this.addZero(dateFrom.day, 10) + '-' + this.addZero(dateTo.day, 10);
       } else day = dateFrom.day;
       if (dateTo.month !== dateFrom.month) {
         month = this.monthList[dateFrom.month - 1] + '-' + this.monthList[dateTo.month - 1];

@@ -23,6 +23,7 @@ export default {
 <style lang="scss" scoped>
 
 .home-page {
+    flex-grow: 1;
     padding-top: 86px;
     &__title {
         text-align: center;

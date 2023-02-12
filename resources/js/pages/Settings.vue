@@ -155,11 +155,8 @@ export default {
             dispetcher: {},
             mechanic: {},            
         }
-    },
+    },   
     computed: {
-        getDateFrom() {
-            return this.dateFrom;
-        },
         dispetcherFullName() {
             return `${this.dispetcher.last_name} ${this.dispetcher.first_name} ${this.dispetcher.middle_name}` || '';
         },
@@ -233,7 +230,7 @@ export default {
             this.loading = true;           
             axios.post('/api/V1/settings/' + this.settingId, {
                 _method: 'PUT',
-// проверить на пустые значения полей
+
                 date_from: JSON.stringify(this.dateFrom),
                 date_to: JSON.stringify(this.dateTo),
                 customer: this.customer,
@@ -278,7 +275,7 @@ export default {
             this.isSameDate = true;
         },
         makeDiffDate() {
-            this.dateTo = {};
+            this.dateTo = { ...this.dateFrom };  
             this.isSameDate = false;
         },        
 

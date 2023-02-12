@@ -203,7 +203,6 @@ export default {
                 this.loading = false             
             })
         },        
-
         saveWaybillToJournal() {
             axios.post('/api/V1/waybills', {
                 number: this.waybillNumber,
@@ -211,7 +210,6 @@ export default {
                 date_from: JSON.stringify(this.dateFrom),
                 date_to: JSON.stringify(this.dateTo),
 
-                // date: `${this.dateFrom.day}.${this.dateFrom.month}.${this.dateFrom.year} - ${this.dateTo.day}.${this.dateTo.month}.${this.dateTo.year}`,
                 full_name: this.driver.last_name + ' ' + this.driver.first_name + ' ' + this.driver.middle_name ,
                 person_number: this.driver.person_number,
                 car_number: this.car.number
@@ -227,17 +225,20 @@ export default {
                 this.loading = false           
             })            
         },       
-
-
         goBack() {
             this.$router.go(-1);
+        },
+        addZero(day, number) {
+            if (day < number) {
+               return '0' + day;
+            } else day;
         },
         formatDate(dateFrom, dateTo) {
             let day = '';
             let month = '';
             let year = '';
             if (dateTo.day !== dateFrom.day) {
-                day = dateFrom.day + '-' + dateTo.day;
+                day = this.addZero(dateFrom.day, 10) + '-' + this.addZero(dateTo.day, 10);
             } else day = dateFrom.day;
 
             if (dateTo.month !== dateFrom.month) {

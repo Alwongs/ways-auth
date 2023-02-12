@@ -9,7 +9,7 @@
         <div class="journal-table-row__column-7"></div>
         <div class="journal-table-row__column-8"></div>
         <div class="journal-table-row__column-9">
-            <span @click="deleteWaybill(data.id)">Удалить</span>
+            <span @click="deleteWaybill(id)">Удалить</span>
         </div>
     </div>
 </template>
@@ -19,6 +19,7 @@
 export default {
     name: 'JournalTableNumbers',
     props: [
+        'id',
         'number',
         'date_from',
         'date_to',
@@ -127,7 +128,10 @@ $border-bold: 2.5px;
             position: absolute;
             left: 58px;
             top: 0;
-            color: rgb(222, 0, 0);
+            color: white;
+            &:hover {
+                color: red;
+            }
         }
     }
 }

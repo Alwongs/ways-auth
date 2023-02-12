@@ -1,29 +1,29 @@
 <template>
     <div class="wrapper">
-        <nav class="nav">
-            <router-link class="nav__logo" :to="({name: 'home'})">На главную</router-link>
-            <div class="nav__list">
-                <router-link class="nav__item" v-if="token" :to="{ name: 'cars' }">Автомобили</router-link>
-                <router-link class="nav__item" v-if="token" :to="{ name: 'drivers' }">Водители</router-link>
-                <router-link class="nav__item" v-if="token" :to="{ name: 'relations' }">Авто-Водитель</router-link>
-                <router-link class="nav__item" v-if="token" :to="{ name: 'journal' }">Журнал</router-link>
-                <router-link class="nav__item" v-if="token" :to="{ name: 'settings' }">Настройки</router-link>
-                
-                <router-link class="nav__item" v-if="!token" :to="{ name: 'user.login' }">Вход</router-link>
-                <router-link class="nav__item" v-if="!token" :to="{ name: 'user.register' }">Регистрация</router-link>
-                <a class="nav__item" v-if="token" @click.prevent="logout" href="#">Выход</a>                
+        <nav class="app-panel">
+            <router-link class="app-panel__logo" :to="({name: 'home'})">На главную</router-link>
+            <div class="app-panel__list">
+                <router-link class="app-panel__item" v-if="!token" :to="{ name: 'user.login' }">Вход</router-link>
+                <router-link class="app-panel__item" v-if="!token" :to="{ name: 'user.register' }">Регистрация</router-link>
+                <a class="app-panel__item" v-if="token" @click.prevent="logout" href="#">Выход</a>                
             </div>
         </nav>         
 
-        <div>
+        <div class="main-view">
+            <aside class="left-side">
+                <nav-list :token="token"/>
+            </aside>
             <router-view></router-view>
         </div>
     </div>
 </template>
 
 <script>
+import NavList from './components/NavList.vue';
 
 export default {
+    name: 'App',
+    components: { NavList },
     data() {
         return {
             token: null
@@ -56,7 +56,7 @@ export default {
 
 @import "../sass/_variables.scss";
 
-.nav {
+.app-panel {
     position: fixed;
     left: 0;
     top: 0;
@@ -70,7 +70,7 @@ export default {
     color: white;
     font-size: 18px;
     padding: 0 32px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
         font-size: 15px;        
     }     
@@ -83,18 +83,18 @@ export default {
         padding: 0 16px;         
     }     
 }
-.nav__list {
+.app-panel__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav__item {
+.app-panel__item {
     &:hover {
         color: rgb(255, 196, 0);
         transition: 0.3s;
     }
 }
-.nav__item:not(:last-child) {
+.app-panel__item:not(:last-child) {
     margin-right: 64px;
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
         margin-right: 48px;       
@@ -106,12 +106,23 @@ export default {
         margin-right: 8px; 
     }      
 }
-.nav__item-logout {
+.app-panel__item-logout {
     background: none;
     border: none;
     color: inherit;
     font-size: inherit;
     font-family: inherit;
     cursor: pointer;
+}
+
+.main-view {
+    display: flex;
+    height: 100vh;
+}
+.left-side {
+    padding-top: 100px;
+    background-color: rgb(151, 181, 207);
+    width: 250px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
 </style>

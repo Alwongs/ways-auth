@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'JournalTableNumbers',
-  props: ['number', 'date_from', 'date_to', 'full_name', 'person_number', 'car_number'],
+  props: ['id', 'number', 'date_from', 'date_to', 'full_name', 'person_number', 'car_number'],
   computed: {
     getDateFrom: function getDateFrom() {
       return this.formatDate(JSON.parse(this.date_from));
@@ -152,7 +152,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_JournalTableHeader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/JournalTableHeader.vue */ "./resources/js/components/JournalTableHeader.vue");
 /* harmony import */ var _components_JournalTableNumbers_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/JournalTableNumbers.vue */ "./resources/js/components/JournalTableNumbers.vue");
 /* harmony import */ var _components_JournalTableRow_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/JournalTableRow.vue */ "./resources/js/components/JournalTableRow.vue");
-//
 //
 //
 //
@@ -304,7 +303,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-row[data-v-2fd96b30] {\n  font-size: 12px;\n  margin: 0 0 0 30px;\n  width: 920px;\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 2px 2px;\n  display: flex;\n  text-align: center;\n  height: 20px;\n}\n.journal-table-row__column-1[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n}\n.journal-table-row__column-2[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 121px;\n}\n.journal-table-row__column-3[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 256px;\n}\n.journal-table-row__column-4[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-5[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n}\n.journal-table-row__column-6[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 90px;\n}\n.journal-table-row__column-7[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 110px;\n}\n.journal-table-row__column-8[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-9[data-v-2fd96b30] {\n  position: relative;\n  flex: 0 0 52px;\n  cursor: pointer;\n}\n.journal-table-row__column-9 span[data-v-2fd96b30] {\n  position: absolute;\n  left: 58px;\n  top: 0;\n  color: rgb(222, 0, 0);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".journal-table-row[data-v-2fd96b30] {\n  font-size: 12px;\n  margin: 0 0 0 30px;\n  width: 920px;\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 2px 2px;\n  display: flex;\n  text-align: center;\n  height: 20px;\n}\n.journal-table-row__column-1[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 55px;\n}\n.journal-table-row__column-2[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 121px;\n}\n.journal-table-row__column-3[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 256px;\n}\n.journal-table-row__column-4[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-5[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 86px;\n}\n.journal-table-row__column-6[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 90px;\n}\n.journal-table-row__column-7[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 110px;\n}\n.journal-table-row__column-8[data-v-2fd96b30] {\n  border-color: rgb(190, 190, 190);\n  border-style: solid;\n  border-width: 0 2px 0 0;\n  flex: 0 0 74px;\n}\n.journal-table-row__column-9[data-v-2fd96b30] {\n  position: relative;\n  flex: 0 0 52px;\n  cursor: pointer;\n}\n.journal-table-row__column-9 span[data-v-2fd96b30] {\n  position: absolute;\n  left: 58px;\n  top: 0;\n  color: white;\n}\n.journal-table-row__column-9 span[data-v-2fd96b30]:hover {\n  color: red;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -327,7 +326,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".link-group[data-v-914e7334] {\n  display: flex;\n  justify-content: space-between;\n  width: 903px;\n  margin: 0 auto 5px;\n}\n.link-group__print[data-v-914e7334] {\n  color: blue;\n}\n.link-group__clear[data-v-914e7334] {\n  color: rgb(161, 0, 0);\n}\n.link-group span[data-v-914e7334]:hover {\n  width: -moz-fit-content;\n  width: fit-content;\n  color: red;\n  cursor: pointer;\n}\n.journal[data-v-914e7334] {\n  position: relative;\n  padding: 64px 32px;\n}\n.journal-table[data-v-914e7334] {\n  font-family: \"Arial Cyr\", \"Franklin Gothic Medium\", \"Arial Narrow\", Arial, sans-serif;\n  font-size: 12px;\n  background-color: #fff;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: 0 auto;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".link-group[data-v-914e7334] {\n  display: flex;\n  justify-content: space-between;\n  width: 903px;\n  margin: 0 auto 5px;\n}\n.link-group__print[data-v-914e7334] {\n  color: blue;\n}\n.link-group__clear[data-v-914e7334] {\n  color: rgb(161, 0, 0);\n}\n.link-group span[data-v-914e7334]:hover {\n  width: -moz-fit-content;\n  width: fit-content;\n  color: red;\n  cursor: pointer;\n}\n.journal[data-v-914e7334] {\n  margin: 0 auto;\n  position: relative;\n  padding: 64px 32px;\n}\n.journal-table[data-v-914e7334] {\n  font-family: \"Arial Cyr\", \"Franklin Gothic Medium\", \"Arial Narrow\", Arial, sans-serif;\n  font-size: 12px;\n  background-color: #fff;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: 0 auto;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1022,7 +1021,7 @@ var render = function () {
         {
           on: {
             click: function ($event) {
-              return _vm.deleteWaybill(_vm.data.id)
+              return _vm.deleteWaybill(_vm.id)
             },
           },
         },
@@ -1089,6 +1088,7 @@ var render = function () {
             return _c("journal-table-row", {
               key: waybill.id,
               attrs: {
+                id: waybill.id,
                 number: waybill.number,
                 date_from: waybill.date_from,
                 date_to: waybill.date_to,

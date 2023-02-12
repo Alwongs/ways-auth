@@ -265,9 +265,7 @@ var render = function () {
     "div",
     { staticClass: "page" },
     [
-      _c("h1", { staticClass: "page__title" }, [
-        _vm._v("Водитель - Автомобиль"),
-      ]),
+      _c("h1", { staticClass: "page__title" }, [_vm._v("Путевые глисты")]),
       _vm._v(" "),
       _c(
         "button",

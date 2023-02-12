@@ -10,12 +10,12 @@
         <error-notification v-if="errored" />
 
         <div class="journal-table print-journal">
-
             <journal-table-header />
             <journal-table-numbers />
             <journal-table-row 
                 v-for="waybill in waybills"
                 :key="waybill.id" 
+                :id="waybill.id" 
                 :number="waybill.number"   
                 :date_from="waybill.date_from"   
                 :date_to="waybill.date_to"   
@@ -24,7 +24,6 @@
                 :car_number="waybill.car_number"   
                 @updateJournal="getJournal"                           
             />
-
         </div>
     </div>
 </template>
@@ -129,6 +128,7 @@ $border-bold: 2.5px;
     }
 }
 .journal {
+    margin: 0 auto;
     position: relative;
     padding: 64px 32px;
 }

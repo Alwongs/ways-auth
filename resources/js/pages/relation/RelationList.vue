@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <h1 class="page__title">Водитель - Автомобиль</h1>
+        <h1 class="page__title">Путевые глисты</h1>
 
         <button class="small-btn small-btn__add mb-16" @click="addRelation">+</button>  
 
