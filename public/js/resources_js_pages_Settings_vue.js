@@ -278,6 +278,12 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -292,6 +298,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       isMechanicListOpen: false,
       isDispetcherListOpen: false,
       isSameDate: false,
+      showDetails: false,
       driverList: [],
       dateFrom: {
         day: '',
@@ -948,198 +955,234 @@ var render = function () {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "setting-form__item" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("заказчик: ")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.customer,
-                expression: "customer",
-              },
-            ],
-            staticClass: "setting-form__customer",
-            attrs: { type: "text", required: "" },
-            domProps: { value: _vm.customer },
-            on: {
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.customer = $event.target.value
-              },
-            },
-          }),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "setting-form__item" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("адрес подачи: ")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.address,
-                expression: "address",
-              },
-            ],
-            staticClass: "setting-form__address",
-            attrs: { type: "text", required: "" },
-            domProps: { value: _vm.address },
-            on: {
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.address = $event.target.value
-              },
-            },
-          }),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "setting-form__item" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("диспетчер: ")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.dispetcherFullName,
-                expression: "dispetcherFullName",
-              },
-            ],
-            staticClass: "setting-form__mechanic",
-            attrs: { type: "text", readonly: "" },
-            domProps: { value: _vm.dispetcherFullName },
-            on: {
-              click: _vm.toggleDispetcherList,
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.dispetcherFullName = $event.target.value
-              },
-            },
-          }),
-          _vm._v(" "),
-          _vm.isDispetcherListOpen
+          !_vm.showDetails
             ? _c(
-                "ul",
-                { staticClass: "setting-form__drop-list" },
-                [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "close-btn",
-                      on: { click: _vm.toggleDispetcherList },
+                "a",
+                {
+                  attrs: { href: "#" },
+                  on: {
+                    click: function ($event) {
+                      _vm.showDetails = !_vm.showDetails
                     },
-                    [_vm._v("x")]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.driverList, function (driver) {
-                    return _c(
-                      "li",
-                      {
-                        key: driver.id,
-                        staticClass: "setting-form__drop-item",
-                        on: {
-                          click: function ($event) {
-                            return _vm.selectDispetcher(driver)
-                          },
-                        },
-                      },
-                      [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(driver.last_name) +
-                            " " +
-                            _vm._s(driver.first_name) +
-                            " " +
-                            _vm._s(driver.middle_name) +
-                            "\n                "
-                        ),
-                      ]
-                    )
-                  }),
-                ],
-                2
+                  },
+                },
+                [_vm._v("Подробнее:")]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.showDetails
+            ? _c(
+                "a",
+                {
+                  attrs: { href: "#" },
+                  on: {
+                    click: function ($event) {
+                      _vm.showDetails = !_vm.showDetails
+                    },
+                  },
+                },
+                [_vm._v("Скрыть:")]
               )
             : _vm._e(),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "setting-form__item" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("механик: ")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.mechanicFullName,
-                expression: "mechanicFullName",
-              },
-            ],
-            staticClass: "setting-form__mechanic",
-            attrs: { type: "text", readonly: "" },
-            domProps: { value: _vm.mechanicFullName },
-            on: {
-              click: _vm.toggleMechanicList,
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.mechanicFullName = $event.target.value
-              },
-            },
-          }),
-          _vm._v(" "),
-          _vm.isMechanicListOpen
-            ? _c(
-                "ul",
-                { staticClass: "setting-form__drop-list" },
-                [
-                  _c(
-                    "li",
+        _vm.showDetails
+          ? _c("div", [
+              _c("div", { staticClass: "setting-form__item" }, [
+                _c("label", { attrs: { for: "" } }, [_vm._v("заказчик: ")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
                     {
-                      staticClass: "close-btn",
-                      on: { click: _vm.toggleMechanicList },
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.customer,
+                      expression: "customer",
                     },
-                    [_vm._v("x")]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.driverList, function (driver) {
-                    return _c(
-                      "li",
-                      {
-                        key: driver.id,
-                        staticClass: "setting-form__drop-item",
-                        on: {
-                          click: function ($event) {
-                            return _vm.selectMechanic(driver)
-                          },
-                        },
-                      },
+                  ],
+                  staticClass: "setting-form__customer",
+                  attrs: { type: "text", required: "" },
+                  domProps: { value: _vm.customer },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.customer = $event.target.value
+                    },
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "setting-form__item" }, [
+                _c("label", { attrs: { for: "" } }, [_vm._v("адрес подачи: ")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.address,
+                      expression: "address",
+                    },
+                  ],
+                  staticClass: "setting-form__address",
+                  attrs: { type: "text", required: "" },
+                  domProps: { value: _vm.address },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.address = $event.target.value
+                    },
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "setting-form__item" }, [
+                _c("label", { attrs: { for: "" } }, [_vm._v("диспетчер: ")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.dispetcherFullName,
+                      expression: "dispetcherFullName",
+                    },
+                  ],
+                  staticClass: "setting-form__mechanic",
+                  attrs: { type: "text", readonly: "" },
+                  domProps: { value: _vm.dispetcherFullName },
+                  on: {
+                    click: _vm.toggleDispetcherList,
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.dispetcherFullName = $event.target.value
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _vm.isDispetcherListOpen
+                  ? _c(
+                      "ul",
+                      { staticClass: "setting-form__drop-list" },
                       [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(driver.last_name) +
-                            " " +
-                            _vm._s(driver.first_name) +
-                            " " +
-                            _vm._s(driver.middle_name) +
-                            "\n                "
+                        _c(
+                          "li",
+                          {
+                            staticClass: "close-btn",
+                            on: { click: _vm.toggleDispetcherList },
+                          },
+                          [_vm._v("x")]
                         ),
-                      ]
+                        _vm._v(" "),
+                        _vm._l(_vm.driverList, function (driver) {
+                          return _c(
+                            "li",
+                            {
+                              key: driver.id,
+                              staticClass: "setting-form__drop-item",
+                              on: {
+                                click: function ($event) {
+                                  return _vm.selectDispetcher(driver)
+                                },
+                              },
+                            },
+                            [
+                              _vm._v(
+                                "\n                        " +
+                                  _vm._s(driver.last_name) +
+                                  " " +
+                                  _vm._s(driver.first_name) +
+                                  " " +
+                                  _vm._s(driver.middle_name) +
+                                  "\n                    "
+                              ),
+                            ]
+                          )
+                        }),
+                      ],
+                      2
                     )
-                  }),
-                ],
-                2
-              )
-            : _vm._e(),
-        ]),
+                  : _vm._e(),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "setting-form__item" }, [
+                _c("label", { attrs: { for: "" } }, [_vm._v("механик: ")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.mechanicFullName,
+                      expression: "mechanicFullName",
+                    },
+                  ],
+                  staticClass: "setting-form__mechanic",
+                  attrs: { type: "text", readonly: "" },
+                  domProps: { value: _vm.mechanicFullName },
+                  on: {
+                    click: _vm.toggleMechanicList,
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.mechanicFullName = $event.target.value
+                    },
+                  },
+                }),
+                _vm._v(" "),
+                _vm.isMechanicListOpen
+                  ? _c(
+                      "ul",
+                      { staticClass: "setting-form__drop-list" },
+                      [
+                        _c(
+                          "li",
+                          {
+                            staticClass: "close-btn",
+                            on: { click: _vm.toggleMechanicList },
+                          },
+                          [_vm._v("x")]
+                        ),
+                        _vm._v(" "),
+                        _vm._l(_vm.driverList, function (driver) {
+                          return _c(
+                            "li",
+                            {
+                              key: driver.id,
+                              staticClass: "setting-form__drop-item",
+                              on: {
+                                click: function ($event) {
+                                  return _vm.selectMechanic(driver)
+                                },
+                              },
+                            },
+                            [
+                              _vm._v(
+                                "\n                        " +
+                                  _vm._s(driver.last_name) +
+                                  " " +
+                                  _vm._s(driver.first_name) +
+                                  " " +
+                                  _vm._s(driver.middle_name) +
+                                  "\n                    "
+                              ),
+                            ]
+                          )
+                        }),
+                      ],
+                      2
+                    )
+                  : _vm._e(),
+              ]),
+            ])
+          : _vm._e(),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "app-btn-group" }, [

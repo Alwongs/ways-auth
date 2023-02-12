@@ -64,22 +64,25 @@
                     <a v-if="showDetails" href="#" @click="showDetails = !showDetails">Скрыть:</a>
                 </div>                    
 
-                <div v-if="showDetails" class="relation-form__item">
-                    <label for="">Заказчик: </label>             
-                    <p for="">{{ customer }}</p>             
+                <div v-if="showDetails">
+                    <div class="relation-form__item">
+                        <label for="">Заказчик: </label>             
+                        <p for="">{{ customer }}</p>             
+                    </div>
+                    <div class="relation-form__item">
+                        <label for="">Адрес: </label>             
+                        <p for="">{{ address }}</p>             
+                    </div>
+                    <div class="relation-form__item">
+                        <label for="">Диспетчер: </label>             
+                        <p for="">{{ dispetcherShortName }}</p>             
+                    </div>
+                    <div class="relation-form__item">
+                        <label for="">Механик: </label>             
+                        <p for="">{{ mechanicShortName }}</p>             
+                    </div>
                 </div>
-                <div v-if="showDetails" class="relation-form__item">
-                    <label for="">Адрес: </label>             
-                    <p for="">{{ address }}</p>             
-                </div>
-                <div v-if="showDetails" class="relation-form__item">
-                    <label for="">Диспетчер: </label>             
-                    <p for="">{{ dispetcherShortName }}</p>             
-                </div>
-                <div v-if="showDetails" class="relation-form__item">
-                    <label for="">Механик: </label>             
-                    <p for="">{{ mechanicShortName }}</p>             
-                </div>
+
 
             </div>
 
@@ -94,7 +97,7 @@
                     class="app-btn app-btn__print" 
                     @click="togglePrintDocument"
                 >
-                    Распечатать
+                    Печать
                 </button>       
                 <button 
                     class="app-btn app-btn__print" 
@@ -237,21 +240,24 @@ export default {
             this.$router.go(-1);
         },
         addZero(day, number) {
-            if (day < number) {
-               return '0' + day;
-            } else day;
+            console.log(day)
+            if (Number(day) < number) {
+               return `0${day}`;
+            } else {
+                return day;
+            }
         },
         formatDate(dateFrom, dateTo) {
             let day = '';
             let month = '';
             let year = '';
             if (dateTo.day !== dateFrom.day) {
-                day = this.addZero(dateFrom.day, 10) + '-' + this.addZero(dateTo.day, 10);
-            } else day = dateFrom.day;
+                day = `${this.addZero(dateFrom.day, 10)}-${this.addZero(dateTo.day, 10)}`;
+            } else day = this.addZero(dateFrom.day, 10);
 
             if (dateTo.month !== dateFrom.month) {
                 month = this.monthList[dateFrom.month - 1] + '-' + this.monthList[dateTo.month - 1];
-            } else month = dateFrom.month;
+            } else month = this.monthList[dateFrom.month - 1];
 
             if (dateTo.year !== dateFrom.year) {
                 year = dateFrom.year + '-' + dateTo.year;
@@ -473,7 +479,7 @@ $content-color: rgb(0, 76, 143);
 .background-print-document {
     background-color: $bg-color;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     left: 0;
     top: 0;
     right: 0;

@@ -616,6 +616,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 
 
 
@@ -708,20 +711,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.$router.go(-1);
     },
     addZero: function addZero(day, number) {
-      if (day < number) {
-        return '0' + day;
-      } else day;
+      console.log(day);
+      if (Number(day) < number) {
+        return "0".concat(day);
+      } else {
+        return day;
+      }
     },
     formatDate: function formatDate(dateFrom, dateTo) {
       var day = '';
       var month = '';
       var year = '';
       if (dateTo.day !== dateFrom.day) {
-        day = this.addZero(dateFrom.day, 10) + '-' + this.addZero(dateTo.day, 10);
-      } else day = dateFrom.day;
+        day = "".concat(this.addZero(dateFrom.day, 10), "-").concat(this.addZero(dateTo.day, 10));
+      } else day = this.addZero(dateFrom.day, 10);
       if (dateTo.month !== dateFrom.month) {
         month = this.monthList[dateFrom.month - 1] + '-' + this.monthList[dateTo.month - 1];
-      } else month = dateFrom.month;
+      } else month = this.monthList[dateFrom.month - 1];
       if (dateTo.year !== dateFrom.year) {
         year = dateFrom.year + '-' + dateTo.year;
       } else year = dateFrom.year;
@@ -914,7 +920,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".relation-page[data-v-c7ea9f90] {\n  padding: 96px 32px 0 272px;\n  margin: 0 auto;\n  display: flex;\n}\n.relation-page__journal[data-v-c7ea9f90] {\n  padding: 0 0 0 32px;\n  flex: 0 0 380px;\n}\n.relation-page__journal-title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation[data-v-c7ea9f90] {\n  flex-grow: 1;\n}\n.relation__title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  width: 60px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form a[data-v-c7ea9f90] {\n  color: green;\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__date[data-v-c7ea9f90] {\n  color: rgb(198, 0, 0);\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 1;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".relation-page[data-v-c7ea9f90] {\n  padding: 96px 32px 0 272px;\n  margin: 0 auto;\n  display: flex;\n}\n.relation-page__journal[data-v-c7ea9f90] {\n  padding: 0 0 0 32px;\n  flex: 0 0 380px;\n}\n.relation-page__journal-title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation[data-v-c7ea9f90] {\n  flex-grow: 1;\n}\n.relation__title[data-v-c7ea9f90] {\n  margin-bottom: 16px;\n}\n.relation__title-car[data-v-c7ea9f90] {\n  font-weight: 700;\n  color: rgb(138, 0, 0);\n  font-size: 20px;\n  margin-bottom: 16px;\n}\n.relation__title-driver[data-v-c7ea9f90] {\n  font-weight: 700;\n  font-size: 22px;\n  text-align: center;\n  color: rgb(0, 76, 143);\n  margin-bottom: 16px;\n}\n.relation__car-number[data-v-c7ea9f90] {\n  text-transform: lowercase;\n  border: 1.5px solid black;\n  border-radius: 4px;\n  background-color: #fff;\n  padding: 0 4px;\n  color: black;\n}\n.relation-form[data-v-c7ea9f90] {\n  border: 1px solid rgb(179, 179, 179);\n  width: 100%;\n  border-radius: 10px;\n  padding: 16px;\n  margin-bottom: 16px;\n}\n.relation-form label[data-v-c7ea9f90] {\n  font-size: 13px;\n  flex: 90px 0 0;\n  margin-right: 8px;\n}\n.relation-form input[data-v-c7ea9f90] {\n  height: 30px;\n  width: 60px;\n  padding: 0 8px;\n  margin-right: 8px;\n  font-size: 15px;\n  text-align: center;\n  border-radius: 4px;\n  border: none;\n  color: rgb(0, 76, 143);\n}\n.relation-form a[data-v-c7ea9f90] {\n  color: green;\n}\n.relation-form__item[data-v-c7ea9f90] {\n  position: relative;\n  margin-bottom: 12px;\n  display: flex;\n  align-items: center;\n}\n.relation-form__date[data-v-c7ea9f90] {\n  color: rgb(198, 0, 0);\n}\n.relation-form__mechanic[data-v-c7ea9f90] {\n  width: 350px;\n  letter-spacing: 1px;\n  cursor: default;\n}\n.relation-form__customer[data-v-c7ea9f90] {\n  width: 400px;\n  letter-spacing: 1px;\n}\n.relation-form__address[data-v-c7ea9f90] {\n  letter-spacing: 1px;\n  flex: 400px 0 1;\n}\n.relation-form__drop-list[data-v-c7ea9f90] {\n  background-color: #fff;\n  position: absolute;\n  z-index: 1;\n  width: 350px;\n  top: 32px;\n  right: 64px;\n  border: 1px solid black;\n  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);\n  border-radius: 4px;\n  padding: 4px 0;\n}\n.relation-form__drop-item[data-v-c7ea9f90] {\n  text-align: start;\n  padding: 8px;\n  cursor: pointer;\n}\n.relation-form__drop-item[data-v-c7ea9f90]:hover {\n  background-color: rgb(217, 217, 217);\n}\n.background-print-document[data-v-c7ea9f90] {\n  background-color: rgb(214, 214, 214);\n  position: absolute;\n  z-index: 3;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.background-print-document__header[data-v-c7ea9f90] {\n  display: flex;\n  justify-content: center;\n  padding-top: 16px;\n  margin-bottom: 16px;\n}\n.background-print-document button[data-v-c7ea9f90]:not(:last-child) {\n  margin-right: 16px;\n}\n.close-btn[data-v-c7ea9f90] {\n  color: black;\n}\n.closeBtn[data-v-c7ea9f90] {\n  text-align: end;\n  padding-right: 8px;\n  cursor: pointer;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2655,37 +2661,37 @@ var render = function () {
           ]),
           _vm._v(" "),
           _vm.showDetails
-            ? _c("div", { staticClass: "relation-form__item" }, [
-                _c("label", { attrs: { for: "" } }, [_vm._v("Заказчик: ")]),
-                _vm._v(" "),
-                _c("p", { attrs: { for: "" } }, [_vm._v(_vm._s(_vm.customer))]),
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.showDetails
-            ? _c("div", { staticClass: "relation-form__item" }, [
-                _c("label", { attrs: { for: "" } }, [_vm._v("Адрес: ")]),
-                _vm._v(" "),
-                _c("p", { attrs: { for: "" } }, [_vm._v(_vm._s(_vm.address))]),
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.showDetails
-            ? _c("div", { staticClass: "relation-form__item" }, [
-                _c("label", { attrs: { for: "" } }, [_vm._v("Диспетчер: ")]),
-                _vm._v(" "),
-                _c("p", { attrs: { for: "" } }, [
-                  _vm._v(_vm._s(_vm.dispetcherShortName)),
+            ? _c("div", [
+                _c("div", { staticClass: "relation-form__item" }, [
+                  _c("label", { attrs: { for: "" } }, [_vm._v("Заказчик: ")]),
+                  _vm._v(" "),
+                  _c("p", { attrs: { for: "" } }, [
+                    _vm._v(_vm._s(_vm.customer)),
+                  ]),
                 ]),
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.showDetails
-            ? _c("div", { staticClass: "relation-form__item" }, [
-                _c("label", { attrs: { for: "" } }, [_vm._v("Механик: ")]),
                 _vm._v(" "),
-                _c("p", { attrs: { for: "" } }, [
-                  _vm._v(_vm._s(_vm.mechanicShortName)),
+                _c("div", { staticClass: "relation-form__item" }, [
+                  _c("label", { attrs: { for: "" } }, [_vm._v("Адрес: ")]),
+                  _vm._v(" "),
+                  _c("p", { attrs: { for: "" } }, [
+                    _vm._v(_vm._s(_vm.address)),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "relation-form__item" }, [
+                  _c("label", { attrs: { for: "" } }, [_vm._v("Диспетчер: ")]),
+                  _vm._v(" "),
+                  _c("p", { attrs: { for: "" } }, [
+                    _vm._v(_vm._s(_vm.dispetcherShortName)),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "relation-form__item" }, [
+                  _c("label", { attrs: { for: "" } }, [_vm._v("Механик: ")]),
+                  _vm._v(" "),
+                  _c("p", { attrs: { for: "" } }, [
+                    _vm._v(_vm._s(_vm.mechanicShortName)),
+                  ]),
                 ]),
               ])
             : _vm._e(),
@@ -2712,7 +2718,7 @@ var render = function () {
               staticClass: "app-btn app-btn__print",
               on: { click: _vm.togglePrintDocument },
             },
-            [_vm._v("\n                Распечатать\n            ")]
+            [_vm._v("\n                Печать\n            ")]
           ),
           _vm._v(" "),
           _c(

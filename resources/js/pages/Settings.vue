@@ -4,7 +4,6 @@
         <app-loader v-if="loading" />
         <error-notification v-if="errored" />
 
-
         <div class="setting-form">
 
             <div class="setting-form__date">
@@ -32,76 +31,83 @@
                 </div>
             </div>
 
-
             <div class="setting-form__item">
-                <label for="">заказчик: </label>
-                <input 
-                    v-model="customer" 
-                    type="text" 
-                    required
-                    class="setting-form__customer" 
-                >
-            </div>
+                <a v-if="!showDetails" href="#" @click="showDetails = !showDetails">Подробнее:</a>
+                <a v-if="showDetails" href="#" @click="showDetails = !showDetails">Скрыть:</a>
+            </div> 
 
-            <div class="setting-form__item">
-                <label for="">адрес подачи: </label>
-                <input 
-                    v-model="address" 
-                    type="text" 
-                    required
-                    class="setting-form__address" 
-                >
-            </div>
-
-            <div class="setting-form__item">
-                <label for="">диспетчер: </label>
-                <input 
-                    v-model="dispetcherFullName" 
-                    type="text" 
-                    readonly
-                    class="setting-form__mechanic" 
-                    @click="toggleDispetcherList"
-                >
-                <ul 
-                    v-if="isDispetcherListOpen" 
-                    class="setting-form__drop-list"
-                >
-                    <li class="close-btn" @click="toggleDispetcherList">x</li>
-                    <li 
-                        v-for="driver in driverList" 
-                        :key="driver.id" 
-                        class="setting-form__drop-item"
-                        @click="selectDispetcher(driver)"
+            <div v-if="showDetails">
+                <div class="setting-form__item">
+                    <label for="">заказчик: </label>
+                    <input 
+                        v-model="customer" 
+                        type="text" 
+                        required
+                        class="setting-form__customer" 
                     >
-                        {{ driver.last_name }} {{ driver.first_name }} {{ driver.middle_name }}
-                    </li>
-                </ul>
+                </div>
+
+                <div class="setting-form__item">
+                    <label for="">адрес подачи: </label>
+                    <input 
+                        v-model="address" 
+                        type="text" 
+                        required
+                        class="setting-form__address" 
+                    >
+                </div>
+
+                <div class="setting-form__item">
+                    <label for="">диспетчер: </label>
+                    <input 
+                        v-model="dispetcherFullName" 
+                        type="text" 
+                        readonly
+                        class="setting-form__mechanic" 
+                        @click="toggleDispetcherList"
+                    >
+                    <ul 
+                        v-if="isDispetcherListOpen" 
+                        class="setting-form__drop-list"
+                    >
+                        <li class="close-btn" @click="toggleDispetcherList">x</li>
+                        <li 
+                            v-for="driver in driverList" 
+                            :key="driver.id" 
+                            class="setting-form__drop-item"
+                            @click="selectDispetcher(driver)"
+                        >
+                            {{ driver.last_name }} {{ driver.first_name }} {{ driver.middle_name }}
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="setting-form__item">
+                    <label for="">механик: </label>
+                    <input 
+                        v-model="mechanicFullName" 
+                        type="text" 
+                        readonly
+                        class="setting-form__mechanic" 
+                        @click="toggleMechanicList"
+                    >
+                    <ul 
+                        v-if="isMechanicListOpen" 
+                        class="setting-form__drop-list"
+                    >
+                        <li class="close-btn" @click="toggleMechanicList">x</li>                
+                        <li 
+                            v-for="driver in driverList" 
+                            :key="driver.id" 
+                            class="setting-form__drop-item"
+                            @click="selectMechanic(driver)"
+                        >
+                            {{ driver.last_name }} {{ driver.first_name }} {{ driver.middle_name }}
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="setting-form__item">
-                <label for="">механик: </label>
-                <input 
-                    v-model="mechanicFullName" 
-                    type="text" 
-                    readonly
-                    class="setting-form__mechanic" 
-                    @click="toggleMechanicList"
-                >
-                <ul 
-                    v-if="isMechanicListOpen" 
-                    class="setting-form__drop-list"
-                >
-                    <li class="close-btn" @click="toggleMechanicList">x</li>                
-                    <li 
-                        v-for="driver in driverList" 
-                        :key="driver.id" 
-                        class="setting-form__drop-item"
-                        @click="selectMechanic(driver)"
-                    >
-                        {{ driver.last_name }} {{ driver.first_name }} {{ driver.middle_name }}
-                    </li>
-                </ul>
-            </div>
         </div>
 
         <div class="app-btn-group">
@@ -135,6 +141,7 @@ export default {
             isMechanicListOpen: false,
             isDispetcherListOpen: false,
             isSameDate: false,
+            showDetails: false, 
             
             driverList: [],
 
